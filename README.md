@@ -152,4 +152,4 @@ For deeper technical specifications, refer to the dedicated documentation files:
 - [Known Limitations & Future Roadmap](docs/limitations.md)
 - [Evaluation & Demonstration Walkthrough Script](docs/demo_script.md)
 - [Visual Design System Specification](DESIGN.md)
-- [Engineering Guidelines & Instructions](AGENTS.md)
+

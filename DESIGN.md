@@ -86,7 +86,7 @@ The interface must not feel crowded.
 
 ### Principle 6: Explainable Intelligence
 
-AI-generated financial risk signals must be understandable.
+Model-generated financial risk signals must be understandable.
 
 Display not only the score but also the reason behind it, the source text, the classification method, and relevant confidence information.
 

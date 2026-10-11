@@ -31,4 +31,4 @@
 
 1. **Strict Client Confidentiality:** No confidential, proprietary, or non-public data from S&P Global, CRISIL, commercial banks, or corporate issuers was accessed, requested, or used.
 2. **Zero Hardcoded Secrets:** All API integrations (such as NewsAPI) are strictly optional and configured via environment variables. The repository contains zero committed access tokens or passwords.
-3. **Plagiarism Prevention:** All application source code, API routes, quantitative rebalancing algorithms, stress test engines, and React UI components are an original, independent implementation developed specifically for this problem statement.
+3. **Original Implementation & Code Integrity:** All application source code, API routes, quantitative rebalancing algorithms, stress test engines, and React UI components are an original, independent implementation developed specifically for this problem statement.
