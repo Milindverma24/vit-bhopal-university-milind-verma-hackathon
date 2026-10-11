@@ -1,5 +1,4 @@
-# vit-bhopal-university-milind-verma-hackathon — RiskPulse AI
-### S&P Global & Crisil Campus Hackathon 2026
+# RiskPulse AI - S&P Global & Crisil Campus Hackathon
 
 **Candidate Name:** Milind Verma  
 **College Email ID:** [milind.23bce11695@vitbhopal.ac.in](mailto:milind.23bce11695@vitbhopal.ac.in)  
