@@ -6,7 +6,9 @@ import {
   Code,
   Copy,
   Check,
-  Download
+  Download,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 import { api } from '../services/api';
 import { RiskSignal } from '../types';
@@ -58,6 +60,30 @@ const PRESET_EXAMPLES = [
   }
 ];
 
+const SAMPLE_API_SCHEMA = {
+  signal_id: "SIG-83c14acc-8fbe-48d3-a060-bfc360e5aef7",
+  source_type: "financial_news",
+  source_name: "Interactive Financial News Wire",
+  headline: "NVIDIA Corporation delivered robust quarterly results this morning, outpacing consensus...",
+  text: "NVIDIA Corporation delivered robust quarterly results this morning...",
+  primary_ticker: "NVDA",
+  primary_company: "NVIDIA Corporation",
+  sentiment_score: 0.56,
+  sentiment_label: "Positive",
+  sentiment_method: "Financial Lexicon-Syntactic Engine",
+  sentiment_confidence: 0.71,
+  event_type: "Corporate Earnings",
+  event_confidence: 0.81,
+  event_evidence: ["quarterly results", "record highs", "revenue expanded"],
+  impact_score: 6,
+  impact_level: "Moderate",
+  impact_rationale: "Event category 'Corporate Earnings' establishes baseline severity of 5.0/10. Positive sentiment (+0.56) compounds valuation impact.",
+  impact_method: "Multi-Factor Severity Matrix v1.0",
+  risk_direction: "Positive",
+  is_synthetic: true,
+  data_source_label: "Synthetic Demonstration Signal"
+};
+
 export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated }) => {
   const [headline, setHeadline] = useState('');
   const [text, setText] = useState('');
@@ -68,7 +94,8 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
   const [result, setResult] = useState<RiskSignal | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [copiedJson, setCopiedJson] = useState(false);
-  const [showJson, setShowJson] = useState(false);
+  const [activeResultTab, setActiveResultTab] = useState<'visual' | 'json'>('visual');
+  const [isJsonExpanded, setIsJsonExpanded] = useState(true);
 
   const handleAnalyze = async (e?: React.FormEvent) => {
     if (e) e.preventDefault();
@@ -107,19 +134,19 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
   };
 
   const handleCopyJson = () => {
-    if (!result) return;
-    navigator.clipboard.writeText(JSON.stringify(result, null, 2));
+    const dataToCopy = result || SAMPLE_API_SCHEMA;
+    navigator.clipboard.writeText(JSON.stringify(dataToCopy, null, 2));
     setCopiedJson(true);
     setTimeout(() => setCopiedJson(false), 2000);
   };
 
   const handleDownloadJson = () => {
-    if (!result) return;
-    const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
+    const dataToDownload = result || SAMPLE_API_SCHEMA;
+    const blob = new Blob([JSON.stringify(dataToDownload, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `risk-signal-${result.signal_id}.json`;
+    a.download = `risk-signal-${result?.signal_id || 'schema'}.json`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -242,6 +269,50 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
 
         {/* Right Column: Analysis Results & Explainability (7 cols) */}
         <div className="lg:col-span-7 space-y-6">
+          {/* Top Switcher: Visual Analytics vs Structured JSON API */}
+          <div className="flex items-center justify-between p-1 bg-[#efefef] rounded-xl border border-[#d9d9d9]">
+            <button
+              type="button"
+              onClick={() => setActiveResultTab('visual')}
+              className={`flex-1 py-2 px-4 rounded-lg text-xs font-semibold transition-all flex items-center justify-center gap-2 ${
+                activeResultTab === 'visual'
+                  ? 'bg-black text-white shadow-sm'
+                  : 'text-[#5e5e5e] hover:text-black hover:bg-[#e2e2e2]'
+              }`}
+            >
+              <span>Visual Analytics</span>
+              {result && (
+                <span className={`text-[10px] px-2 py-0.5 rounded-full ${
+                  activeResultTab === 'visual' ? 'bg-[#333] text-white' : 'bg-[#d9d9d9] text-black'
+                }`}>
+                  {result.primary_ticker || 'NVDA'}
+                </span>
+              )}
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setActiveResultTab('json')}
+              className={`flex-1 py-2 px-4 rounded-lg text-xs font-semibold transition-all flex items-center justify-center gap-2 ${
+                activeResultTab === 'json'
+                  ? 'bg-black text-white shadow-sm'
+                  : 'text-[#5e5e5e] hover:text-black hover:bg-[#e2e2e2]'
+              }`}
+            >
+              <Code className="w-3.5 h-3.5" />
+              <span>Structured JSON API response</span>
+              <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${
+                activeResultTab === 'json'
+                  ? 'bg-[#333] text-emerald-400'
+                  : result
+                  ? 'bg-emerald-100 text-emerald-800'
+                  : 'bg-[#d9d9d9] text-[#5e5e5e]'
+              }`}>
+                {result ? '200 OK' : 'API Schema'}
+              </span>
+            </button>
+          </div>
+
           {analyzing ? (
             <Card className="min-h-[420px] flex items-center justify-center text-center">
               <div className="space-y-3">
@@ -251,6 +322,55 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
                   Extracting entities, parsing financial polarity, matching rule-based event taxonomies, and calibrating market impact.
                 </p>
               </div>
+            </Card>
+          ) : activeResultTab === 'json' ? (
+            /* Dedicated Structured JSON API response View */
+            <Card>
+              <div className="flex items-center justify-between pb-3 border-b border-[#d9d9d9]">
+                <div className="flex items-center gap-2">
+                  <Code className="w-4 h-4 text-black" />
+                  <div>
+                    <h4 className="text-sm font-bold text-black">Structured JSON API response</h4>
+                    <p className="text-[11px] text-[#767676]">
+                      {result 
+                        ? `Endpoint: POST /api/analyze • Signal ID: ${result.signal_id}` 
+                        : 'Live Schema Specification • POST /api/analyze'}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${
+                    result ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-[#efefef] text-[#767676] border border-[#d9d9d9]'
+                  }`}>
+                    {result ? 'HTTP 200 OK' : 'API Schema Contract'}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={handleCopyJson}
+                    className="px-3 py-1 rounded-full text-xs font-medium bg-[#efefef] text-black hover:bg-[#e2e2e2] transition-colors inline-flex items-center gap-1"
+                  >
+                    {copiedJson ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
+                    <span>{copiedJson ? 'Copied' : 'Copy JSON'}</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleDownloadJson}
+                    className="px-3 py-1 rounded-full text-xs font-medium bg-[#efefef] text-black hover:bg-[#e2e2e2] transition-colors inline-flex items-center gap-1"
+                  >
+                    <Download className="w-3 h-3" />
+                    <span>Download</span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-3 p-4 bg-[#1e1e1e] text-[#d4d4d4] rounded-xl overflow-x-auto text-xs font-mono max-h-[580px] border border-[#333]">
+                <pre>{JSON.stringify(result || SAMPLE_API_SCHEMA, null, 2)}</pre>
+              </div>
+              {!result && (
+                <p className="text-[11px] text-[#767676] mt-2 italic text-center">
+                  * Showing API response contract. Click "Analyze Text" on the left to populate with live inference results.
+                </p>
+              )}
             </Card>
           ) : result ? (
             <div className="space-y-6">
@@ -398,14 +518,25 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
                   <div className="flex items-center gap-2">
                     <Code className="w-4 h-4 text-black" />
                     <h4 className="text-sm font-bold text-black">Structured JSON API response</h4>
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
+                      HTTP 200 OK
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setIsJsonExpanded(!isJsonExpanded)}
+                      className="px-2.5 py-1 rounded-full text-xs font-medium bg-[#efefef] text-black hover:bg-[#e2e2e2] transition-colors inline-flex items-center gap-1"
+                    >
+                      {isJsonExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+                      <span>{isJsonExpanded ? 'Collapse' : 'Expand'}</span>
+                    </button>
                     <button
                       type="button"
                       onClick={handleCopyJson}
                       className="px-3 py-1 rounded-full text-xs font-medium bg-[#efefef] text-black hover:bg-[#e2e2e2] transition-colors inline-flex items-center gap-1"
                     >
-                      {copiedJson ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
+                      {copiedJson ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
                       <span>{copiedJson ? 'Copied' : 'Copy'}</span>
                     </button>
                     <button
@@ -419,9 +550,11 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
                   </div>
                 </div>
 
-                <div className="mt-3 p-4 bg-[#282828] text-white rounded-xl overflow-x-auto text-xs font-mono max-h-64">
-                  <pre>{JSON.stringify(result, null, 2)}</pre>
-                </div>
+                {isJsonExpanded && (
+                  <div className="mt-3 p-4 bg-[#1e1e1e] text-[#d4d4d4] rounded-xl overflow-x-auto text-xs font-mono max-h-72 border border-[#333]">
+                    <pre>{JSON.stringify(result, null, 2)}</pre>
+                  </div>
+                )}
               </Card>
             </div>
           ) : (
