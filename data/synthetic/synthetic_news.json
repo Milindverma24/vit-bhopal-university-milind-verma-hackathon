@@ -1,0 +1,3002 @@
+[
+  {
+    "article_id": "news-synth-1000",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "Walmart Inc. Unveils Next-Gen AI Infrastructure Platform in Commercial Breakthrough",
+    "description": "At its annual flagship developer keynote, Walmart Inc. (WMT) unveiled an innovative high-performance platform engineered for enterprise scal...",
+    "content": "At its annual flagship developer keynote, Walmart Inc. (WMT) unveiled an innovative high-performance platform engineered for enterprise scalability. Early benchmark testing indicates 40% performance gains over incumbent solutions, attracting multi-year adoption commitments from global Fortune 500 corporations.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1000",
+    "published_at": "2026-10-10T06:32:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1001",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Rating Agencies Upgrade Bank of America Corp. to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of Bank of America Corp. (BAC) senior unsecured debt from A+ to AA-. Analysts highlighted ...",
+    "content": "Major credit rating agencies announced an upgrade of Bank of America Corp. (BAC) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1001",
+    "published_at": "2026-10-05T18:17:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1002",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Procter & Gamble Co. Unveils Next-Gen AI Infrastructure Platform in Commercial Breakthrough",
+    "description": "At its annual flagship developer keynote, Procter & Gamble Co. (PG) unveiled an innovative high-performance platform engineered for enterpri...",
+    "content": "At its annual flagship developer keynote, Procter & Gamble Co. (PG) unveiled an innovative high-performance platform engineered for enterprise scalability. Early benchmark testing indicates 40% performance gains over incumbent solutions, attracting multi-year adoption commitments from global Fortune 500 corporations.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1002",
+    "published_at": "2026-09-28T10:21:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1003",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Factory Shutdowns and Chip Bottlenecks Force Amazon.com Inc. to Slash Annual Guidance",
+    "description": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Amazon.com Inc. (AMZN) to curtail output for the upcomi...",
+    "content": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Amazon.com Inc. (AMZN) to curtail output for the upcoming fiscal quarter. Management revised operating margin targets downward by 250 basis points, warning of elevated freight and raw component costs.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1003",
+    "published_at": "2026-10-10T02:50:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Amazon.com Inc."
+    ],
+    "ticker_symbols": [
+      "AMZN"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Discretionary"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1004",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Rating Agencies Upgrade Microsoft Corporation to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of Microsoft Corporation (MSFT) senior unsecured debt from A+ to AA-. Analysts highlighted...",
+    "content": "Major credit rating agencies announced an upgrade of Microsoft Corporation (MSFT) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1004",
+    "published_at": "2026-10-05T13:08:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1005",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Amazon.com Inc. Surpasses Q3 Revenue Forecasts on Surging Enterprise Demand",
+    "description": "Amazon.com Inc. (AMZN) delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS reached re...",
+    "content": "Amazon.com Inc. (AMZN) delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS reached record highs as revenue expanded 18% year-over-year. Management cited durable enterprise adoption, disciplined cost controls, and raised full-year forward revenue guidance by $1.5 billion.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1005",
+    "published_at": "2026-09-28T01:41:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Amazon.com Inc."
+    ],
+    "ticker_symbols": [
+      "AMZN"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Discretionary"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1006",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "Central Bank Unexpectedly Hikes Policy Rate by 50 Basis Points to Curb Sticky Inflation",
+    "description": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as ...",
+    "content": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as commercial banks recalibrated prime lending rates, increasing corporate borrowing costs across the economy.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1006",
+    "published_at": "2026-09-28T10:35:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1007",
+    "source_type": "financial_news",
+    "source_name": "Wall Street Journal Synthetic",
+    "headline": "SEC and Justice Department Launch Joint Probe into JPMorgan Chase & Co. Accounting Practices",
+    "description": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to JPMorgan Chase & Co. (JPM) regarding revenue recog...",
+    "content": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to JPMorgan Chase & Co. (JPM) regarding revenue recognition accounting in its subscription division. The audit committee confirmed an independent special inquiry, sparking widespread market volatility.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1007",
+    "published_at": "2026-09-27T10:22:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1008",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Wholesale Interbank Liquidity Tightens as Short-Term Commercial Paper Spreads Widen",
+    "description": "Treasury bill issuance and quarterly corporate tax outflows contributed to temporary liquidity strains in overnight money markets. The centr...",
+    "content": "Treasury bill issuance and quarterly corporate tax outflows contributed to temporary liquidity strains in overnight money markets. The central bank opened temporary repo liquidity facilities to stabilize interbank funding conditions.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1008",
+    "published_at": "2026-10-10T16:39:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1009",
+    "source_type": "financial_news",
+    "source_name": "Wall Street Journal Synthetic",
+    "headline": "Factory Shutdowns and Chip Bottlenecks Force Procter & Gamble Co. to Slash Annual Guidance",
+    "description": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Procter & Gamble Co. (PG) to curtail output for the upc...",
+    "content": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Procter & Gamble Co. (PG) to curtail output for the upcoming fiscal quarter. Management revised operating margin targets downward by 250 basis points, warning of elevated freight and raw component costs.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1009",
+    "published_at": "2026-10-03T02:22:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1010",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Rating Agencies Upgrade NVIDIA Corporation to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of NVIDIA Corporation (NVDA) senior unsecured debt from A+ to AA-. Analysts highlighted si...",
+    "content": "Major credit rating agencies announced an upgrade of NVIDIA Corporation (NVDA) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1010",
+    "published_at": "2026-10-03T04:22:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "NVIDIA Corporation"
+    ],
+    "ticker_symbols": [
+      "NVDA"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1011",
+    "source_type": "financial_news",
+    "source_name": "Wall Street Journal Synthetic",
+    "headline": "Factory Shutdowns and Chip Bottlenecks Force Microsoft Corporation to Slash Annual Guidance",
+    "description": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Microsoft Corporation (MSFT) to curtail output for the ...",
+    "content": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Microsoft Corporation (MSFT) to curtail output for the upcoming fiscal quarter. Management revised operating margin targets downward by 250 basis points, warning of elevated freight and raw component costs.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1011",
+    "published_at": "2026-10-08T15:22:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1012",
+    "source_type": "financial_news",
+    "source_name": "Wall Street Journal Synthetic",
+    "headline": "Lockheed Martin Corp. Discloses Critical Data Breach and Unauthorized System Access",
+    "description": "Lockheed Martin Corp. (LMT) filed an 8-K disclosure acknowledging a sophisticated ransomware and data breach incident that compromised encry...",
+    "content": "Lockheed Martin Corp. (LMT) filed an 8-K disclosure acknowledging a sophisticated ransomware and data breach incident that compromised encrypted customer records and disrupted internal IT workflows. Management halted affected customer portals and retained forensic cybersecurity investigators.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1012",
+    "published_at": "2026-09-27T02:29:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Lockheed Martin Corp."
+    ],
+    "ticker_symbols": [
+      "LMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1013",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Caterpillar Inc. Surpasses Q3 Revenue Forecasts on Surging Enterprise Demand",
+    "description": "Caterpillar Inc. (CAT) delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS reached re...",
+    "content": "Caterpillar Inc. (CAT) delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS reached record highs as revenue expanded 18% year-over-year. Management cited durable enterprise adoption, disciplined cost controls, and raised full-year forward revenue guidance by $1.5 billion.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1013",
+    "published_at": "2026-09-30T09:17:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1014",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Factory Shutdowns and Chip Bottlenecks Force Microsoft Corporation to Slash Annual Guidance",
+    "description": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Microsoft Corporation (MSFT) to curtail output for the ...",
+    "content": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Microsoft Corporation (MSFT) to curtail output for the upcoming fiscal quarter. Management revised operating margin targets downward by 250 basis points, warning of elevated freight and raw component costs.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1014",
+    "published_at": "2026-10-09T01:09:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1015",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Wholesale Interbank Liquidity Tightens as Short-Term Commercial Paper Spreads Widen",
+    "description": "Treasury bill issuance and quarterly corporate tax outflows contributed to temporary liquidity strains in overnight money markets. The centr...",
+    "content": "Treasury bill issuance and quarterly corporate tax outflows contributed to temporary liquidity strains in overnight money markets. The central bank opened temporary repo liquidity facilities to stabilize interbank funding conditions.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1015",
+    "published_at": "2026-10-02T14:41:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1016",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Maritime Shipping Tensions and Export Sanctions Escalate Global Energy and Freight Risks",
+    "description": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energ...",
+    "content": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energy refiners and industrial manufacturers are preparing contingency logistics routing to mitigate potential delivery bottlenecks.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1016",
+    "published_at": "2026-10-09T06:12:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1017",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Rating Agencies Upgrade Walmart Inc. to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of Walmart Inc. (WMT) senior unsecured debt from A+ to AA-. Analysts highlighted significa...",
+    "content": "Major credit rating agencies announced an upgrade of Walmart Inc. (WMT) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1017",
+    "published_at": "2026-10-04T06:09:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1018",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "Rating Agencies Upgrade Lockheed Martin Corp. to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of Lockheed Martin Corp. (LMT) senior unsecured debt from A+ to AA-. Analysts highlighted ...",
+    "content": "Major credit rating agencies announced an upgrade of Lockheed Martin Corp. (LMT) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1018",
+    "published_at": "2026-10-08T13:02:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Lockheed Martin Corp."
+    ],
+    "ticker_symbols": [
+      "LMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1019",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "SEC and Justice Department Launch Joint Probe into Bank of America Corp. Accounting Practices",
+    "description": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to Bank of America Corp. (BAC) regarding revenue reco...",
+    "content": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to Bank of America Corp. (BAC) regarding revenue recognition accounting in its subscription division. The audit committee confirmed an independent special inquiry, sparking widespread market volatility.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1019",
+    "published_at": "2026-10-02T12:57:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1020",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "Exxon Mobil Corporation Discloses Critical Data Breach and Unauthorized System Access",
+    "description": "Exxon Mobil Corporation (XOM) filed an 8-K disclosure acknowledging a sophisticated ransomware and data breach incident that compromised enc...",
+    "content": "Exxon Mobil Corporation (XOM) filed an 8-K disclosure acknowledging a sophisticated ransomware and data breach incident that compromised encrypted customer records and disrupted internal IT workflows. Management halted affected customer portals and retained forensic cybersecurity investigators.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1020",
+    "published_at": "2026-10-06T01:46:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Exxon Mobil Corporation"
+    ],
+    "ticker_symbols": [
+      "XOM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1021",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Maritime Shipping Tensions and Export Sanctions Escalate Global Energy and Freight Risks",
+    "description": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energ...",
+    "content": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energy refiners and industrial manufacturers are preparing contingency logistics routing to mitigate potential delivery bottlenecks.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1021",
+    "published_at": "2026-10-09T05:12:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1022",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "Walmart Inc. Secures Landmark $3.8 Billion Defense and Industrial Cloud Contract",
+    "description": "Walmart Inc. (WMT) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bolster...",
+    "content": "Walmart Inc. (WMT) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bolsters backlog visibility through 2029, prompting credit rating agencies to reaffirm an investment-grade A+ rating outlook.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1022",
+    "published_at": "2026-09-28T16:29:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1023",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "JPMorgan Chase & Co. Secures Landmark $3.8 Billion Defense and Industrial Cloud Contract",
+    "description": "JPMorgan Chase & Co. (JPM) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially...",
+    "content": "JPMorgan Chase & Co. (JPM) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bolsters backlog visibility through 2029, prompting credit rating agencies to reaffirm an investment-grade A+ rating outlook.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1023",
+    "published_at": "2026-09-30T07:44:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1024",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Central Bank Unexpectedly Hikes Policy Rate by 50 Basis Points to Curb Sticky Inflation",
+    "description": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as ...",
+    "content": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as commercial banks recalibrated prime lending rates, increasing corporate borrowing costs across the economy.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1024",
+    "published_at": "2026-09-28T04:01:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1025",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Walmart Inc. Discloses Critical Data Breach and Unauthorized System Access",
+    "description": "Walmart Inc. (WMT) filed an 8-K disclosure acknowledging a sophisticated ransomware and data breach incident that compromised encrypted cust...",
+    "content": "Walmart Inc. (WMT) filed an 8-K disclosure acknowledging a sophisticated ransomware and data breach incident that compromised encrypted customer records and disrupted internal IT workflows. Management halted affected customer portals and retained forensic cybersecurity investigators.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1025",
+    "published_at": "2026-10-09T13:39:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1026",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "Lockheed Martin Corp. Surpasses Q3 Revenue Forecasts on Surging Enterprise Demand",
+    "description": "Lockheed Martin Corp. (LMT) delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS reach...",
+    "content": "Lockheed Martin Corp. (LMT) delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS reached record highs as revenue expanded 18% year-over-year. Management cited durable enterprise adoption, disciplined cost controls, and raised full-year forward revenue guidance by $1.5 billion.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1026",
+    "published_at": "2026-10-03T15:55:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Lockheed Martin Corp."
+    ],
+    "ticker_symbols": [
+      "LMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1027",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Bank of America Corp. Unveils Next-Gen AI Infrastructure Platform in Commercial Breakthrough",
+    "description": "At its annual flagship developer keynote, Bank of America Corp. (BAC) unveiled an innovative high-performance platform engineered for enterp...",
+    "content": "At its annual flagship developer keynote, Bank of America Corp. (BAC) unveiled an innovative high-performance platform engineered for enterprise scalability. Early benchmark testing indicates 40% performance gains over incumbent solutions, attracting multi-year adoption commitments from global Fortune 500 corporations.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1027",
+    "published_at": "2026-10-06T00:58:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1028",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Maritime Shipping Tensions and Export Sanctions Escalate Global Energy and Freight Risks",
+    "description": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energ...",
+    "content": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energy refiners and industrial manufacturers are preparing contingency logistics routing to mitigate potential delivery bottlenecks.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1028",
+    "published_at": "2026-10-03T16:20:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1029",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "SEC and Justice Department Launch Joint Probe into Walmart Inc. Accounting Practices",
+    "description": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to Walmart Inc. (WMT) regarding revenue recognition a...",
+    "content": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to Walmart Inc. (WMT) regarding revenue recognition accounting in its subscription division. The audit committee confirmed an independent special inquiry, sparking widespread market volatility.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1029",
+    "published_at": "2026-10-01T20:07:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1030",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Johnson & Johnson Secures Landmark $3.8 Billion Defense and Industrial Cloud Contract",
+    "description": "Johnson & Johnson (JNJ) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bo...",
+    "content": "Johnson & Johnson (JNJ) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bolsters backlog visibility through 2029, prompting credit rating agencies to reaffirm an investment-grade A+ rating outlook.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1030",
+    "published_at": "2026-10-04T19:32:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1031",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Maritime Shipping Tensions and Export Sanctions Escalate Global Energy and Freight Risks",
+    "description": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energ...",
+    "content": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energy refiners and industrial manufacturers are preparing contingency logistics routing to mitigate potential delivery bottlenecks.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1031",
+    "published_at": "2026-09-28T01:37:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1032",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "Maritime Shipping Tensions and Export Sanctions Escalate Global Energy and Freight Risks",
+    "description": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energ...",
+    "content": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energy refiners and industrial manufacturers are preparing contingency logistics routing to mitigate potential delivery bottlenecks.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1032",
+    "published_at": "2026-09-27T12:56:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1033",
+    "source_type": "financial_news",
+    "source_name": "Wall Street Journal Synthetic",
+    "headline": "Central Bank Maintains Benchmark Interest Rate in Balanced Policy Statement",
+    "description": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Pol...",
+    "content": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Policymakers noted balanced labor market indicators and reiterated a data-dependent stance regarding upcoming inflation prints.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1033",
+    "published_at": "2026-10-01T18:04:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1034",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "JPMorgan Chase & Co. Secures Landmark $3.8 Billion Defense and Industrial Cloud Contract",
+    "description": "JPMorgan Chase & Co. (JPM) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially...",
+    "content": "JPMorgan Chase & Co. (JPM) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bolsters backlog visibility through 2029, prompting credit rating agencies to reaffirm an investment-grade A+ rating outlook.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1034",
+    "published_at": "2026-09-29T05:55:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1035",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Core Consumer Price Index Prints at 3.4% Annualized, Matching Consensus Expectations",
+    "description": "The latest monthly CPI report showed core consumer price gains moderating in line with economist expectations. Energy components saw slight ...",
+    "content": "The latest monthly CPI report showed core consumer price gains moderating in line with economist expectations. Energy components saw slight seasonal increases while services inflation leveled off, sustaining baseline macroeconomic stability.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1035",
+    "published_at": "2026-10-09T18:28:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1036",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "Central Bank Unexpectedly Hikes Policy Rate by 50 Basis Points to Curb Sticky Inflation",
+    "description": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as ...",
+    "content": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as commercial banks recalibrated prime lending rates, increasing corporate borrowing costs across the economy.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1036",
+    "published_at": "2026-10-07T04:49:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "NVIDIA Corporation"
+    ],
+    "ticker_symbols": [
+      "NVDA"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1037",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "Central Bank Maintains Benchmark Interest Rate in Balanced Policy Statement",
+    "description": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Pol...",
+    "content": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Policymakers noted balanced labor market indicators and reiterated a data-dependent stance regarding upcoming inflation prints.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1037",
+    "published_at": "2026-10-09T09:30:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Chevron Corporation"
+    ],
+    "ticker_symbols": [
+      "CVX"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1038",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Central Bank Maintains Benchmark Interest Rate in Balanced Policy Statement",
+    "description": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Pol...",
+    "content": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Policymakers noted balanced labor market indicators and reiterated a data-dependent stance regarding upcoming inflation prints.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1038",
+    "published_at": "2026-09-30T04:34:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Chevron Corporation"
+    ],
+    "ticker_symbols": [
+      "CVX"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1039",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "Bank of America Corp. Misses Quarterly Profit Targets Amid Severe Margin Compression",
+    "description": "Bank of America Corp. (BAC) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soa...",
+    "content": "Bank of America Corp. (BAC) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soared and consumer demand softened. Management declined to provide forward guidance, citing macroeconomic headwinds.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1039",
+    "published_at": "2026-10-10T13:55:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1040",
+    "source_type": "financial_news",
+    "source_name": "Wall Street Journal Synthetic",
+    "headline": "Procter & Gamble Co. Unveils Next-Gen AI Infrastructure Platform in Commercial Breakthrough",
+    "description": "At its annual flagship developer keynote, Procter & Gamble Co. (PG) unveiled an innovative high-performance platform engineered for enterpri...",
+    "content": "At its annual flagship developer keynote, Procter & Gamble Co. (PG) unveiled an innovative high-performance platform engineered for enterprise scalability. Early benchmark testing indicates 40% performance gains over incumbent solutions, attracting multi-year adoption commitments from global Fortune 500 corporations.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1040",
+    "published_at": "2026-09-28T14:56:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1041",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Central Bank Unexpectedly Hikes Policy Rate by 50 Basis Points to Curb Sticky Inflation",
+    "description": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as ...",
+    "content": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as commercial banks recalibrated prime lending rates, increasing corporate borrowing costs across the economy.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1041",
+    "published_at": "2026-10-03T02:25:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1042",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "Factory Shutdowns and Chip Bottlenecks Force Bank of America Corp. to Slash Annual Guidance",
+    "description": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Bank of America Corp. (BAC) to curtail output for the u...",
+    "content": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Bank of America Corp. (BAC) to curtail output for the upcoming fiscal quarter. Management revised operating margin targets downward by 250 basis points, warning of elevated freight and raw component costs.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1042",
+    "published_at": "2026-10-07T05:49:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1043",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Maritime Shipping Tensions and Export Sanctions Escalate Global Energy and Freight Risks",
+    "description": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energ...",
+    "content": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energy refiners and industrial manufacturers are preparing contingency logistics routing to mitigate potential delivery bottlenecks.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1043",
+    "published_at": "2026-10-04T20:21:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1044",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Caterpillar Inc. Secures Landmark $3.8 Billion Defense and Industrial Cloud Contract",
+    "description": "Caterpillar Inc. (CAT) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bol...",
+    "content": "Caterpillar Inc. (CAT) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bolsters backlog visibility through 2029, prompting credit rating agencies to reaffirm an investment-grade A+ rating outlook.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1044",
+    "published_at": "2026-09-29T06:56:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1045",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "Central Bank Unexpectedly Hikes Policy Rate by 50 Basis Points to Curb Sticky Inflation",
+    "description": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as ...",
+    "content": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as commercial banks recalibrated prime lending rates, increasing corporate borrowing costs across the economy.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1045",
+    "published_at": "2026-10-04T01:12:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Lockheed Martin Corp."
+    ],
+    "ticker_symbols": [
+      "LMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1046",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Central Bank Maintains Benchmark Interest Rate in Balanced Policy Statement",
+    "description": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Pol...",
+    "content": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Policymakers noted balanced labor market indicators and reiterated a data-dependent stance regarding upcoming inflation prints.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1046",
+    "published_at": "2026-10-06T07:34:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1047",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Core Consumer Price Index Prints at 3.4% Annualized, Matching Consensus Expectations",
+    "description": "The latest monthly CPI report showed core consumer price gains moderating in line with economist expectations. Energy components saw slight ...",
+    "content": "The latest monthly CPI report showed core consumer price gains moderating in line with economist expectations. Energy components saw slight seasonal increases while services inflation leveled off, sustaining baseline macroeconomic stability.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1047",
+    "published_at": "2026-10-07T03:58:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Exxon Mobil Corporation"
+    ],
+    "ticker_symbols": [
+      "XOM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1048",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Caterpillar Inc. Misses Quarterly Profit Targets Amid Severe Margin Compression",
+    "description": "Caterpillar Inc. (CAT) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soared a...",
+    "content": "Caterpillar Inc. (CAT) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soared and consumer demand softened. Management declined to provide forward guidance, citing macroeconomic headwinds.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1048",
+    "published_at": "2026-10-10T19:53:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1049",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "SEC and Justice Department Launch Joint Probe into Exxon Mobil Corporation Accounting Practices",
+    "description": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to Exxon Mobil Corporation (XOM) regarding revenue re...",
+    "content": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to Exxon Mobil Corporation (XOM) regarding revenue recognition accounting in its subscription division. The audit committee confirmed an independent special inquiry, sparking widespread market volatility.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1049",
+    "published_at": "2026-10-10T09:33:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Exxon Mobil Corporation"
+    ],
+    "ticker_symbols": [
+      "XOM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1050",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "NextEra Energy Inc. Discloses Critical Data Breach and Unauthorized System Access",
+    "description": "NextEra Energy Inc. (NEE) filed an 8-K disclosure acknowledging a sophisticated ransomware and data breach incident that compromised encrypt...",
+    "content": "NextEra Energy Inc. (NEE) filed an 8-K disclosure acknowledging a sophisticated ransomware and data breach incident that compromised encrypted customer records and disrupted internal IT workflows. Management halted affected customer portals and retained forensic cybersecurity investigators.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1050",
+    "published_at": "2026-10-03T20:15:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1051",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Rating Agencies Upgrade Apple Inc. to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of Apple Inc. (AAPL) senior unsecured debt from A+ to AA-. Analysts highlighted significan...",
+    "content": "Major credit rating agencies announced an upgrade of Apple Inc. (AAPL) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1051",
+    "published_at": "2026-09-27T22:20:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1052",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Maritime Shipping Tensions and Export Sanctions Escalate Global Energy and Freight Risks",
+    "description": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energ...",
+    "content": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energy refiners and industrial manufacturers are preparing contingency logistics routing to mitigate potential delivery bottlenecks.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1052",
+    "published_at": "2026-09-29T18:47:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1053",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Caterpillar Inc. Misses Quarterly Profit Targets Amid Severe Margin Compression",
+    "description": "Caterpillar Inc. (CAT) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soared a...",
+    "content": "Caterpillar Inc. (CAT) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soared and consumer demand softened. Management declined to provide forward guidance, citing macroeconomic headwinds.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1053",
+    "published_at": "2026-10-07T23:31:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1054",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "SEC and Justice Department Launch Joint Probe into Walmart Inc. Accounting Practices",
+    "description": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to Walmart Inc. (WMT) regarding revenue recognition a...",
+    "content": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to Walmart Inc. (WMT) regarding revenue recognition accounting in its subscription division. The audit committee confirmed an independent special inquiry, sparking widespread market volatility.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1054",
+    "published_at": "2026-09-28T07:56:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1055",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "Bank of America Corp. Misses Quarterly Profit Targets Amid Severe Margin Compression",
+    "description": "Bank of America Corp. (BAC) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soa...",
+    "content": "Bank of America Corp. (BAC) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soared and consumer demand softened. Management declined to provide forward guidance, citing macroeconomic headwinds.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1055",
+    "published_at": "2026-09-27T00:55:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1056",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "JPMorgan Chase & Co. Misses Quarterly Profit Targets Amid Severe Margin Compression",
+    "description": "JPMorgan Chase & Co. (JPM) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soar...",
+    "content": "JPMorgan Chase & Co. (JPM) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soared and consumer demand softened. Management declined to provide forward guidance, citing macroeconomic headwinds.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1056",
+    "published_at": "2026-10-06T06:20:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1057",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "Factory Shutdowns and Chip Bottlenecks Force Bank of America Corp. to Slash Annual Guidance",
+    "description": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Bank of America Corp. (BAC) to curtail output for the u...",
+    "content": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Bank of America Corp. (BAC) to curtail output for the upcoming fiscal quarter. Management revised operating margin targets downward by 250 basis points, warning of elevated freight and raw component costs.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1057",
+    "published_at": "2026-10-02T08:15:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1058",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "NextEra Energy Inc. Misses Quarterly Profit Targets Amid Severe Margin Compression",
+    "description": "NextEra Energy Inc. (NEE) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soare...",
+    "content": "NextEra Energy Inc. (NEE) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soared and consumer demand softened. Management declined to provide forward guidance, citing macroeconomic headwinds.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1058",
+    "published_at": "2026-09-30T13:37:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1059",
+    "source_type": "financial_news",
+    "source_name": "Wall Street Journal Synthetic",
+    "headline": "Rating Agencies Upgrade JPMorgan Chase & Co. to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of JPMorgan Chase & Co. (JPM) senior unsecured debt from A+ to AA-. Analysts highlighted s...",
+    "content": "Major credit rating agencies announced an upgrade of JPMorgan Chase & Co. (JPM) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1059",
+    "published_at": "2026-10-09T09:13:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1060",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Central Bank Maintains Benchmark Interest Rate in Balanced Policy Statement",
+    "description": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Pol...",
+    "content": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Policymakers noted balanced labor market indicators and reiterated a data-dependent stance regarding upcoming inflation prints.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1060",
+    "published_at": "2026-09-28T05:41:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1061",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Rating Agencies Upgrade Amazon.com Inc. to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of Amazon.com Inc. (AMZN) senior unsecured debt from A+ to AA-. Analysts highlighted signi...",
+    "content": "Major credit rating agencies announced an upgrade of Amazon.com Inc. (AMZN) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1061",
+    "published_at": "2026-10-10T16:16:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Amazon.com Inc."
+    ],
+    "ticker_symbols": [
+      "AMZN"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Discretionary"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1062",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Central Bank Unexpectedly Hikes Policy Rate by 50 Basis Points to Curb Sticky Inflation",
+    "description": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as ...",
+    "content": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as commercial banks recalibrated prime lending rates, increasing corporate borrowing costs across the economy.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1062",
+    "published_at": "2026-10-09T12:02:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1063",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Microsoft Corporation Surpasses Q3 Revenue Forecasts on Surging Enterprise Demand",
+    "description": "Microsoft Corporation (MSFT) delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS reac...",
+    "content": "Microsoft Corporation (MSFT) delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS reached record highs as revenue expanded 18% year-over-year. Management cited durable enterprise adoption, disciplined cost controls, and raised full-year forward revenue guidance by $1.5 billion.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1063",
+    "published_at": "2026-10-03T07:44:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1064",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "Rating Agencies Upgrade Pfizer Inc. to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of Pfizer Inc. (PFE) senior unsecured debt from A+ to AA-. Analysts highlighted significan...",
+    "content": "Major credit rating agencies announced an upgrade of Pfizer Inc. (PFE) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1064",
+    "published_at": "2026-10-04T12:06:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1065",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Rating Agencies Upgrade Johnson & Johnson to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of Johnson & Johnson (JNJ) senior unsecured debt from A+ to AA-. Analysts highlighted sign...",
+    "content": "Major credit rating agencies announced an upgrade of Johnson & Johnson (JNJ) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1065",
+    "published_at": "2026-09-28T13:42:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1066",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "Central Bank Maintains Benchmark Interest Rate in Balanced Policy Statement",
+    "description": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Pol...",
+    "content": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Policymakers noted balanced labor market indicators and reiterated a data-dependent stance regarding upcoming inflation prints.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1066",
+    "published_at": "2026-09-27T17:30:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1067",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "Core Consumer Price Index Prints at 3.4% Annualized, Matching Consensus Expectations",
+    "description": "The latest monthly CPI report showed core consumer price gains moderating in line with economist expectations. Energy components saw slight ...",
+    "content": "The latest monthly CPI report showed core consumer price gains moderating in line with economist expectations. Energy components saw slight seasonal increases while services inflation leveled off, sustaining baseline macroeconomic stability.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1067",
+    "published_at": "2026-09-30T01:53:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1068",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "JPMorgan Chase & Co. Unveils Next-Gen AI Infrastructure Platform in Commercial Breakthrough",
+    "description": "At its annual flagship developer keynote, JPMorgan Chase & Co. (JPM) unveiled an innovative high-performance platform engineered for enterpr...",
+    "content": "At its annual flagship developer keynote, JPMorgan Chase & Co. (JPM) unveiled an innovative high-performance platform engineered for enterprise scalability. Early benchmark testing indicates 40% performance gains over incumbent solutions, attracting multi-year adoption commitments from global Fortune 500 corporations.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1068",
+    "published_at": "2026-10-08T15:15:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1069",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "Chevron Corporation Discloses Critical Data Breach and Unauthorized System Access",
+    "description": "Chevron Corporation (CVX) filed an 8-K disclosure acknowledging a sophisticated ransomware and data breach incident that compromised encrypt...",
+    "content": "Chevron Corporation (CVX) filed an 8-K disclosure acknowledging a sophisticated ransomware and data breach incident that compromised encrypted customer records and disrupted internal IT workflows. Management halted affected customer portals and retained forensic cybersecurity investigators.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1069",
+    "published_at": "2026-10-01T04:52:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Chevron Corporation"
+    ],
+    "ticker_symbols": [
+      "CVX"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1070",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "Wholesale Interbank Liquidity Tightens as Short-Term Commercial Paper Spreads Widen",
+    "description": "Treasury bill issuance and quarterly corporate tax outflows contributed to temporary liquidity strains in overnight money markets. The centr...",
+    "content": "Treasury bill issuance and quarterly corporate tax outflows contributed to temporary liquidity strains in overnight money markets. The central bank opened temporary repo liquidity facilities to stabilize interbank funding conditions.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1070",
+    "published_at": "2026-10-09T14:36:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1071",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Central Bank Unexpectedly Hikes Policy Rate by 50 Basis Points to Curb Sticky Inflation",
+    "description": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as ...",
+    "content": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as commercial banks recalibrated prime lending rates, increasing corporate borrowing costs across the economy.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1071",
+    "published_at": "2026-10-08T14:27:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1072",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Maritime Shipping Tensions and Export Sanctions Escalate Global Energy and Freight Risks",
+    "description": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energ...",
+    "content": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energy refiners and industrial manufacturers are preparing contingency logistics routing to mitigate potential delivery bottlenecks.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1072",
+    "published_at": "2026-10-03T02:53:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Chevron Corporation"
+    ],
+    "ticker_symbols": [
+      "CVX"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1073",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Rating Agencies Upgrade JPMorgan Chase & Co. to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of JPMorgan Chase & Co. (JPM) senior unsecured debt from A+ to AA-. Analysts highlighted s...",
+    "content": "Major credit rating agencies announced an upgrade of JPMorgan Chase & Co. (JPM) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1073",
+    "published_at": "2026-10-06T12:19:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1074",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Johnson & Johnson Secures Landmark $3.8 Billion Defense and Industrial Cloud Contract",
+    "description": "Johnson & Johnson (JNJ) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bo...",
+    "content": "Johnson & Johnson (JNJ) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bolsters backlog visibility through 2029, prompting credit rating agencies to reaffirm an investment-grade A+ rating outlook.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1074",
+    "published_at": "2026-10-01T05:47:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1075",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "SEC and Justice Department Launch Joint Probe into Bank of America Corp. Accounting Practices",
+    "description": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to Bank of America Corp. (BAC) regarding revenue reco...",
+    "content": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to Bank of America Corp. (BAC) regarding revenue recognition accounting in its subscription division. The audit committee confirmed an independent special inquiry, sparking widespread market volatility.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1075",
+    "published_at": "2026-10-05T03:46:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1076",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Core Consumer Price Index Prints at 3.4% Annualized, Matching Consensus Expectations",
+    "description": "The latest monthly CPI report showed core consumer price gains moderating in line with economist expectations. Energy components saw slight ...",
+    "content": "The latest monthly CPI report showed core consumer price gains moderating in line with economist expectations. Energy components saw slight seasonal increases while services inflation leveled off, sustaining baseline macroeconomic stability.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1076",
+    "published_at": "2026-09-28T07:38:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1077",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Central Bank Unexpectedly Hikes Policy Rate by 50 Basis Points to Curb Sticky Inflation",
+    "description": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as ...",
+    "content": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as commercial banks recalibrated prime lending rates, increasing corporate borrowing costs across the economy.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1077",
+    "published_at": "2026-09-28T12:58:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1078",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Core Consumer Price Index Prints at 3.4% Annualized, Matching Consensus Expectations",
+    "description": "The latest monthly CPI report showed core consumer price gains moderating in line with economist expectations. Energy components saw slight ...",
+    "content": "The latest monthly CPI report showed core consumer price gains moderating in line with economist expectations. Energy components saw slight seasonal increases while services inflation leveled off, sustaining baseline macroeconomic stability.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1078",
+    "published_at": "2026-10-05T11:06:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1079",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "SEC and Justice Department Launch Joint Probe into Chevron Corporation Accounting Practices",
+    "description": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to Chevron Corporation (CVX) regarding revenue recogn...",
+    "content": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to Chevron Corporation (CVX) regarding revenue recognition accounting in its subscription division. The audit committee confirmed an independent special inquiry, sparking widespread market volatility.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1079",
+    "published_at": "2026-09-29T21:18:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Chevron Corporation"
+    ],
+    "ticker_symbols": [
+      "CVX"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1080",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Factory Shutdowns and Chip Bottlenecks Force Lockheed Martin Corp. to Slash Annual Guidance",
+    "description": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Lockheed Martin Corp. (LMT) to curtail output for the u...",
+    "content": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Lockheed Martin Corp. (LMT) to curtail output for the upcoming fiscal quarter. Management revised operating margin targets downward by 250 basis points, warning of elevated freight and raw component costs.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1080",
+    "published_at": "2026-10-09T12:10:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Lockheed Martin Corp."
+    ],
+    "ticker_symbols": [
+      "LMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1081",
+    "source_type": "financial_news",
+    "source_name": "Wall Street Journal Synthetic",
+    "headline": "Chevron Corporation Surpasses Q3 Revenue Forecasts on Surging Enterprise Demand",
+    "description": "Chevron Corporation (CVX) delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS reached...",
+    "content": "Chevron Corporation (CVX) delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS reached record highs as revenue expanded 18% year-over-year. Management cited durable enterprise adoption, disciplined cost controls, and raised full-year forward revenue guidance by $1.5 billion.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1081",
+    "published_at": "2026-10-01T22:58:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Chevron Corporation"
+    ],
+    "ticker_symbols": [
+      "CVX"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1082",
+    "source_type": "financial_news",
+    "source_name": "Wall Street Journal Synthetic",
+    "headline": "Core Consumer Price Index Prints at 3.4% Annualized, Matching Consensus Expectations",
+    "description": "The latest monthly CPI report showed core consumer price gains moderating in line with economist expectations. Energy components saw slight ...",
+    "content": "The latest monthly CPI report showed core consumer price gains moderating in line with economist expectations. Energy components saw slight seasonal increases while services inflation leveled off, sustaining baseline macroeconomic stability.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1082",
+    "published_at": "2026-09-30T11:42:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1083",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "Maritime Shipping Tensions and Export Sanctions Escalate Global Energy and Freight Risks",
+    "description": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energ...",
+    "content": "Geopolitical escalations in vital shipping straits have triggered retaliatory maritime restrictions and elevated insurance surcharges. Energy refiners and industrial manufacturers are preparing contingency logistics routing to mitigate potential delivery bottlenecks.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1083",
+    "published_at": "2026-09-28T04:40:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Chevron Corporation"
+    ],
+    "ticker_symbols": [
+      "CVX"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1084",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "SEC and Justice Department Launch Joint Probe into Procter & Gamble Co. Accounting Practices",
+    "description": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to Procter & Gamble Co. (PG) regarding revenue recogn...",
+    "content": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to Procter & Gamble Co. (PG) regarding revenue recognition accounting in its subscription division. The audit committee confirmed an independent special inquiry, sparking widespread market volatility.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1084",
+    "published_at": "2026-10-07T07:39:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1085",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Rating Agencies Upgrade Bank of America Corp. to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of Bank of America Corp. (BAC) senior unsecured debt from A+ to AA-. Analysts highlighted ...",
+    "content": "Major credit rating agencies announced an upgrade of Bank of America Corp. (BAC) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1085",
+    "published_at": "2026-10-09T12:15:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1086",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "Procter & Gamble Co. Misses Quarterly Profit Targets Amid Severe Margin Compression",
+    "description": "Procter & Gamble Co. (PG) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soare...",
+    "content": "Procter & Gamble Co. (PG) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soared and consumer demand softened. Management declined to provide forward guidance, citing macroeconomic headwinds.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1086",
+    "published_at": "2026-10-09T10:54:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1087",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Exxon Mobil Corporation Surpasses Q3 Revenue Forecasts on Surging Enterprise Demand",
+    "description": "Exxon Mobil Corporation (XOM) delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS rea...",
+    "content": "Exxon Mobil Corporation (XOM) delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS reached record highs as revenue expanded 18% year-over-year. Management cited durable enterprise adoption, disciplined cost controls, and raised full-year forward revenue guidance by $1.5 billion.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1087",
+    "published_at": "2026-10-09T16:48:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Exxon Mobil Corporation"
+    ],
+    "ticker_symbols": [
+      "XOM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1088",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Johnson & Johnson Misses Quarterly Profit Targets Amid Severe Margin Compression",
+    "description": "Johnson & Johnson (JNJ) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soared ...",
+    "content": "Johnson & Johnson (JNJ) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soared and consumer demand softened. Management declined to provide forward guidance, citing macroeconomic headwinds.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1088",
+    "published_at": "2026-09-28T18:08:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1089",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Apple Inc. Misses Quarterly Profit Targets Amid Severe Margin Compression",
+    "description": "Apple Inc. (AAPL) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soared and co...",
+    "content": "Apple Inc. (AAPL) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soared and consumer demand softened. Management declined to provide forward guidance, citing macroeconomic headwinds.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1089",
+    "published_at": "2026-10-09T00:26:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1090",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "Central Bank Maintains Benchmark Interest Rate in Balanced Policy Statement",
+    "description": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Pol...",
+    "content": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Policymakers noted balanced labor market indicators and reiterated a data-dependent stance regarding upcoming inflation prints.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1090",
+    "published_at": "2026-10-09T07:05:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1091",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Rating Agencies Upgrade Lockheed Martin Corp. to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of Lockheed Martin Corp. (LMT) senior unsecured debt from A+ to AA-. Analysts highlighted ...",
+    "content": "Major credit rating agencies announced an upgrade of Lockheed Martin Corp. (LMT) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1091",
+    "published_at": "2026-10-01T15:41:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Lockheed Martin Corp."
+    ],
+    "ticker_symbols": [
+      "LMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1092",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Central Bank Maintains Benchmark Interest Rate in Balanced Policy Statement",
+    "description": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Pol...",
+    "content": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Policymakers noted balanced labor market indicators and reiterated a data-dependent stance regarding upcoming inflation prints.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1092",
+    "published_at": "2026-10-05T05:44:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1093",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "Amazon.com Inc. Surpasses Q3 Revenue Forecasts on Surging Enterprise Demand",
+    "description": "Amazon.com Inc. (AMZN) delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS reached re...",
+    "content": "Amazon.com Inc. (AMZN) delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS reached record highs as revenue expanded 18% year-over-year. Management cited durable enterprise adoption, disciplined cost controls, and raised full-year forward revenue guidance by $1.5 billion.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1093",
+    "published_at": "2026-10-08T23:25:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Amazon.com Inc."
+    ],
+    "ticker_symbols": [
+      "AMZN"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Discretionary"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1094",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Central Bank Maintains Benchmark Interest Rate in Balanced Policy Statement",
+    "description": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Pol...",
+    "content": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Policymakers noted balanced labor market indicators and reiterated a data-dependent stance regarding upcoming inflation prints.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1094",
+    "published_at": "2026-09-27T23:30:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1095",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "Antitrust Regulators File Formal Injunction Against Exxon Mobil Corporation Over Market Dominance",
+    "description": "Federal antitrust authorities initiated formal litigation against Exxon Mobil Corporation (XOM), alleging anti-competitive practices and exc...",
+    "content": "Federal antitrust authorities initiated formal litigation against Exxon Mobil Corporation (XOM), alleging anti-competitive practices and exclusive distribution agreements. The legal action seeks civil fines of up to $2.2 billion and potential structural operational remedies, sending shares lower in pre-market trading.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1095",
+    "published_at": "2026-10-06T04:38:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Exxon Mobil Corporation"
+    ],
+    "ticker_symbols": [
+      "XOM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1096",
+    "source_type": "financial_news",
+    "source_name": "Wall Street Journal Synthetic",
+    "headline": "Procter & Gamble Co. Discloses Critical Data Breach and Unauthorized System Access",
+    "description": "Procter & Gamble Co. (PG) filed an 8-K disclosure acknowledging a sophisticated ransomware and data breach incident that compromised encrypt...",
+    "content": "Procter & Gamble Co. (PG) filed an 8-K disclosure acknowledging a sophisticated ransomware and data breach incident that compromised encrypted customer records and disrupted internal IT workflows. Management halted affected customer portals and retained forensic cybersecurity investigators.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1096",
+    "published_at": "2026-10-05T09:50:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1097",
+    "source_type": "financial_news",
+    "source_name": "Financial Times Macrofeed",
+    "headline": "Chevron Corporation Secures Landmark $3.8 Billion Defense and Industrial Cloud Contract",
+    "description": "Chevron Corporation (CVX) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially ...",
+    "content": "Chevron Corporation (CVX) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bolsters backlog visibility through 2029, prompting credit rating agencies to reaffirm an investment-grade A+ rating outlook.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1097",
+    "published_at": "2026-10-04T00:21:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Chevron Corporation"
+    ],
+    "ticker_symbols": [
+      "CVX"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1098",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Core Consumer Price Index Prints at 3.4% Annualized, Matching Consensus Expectations",
+    "description": "The latest monthly CPI report showed core consumer price gains moderating in line with economist expectations. Energy components saw slight ...",
+    "content": "The latest monthly CPI report showed core consumer price gains moderating in line with economist expectations. Energy components saw slight seasonal increases while services inflation leveled off, sustaining baseline macroeconomic stability.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1098",
+    "published_at": "2026-10-09T04:34:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Exxon Mobil Corporation"
+    ],
+    "ticker_symbols": [
+      "XOM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1099",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Central Bank Maintains Benchmark Interest Rate in Balanced Policy Statement",
+    "description": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Pol...",
+    "content": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Policymakers noted balanced labor market indicators and reiterated a data-dependent stance regarding upcoming inflation prints.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1099",
+    "published_at": "2026-09-28T00:43:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1100",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Microsoft Corporation Misses Quarterly Profit Targets Amid Severe Margin Compression",
+    "description": "Microsoft Corporation (MSFT) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead so...",
+    "content": "Microsoft Corporation (MSFT) reported fiscal results falling short of Wall Street estimates. Net income plunged 22% as operating overhead soared and consumer demand softened. Management declined to provide forward guidance, citing macroeconomic headwinds.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1100",
+    "published_at": "2026-10-05T23:47:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1101",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Bank of America Corp. Secures Landmark $3.8 Billion Defense and Industrial Cloud Contract",
+    "description": "Bank of America Corp. (BAC) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantiall...",
+    "content": "Bank of America Corp. (BAC) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bolsters backlog visibility through 2029, prompting credit rating agencies to reaffirm an investment-grade A+ rating outlook.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1101",
+    "published_at": "2026-10-02T21:35:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1102",
+    "source_type": "financial_news",
+    "source_name": "Wall Street Journal Synthetic",
+    "headline": "Rating Agencies Upgrade NextEra Energy Inc. to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of NextEra Energy Inc. (NEE) senior unsecured debt from A+ to AA-. Analysts highlighted si...",
+    "content": "Major credit rating agencies announced an upgrade of NextEra Energy Inc. (NEE) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1102",
+    "published_at": "2026-10-02T10:23:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1103",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "SEC and Justice Department Launch Joint Probe into NVIDIA Corporation Accounting Practices",
+    "description": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to NVIDIA Corporation (NVDA) regarding revenue recogn...",
+    "content": "Federal prosecutors and the Securities and Exchange Commission issued formal subpoenas to NVIDIA Corporation (NVDA) regarding revenue recognition accounting in its subscription division. The audit committee confirmed an independent special inquiry, sparking widespread market volatility.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1103",
+    "published_at": "2026-09-28T11:31:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "NVIDIA Corporation"
+    ],
+    "ticker_symbols": [
+      "NVDA"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1104",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Central Bank Maintains Benchmark Interest Rate in Balanced Policy Statement",
+    "description": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Pol...",
+    "content": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark overnight borrowing rates steady. Policymakers noted balanced labor market indicators and reiterated a data-dependent stance regarding upcoming inflation prints.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1104",
+    "published_at": "2026-09-28T19:19:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1105",
+    "source_type": "financial_news",
+    "source_name": "Wall Street Journal Synthetic",
+    "headline": "Wholesale Interbank Liquidity Tightens as Short-Term Commercial Paper Spreads Widen",
+    "description": "Treasury bill issuance and quarterly corporate tax outflows contributed to temporary liquidity strains in overnight money markets. The centr...",
+    "content": "Treasury bill issuance and quarterly corporate tax outflows contributed to temporary liquidity strains in overnight money markets. The central bank opened temporary repo liquidity facilities to stabilize interbank funding conditions.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1105",
+    "published_at": "2026-09-28T05:18:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1106",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Central Bank Unexpectedly Hikes Policy Rate by 50 Basis Points to Curb Sticky Inflation",
+    "description": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as ...",
+    "content": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as commercial banks recalibrated prime lending rates, increasing corporate borrowing costs across the economy.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1106",
+    "published_at": "2026-10-08T11:37:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1107",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "Bank of America Corp. Unveils Next-Gen AI Infrastructure Platform in Commercial Breakthrough",
+    "description": "At its annual flagship developer keynote, Bank of America Corp. (BAC) unveiled an innovative high-performance platform engineered for enterp...",
+    "content": "At its annual flagship developer keynote, Bank of America Corp. (BAC) unveiled an innovative high-performance platform engineered for enterprise scalability. Early benchmark testing indicates 40% performance gains over incumbent solutions, attracting multi-year adoption commitments from global Fortune 500 corporations.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1107",
+    "published_at": "2026-10-08T09:44:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1108",
+    "source_type": "financial_news",
+    "source_name": "Wall Street Journal Synthetic",
+    "headline": "Pfizer Inc. Secures Landmark $3.8 Billion Defense and Industrial Cloud Contract",
+    "description": "Pfizer Inc. (PFE) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bolsters...",
+    "content": "Pfizer Inc. (PFE) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bolsters backlog visibility through 2029, prompting credit rating agencies to reaffirm an investment-grade A+ rating outlook.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1108",
+    "published_at": "2026-10-04T15:27:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1109",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Rating Agencies Upgrade Amazon.com Inc. to AA- Following Deleveraging and Record Cash Flows",
+    "description": "Major credit rating agencies announced an upgrade of Amazon.com Inc. (AMZN) senior unsecured debt from A+ to AA-. Analysts highlighted signi...",
+    "content": "Major credit rating agencies announced an upgrade of Amazon.com Inc. (AMZN) senior unsecured debt from A+ to AA-. Analysts highlighted significant balance sheet deleveraging, resilient operating margins, and consistent free cash flow generation exceeding $12 billion annually.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1109",
+    "published_at": "2026-10-03T00:56:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Amazon.com Inc."
+    ],
+    "ticker_symbols": [
+      "AMZN"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Discretionary"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1110",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Central Bank Unexpectedly Hikes Policy Rate by 50 Basis Points to Curb Sticky Inflation",
+    "description": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as ...",
+    "content": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 bps. Yield curves steepened sharply as commercial banks recalibrated prime lending rates, increasing corporate borrowing costs across the economy.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1110",
+    "published_at": "2026-10-04T20:01:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1111",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Antitrust Regulators File Formal Injunction Against Johnson & Johnson Over Market Dominance",
+    "description": "Federal antitrust authorities initiated formal litigation against Johnson & Johnson (JNJ), alleging anti-competitive practices and exclusive...",
+    "content": "Federal antitrust authorities initiated formal litigation against Johnson & Johnson (JNJ), alleging anti-competitive practices and exclusive distribution agreements. The legal action seeks civil fines of up to $2.2 billion and potential structural operational remedies, sending shares lower in pre-market trading.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1111",
+    "published_at": "2026-10-09T16:27:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1112",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Factory Shutdowns and Chip Bottlenecks Force Walmart Inc. to Slash Annual Guidance",
+    "description": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Walmart Inc. (WMT) to curtail output for the upcoming f...",
+    "content": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Walmart Inc. (WMT) to curtail output for the upcoming fiscal quarter. Management revised operating margin targets downward by 250 basis points, warning of elevated freight and raw component costs.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1112",
+    "published_at": "2026-10-04T13:05:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1113",
+    "source_type": "financial_news",
+    "source_name": "Dow Jones Newswire Synthetic",
+    "headline": "Apple Inc. Discloses Critical Data Breach and Unauthorized System Access",
+    "description": "Apple Inc. (AAPL) filed an 8-K disclosure acknowledging a sophisticated ransomware and data breach incident that compromised encrypted custo...",
+    "content": "Apple Inc. (AAPL) filed an 8-K disclosure acknowledging a sophisticated ransomware and data breach incident that compromised encrypted customer records and disrupted internal IT workflows. Management halted affected customer portals and retained forensic cybersecurity investigators.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1113",
+    "published_at": "2026-10-07T20:45:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1114",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Bank of America Corp. Secures Landmark $3.8 Billion Defense and Industrial Cloud Contract",
+    "description": "Bank of America Corp. (BAC) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantiall...",
+    "content": "Bank of America Corp. (BAC) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bolsters backlog visibility through 2029, prompting credit rating agencies to reaffirm an investment-grade A+ rating outlook.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1114",
+    "published_at": "2026-09-30T18:53:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1115",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Factory Shutdowns and Chip Bottlenecks Force Procter & Gamble Co. to Slash Annual Guidance",
+    "description": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Procter & Gamble Co. (PG) to curtail output for the upc...",
+    "content": "Persistent logistical bottlenecks and overseas manufacturing disruptions have forced Procter & Gamble Co. (PG) to curtail output for the upcoming fiscal quarter. Management revised operating margin targets downward by 250 basis points, warning of elevated freight and raw component costs.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1115",
+    "published_at": "2026-09-28T01:52:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1116",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Microsoft Corporation Unveils Next-Gen AI Infrastructure Platform in Commercial Breakthrough",
+    "description": "At its annual flagship developer keynote, Microsoft Corporation (MSFT) unveiled an innovative high-performance platform engineered for enter...",
+    "content": "At its annual flagship developer keynote, Microsoft Corporation (MSFT) unveiled an innovative high-performance platform engineered for enterprise scalability. Early benchmark testing indicates 40% performance gains over incumbent solutions, attracting multi-year adoption commitments from global Fortune 500 corporations.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1116",
+    "published_at": "2026-10-07T10:47:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1117",
+    "source_type": "financial_news",
+    "source_name": "CNBC Market Alert",
+    "headline": "Wholesale Interbank Liquidity Tightens as Short-Term Commercial Paper Spreads Widen",
+    "description": "Treasury bill issuance and quarterly corporate tax outflows contributed to temporary liquidity strains in overnight money markets. The centr...",
+    "content": "Treasury bill issuance and quarterly corporate tax outflows contributed to temporary liquidity strains in overnight money markets. The central bank opened temporary repo liquidity facilities to stabilize interbank funding conditions.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1117",
+    "published_at": "2026-10-02T10:33:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1118",
+    "source_type": "financial_news",
+    "source_name": "Bloomberg MarketPulse",
+    "headline": "Pfizer Inc. Secures Landmark $3.8 Billion Defense and Industrial Cloud Contract",
+    "description": "Pfizer Inc. (PFE) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bolsters...",
+    "content": "Pfizer Inc. (PFE) announced a definitive multi-year strategic procurement award valued at $3.8 billion. The agreement substantially bolsters backlog visibility through 2029, prompting credit rating agencies to reaffirm an investment-grade A+ rating outlook.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1118",
+    "published_at": "2026-10-01T01:28:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  },
+  {
+    "article_id": "news-synth-1119",
+    "source_type": "financial_news",
+    "source_name": "Reuters Synthetic Wire",
+    "headline": "Antitrust Regulators File Formal Injunction Against Apple Inc. Over Market Dominance",
+    "description": "Federal antitrust authorities initiated formal litigation against Apple Inc. (AAPL), alleging anti-competitive practices and exclusive distr...",
+    "content": "Federal antitrust authorities initiated formal litigation against Apple Inc. (AAPL), alleging anti-competitive practices and exclusive distribution agreements. The legal action seeks civil fines of up to $2.2 billion and potential structural operational remedies, sending shares lower in pre-market trading.",
+    "url": "https://synthetic-financial-wire.internal/articles/news-synth-1119",
+    "published_at": "2026-10-02T13:03:25.438385",
+    "ingested_at": "2026-10-10T20:16:25.438385",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Synthetic Financial News Wire"
+  }
+]

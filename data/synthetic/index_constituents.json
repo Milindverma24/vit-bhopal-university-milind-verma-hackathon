@@ -1,0 +1,190 @@
+[
+  {
+    "ticker": "AAPL",
+    "name": "Apple Inc.",
+    "sector": "Technology",
+    "country": "USA",
+    "base_weight": 0.0667,
+    "aliases": [
+      "Apple",
+      "AAPL",
+      "iPhone maker",
+      "Apple Inc"
+    ]
+  },
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft Corporation",
+    "sector": "Technology",
+    "country": "USA",
+    "base_weight": 0.0667,
+    "aliases": [
+      "Microsoft",
+      "MSFT",
+      "Windows maker",
+      "Azure",
+      "Microsoft Corp"
+    ]
+  },
+  {
+    "ticker": "NVDA",
+    "name": "NVIDIA Corporation",
+    "sector": "Technology",
+    "country": "USA",
+    "base_weight": 0.0667,
+    "aliases": [
+      "Nvidia",
+      "NVDA",
+      "Nvidia Corp",
+      "NVIDIA"
+    ]
+  },
+  {
+    "ticker": "JPM",
+    "name": "JPMorgan Chase & Co.",
+    "sector": "Financial Services",
+    "country": "USA",
+    "base_weight": 0.0667,
+    "aliases": [
+      "JPMorgan",
+      "JPMorgan Chase",
+      "JPM",
+      "JP Morgan",
+      "Chase"
+    ]
+  },
+  {
+    "ticker": "BAC",
+    "name": "Bank of America Corp.",
+    "sector": "Financial Services",
+    "country": "USA",
+    "base_weight": 0.0667,
+    "aliases": [
+      "Bank of America",
+      "BAC",
+      "BofA"
+    ]
+  },
+  {
+    "ticker": "XOM",
+    "name": "Exxon Mobil Corporation",
+    "sector": "Energy",
+    "country": "USA",
+    "base_weight": 0.0667,
+    "aliases": [
+      "ExxonMobil",
+      "Exxon",
+      "XOM",
+      "Exxon Mobil"
+    ]
+  },
+  {
+    "ticker": "CVX",
+    "name": "Chevron Corporation",
+    "sector": "Energy",
+    "country": "USA",
+    "base_weight": 0.0667,
+    "aliases": [
+      "Chevron",
+      "CVX",
+      "Chevron Corp"
+    ]
+  },
+  {
+    "ticker": "JNJ",
+    "name": "Johnson & Johnson",
+    "sector": "Healthcare",
+    "country": "USA",
+    "base_weight": 0.0667,
+    "aliases": [
+      "Johnson & Johnson",
+      "JNJ",
+      "J&J"
+    ]
+  },
+  {
+    "ticker": "PFE",
+    "name": "Pfizer Inc.",
+    "sector": "Healthcare",
+    "country": "USA",
+    "base_weight": 0.0667,
+    "aliases": [
+      "Pfizer",
+      "PFE",
+      "Pfizer Inc"
+    ]
+  },
+  {
+    "ticker": "AMZN",
+    "name": "Amazon.com Inc.",
+    "sector": "Consumer Discretionary",
+    "country": "USA",
+    "base_weight": 0.0667,
+    "aliases": [
+      "Amazon",
+      "AMZN",
+      "Amazon.com",
+      "AWS"
+    ]
+  },
+  {
+    "ticker": "WMT",
+    "name": "Walmart Inc.",
+    "sector": "Consumer Staples",
+    "country": "USA",
+    "base_weight": 0.0667,
+    "aliases": [
+      "Walmart",
+      "WMT",
+      "Wal-Mart"
+    ]
+  },
+  {
+    "ticker": "PG",
+    "name": "Procter & Gamble Co.",
+    "sector": "Consumer Staples",
+    "country": "USA",
+    "base_weight": 0.0667,
+    "aliases": [
+      "Procter & Gamble",
+      "PG",
+      "P&G"
+    ]
+  },
+  {
+    "ticker": "CAT",
+    "name": "Caterpillar Inc.",
+    "sector": "Industrials",
+    "country": "USA",
+    "base_weight": 0.0667,
+    "aliases": [
+      "Caterpillar",
+      "CAT",
+      "Caterpillar Inc"
+    ]
+  },
+  {
+    "ticker": "LMT",
+    "name": "Lockheed Martin Corp.",
+    "sector": "Industrials",
+    "country": "USA",
+    "base_weight": 0.0667,
+    "aliases": [
+      "Lockheed Martin",
+      "LMT",
+      "Lockheed"
+    ]
+  },
+  {
+    "ticker": "NEE",
+    "name": "NextEra Energy Inc.",
+    "sector": "Utilities",
+    "country": "USA",
+    "base_weight": 0.0662,
+    "aliases": [
+      "NextEra Energy",
+      "NEE",
+      "NextEra"
+    ]
+  }
+]

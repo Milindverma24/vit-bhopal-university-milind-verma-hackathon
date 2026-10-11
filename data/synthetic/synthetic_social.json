@@ -1,0 +1,3002 @@
+[
+  {
+    "article_id": "social-synth-2000",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $PG",
+    "description": "Supply chain bottlenecks are going to crush margins for $PG next quarter. De-risking my portfolio allocation.",
+    "content": "Supply chain bottlenecks are going to crush margins for $PG next quarter. De-risking my portfolio allocation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2000",
+    "published_at": "2026-10-10T10:03:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2001",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $AAPL",
+    "description": "Credit default swap spreads widening on $AAPL. Rising debt rollover costs create refinancing headwinds.",
+    "content": "Credit default swap spreads widening on $AAPL. Rising debt rollover costs create refinancing headwinds.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2001",
+    "published_at": "2026-10-08T14:33:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2002",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $JNJ",
+    "description": "DOJ antitrust scrutiny into Johnson & Johnson ($JNJ) expanding. Expecting legal overhang to depress multiples.",
+    "content": "DOJ antitrust scrutiny into Johnson & Johnson ($JNJ) expanding. Expecting legal overhang to depress multiples.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2002",
+    "published_at": "2026-10-03T22:03:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2003",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $PFE",
+    "description": "Major cyber incident confirmed at Pfizer Inc. ($PFE). Expecting significant regulatory penalties and reputational hit.",
+    "content": "Major cyber incident confirmed at Pfizer Inc. ($PFE). Expecting significant regulatory penalties and reputational hit.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2003",
+    "published_at": "2026-10-04T20:43:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2004",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $CVX",
+    "description": "Credit default swap spreads widening on $CVX. Rising debt rollover costs create refinancing headwinds.",
+    "content": "Credit default swap spreads widening on $CVX. Rising debt rollover costs create refinancing headwinds.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2004",
+    "published_at": "2026-10-03T23:34:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Chevron Corporation"
+    ],
+    "ticker_symbols": [
+      "CVX"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2005",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $NVDA",
+    "description": "Institutional rebalancing flows in $NVDA ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "content": "Institutional rebalancing flows in $NVDA ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2005",
+    "published_at": "2026-10-10T08:17:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NVIDIA Corporation"
+    ],
+    "ticker_symbols": [
+      "NVDA"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2006",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $NVDA",
+    "description": "The new enterprise rollout from NVIDIA Corporation ($NVDA) is a game changer for efficiency. Cloud adoption numbers look stellar this quarter.",
+    "content": "The new enterprise rollout from NVIDIA Corporation ($NVDA) is a game changer for efficiency. Cloud adoption numbers look stellar this quarter.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2006",
+    "published_at": "2026-10-05T03:48:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NVIDIA Corporation"
+    ],
+    "ticker_symbols": [
+      "NVDA"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2007",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $PFE",
+    "description": "Big institutional block buys detected in $PFE. Rating agency upgrade provides strong credit validation.",
+    "content": "Big institutional block buys detected in $PFE. Rating agency upgrade provides strong credit validation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2007",
+    "published_at": "2026-10-10T17:01:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2008",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $JPM",
+    "description": "Trading volume in $JPM is unusually quiet ahead of the CPI inflation print tomorrow. Waiting on macro clarity.",
+    "content": "Trading volume in $JPM is unusually quiet ahead of the CPI inflation print tomorrow. Waiting on macro clarity.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2008",
+    "published_at": "2026-10-09T07:11:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2009",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $PG",
+    "description": "Big institutional block buys detected in $PG. Rating agency upgrade provides strong credit validation.",
+    "content": "Big institutional block buys detected in $PG. Rating agency upgrade provides strong credit validation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2009",
+    "published_at": "2026-10-07T18:03:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2010",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $NEE",
+    "description": "Big institutional block buys detected in $NEE. Rating agency upgrade provides strong credit validation.",
+    "content": "Big institutional block buys detected in $NEE. Rating agency upgrade provides strong credit validation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2010",
+    "published_at": "2026-10-04T15:39:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2011",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $JNJ",
+    "description": "$JNJ just reported huge numbers! Revenue beat by 8% and operating margins are expanding rapidly. Long-term bull case intact. \ud83d\ude80\ud83d\udcc8 #investing",
+    "content": "$JNJ just reported huge numbers! Revenue beat by 8% and operating margins are expanding rapidly. Long-term bull case intact. \ud83d\ude80\ud83d\udcc8 #investing",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2011",
+    "published_at": "2026-10-09T04:16:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2012",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $AAPL",
+    "description": "Impressive product execution from Apple Inc. ($AAPL). Margins expanding faster than consensus anticipated. Accumulating on any dip.",
+    "content": "Impressive product execution from Apple Inc. ($AAPL). Margins expanding faster than consensus anticipated. Accumulating on any dip.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2012",
+    "published_at": "2026-10-04T14:26:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2013",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $NVDA",
+    "description": "Major cyber incident confirmed at NVIDIA Corporation ($NVDA). Expecting significant regulatory penalties and reputational hit.",
+    "content": "Major cyber incident confirmed at NVIDIA Corporation ($NVDA). Expecting significant regulatory penalties and reputational hit.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2013",
+    "published_at": "2026-10-08T17:37:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NVIDIA Corporation"
+    ],
+    "ticker_symbols": [
+      "NVDA"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2014",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $NEE",
+    "description": "DOJ antitrust scrutiny into NextEra Energy Inc. ($NEE) expanding. Expecting legal overhang to depress multiples.",
+    "content": "DOJ antitrust scrutiny into NextEra Energy Inc. ($NEE) expanding. Expecting legal overhang to depress multiples.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2014",
+    "published_at": "2026-10-04T17:23:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2015",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $NVDA",
+    "description": "Institutional rebalancing flows in $NVDA ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "content": "Institutional rebalancing flows in $NVDA ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2015",
+    "published_at": "2026-10-06T00:49:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NVIDIA Corporation"
+    ],
+    "ticker_symbols": [
+      "NVDA"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2016",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $PFE",
+    "description": "$PFE just reported huge numbers! Revenue beat by 8% and operating margins are expanding rapidly. Long-term bull case intact. \ud83d\ude80\ud83d\udcc8 #investing",
+    "content": "$PFE just reported huge numbers! Revenue beat by 8% and operating margins are expanding rapidly. Long-term bull case intact. \ud83d\ude80\ud83d\udcc8 #investing",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2016",
+    "published_at": "2026-10-09T22:59:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2017",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $JNJ",
+    "description": "Disastrous earnings miss from $JNJ. Operating expenses surged 30% and forward guidance was completely pulled. Bearish.",
+    "content": "Disastrous earnings miss from $JNJ. Operating expenses surged 30% and forward guidance was completely pulled. Bearish.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2017",
+    "published_at": "2026-10-04T01:55:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2018",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $NEE",
+    "description": "Strong balance sheet and free cash flow generation make $NEE an absolute defensive pillar in this market.",
+    "content": "Strong balance sheet and free cash flow generation make $NEE an absolute defensive pillar in this market.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2018",
+    "published_at": "2026-10-09T04:45:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2019",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $PFE",
+    "description": "Fed rate decision today is the main driver for $PFE and the broader index. Watching Treasury yields closely.",
+    "content": "Fed rate decision today is the main driver for $PFE and the broader index. Watching Treasury yields closely.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2019",
+    "published_at": "2026-10-06T09:39:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2020",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $XOM",
+    "description": "DOJ antitrust scrutiny into Exxon Mobil Corporation ($XOM) expanding. Expecting legal overhang to depress multiples.",
+    "content": "DOJ antitrust scrutiny into Exxon Mobil Corporation ($XOM) expanding. Expecting legal overhang to depress multiples.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2020",
+    "published_at": "2026-10-07T18:18:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Exxon Mobil Corporation"
+    ],
+    "ticker_symbols": [
+      "XOM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2021",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $AAPL",
+    "description": "Supply chain bottlenecks are going to crush margins for $AAPL next quarter. De-risking my portfolio allocation.",
+    "content": "Supply chain bottlenecks are going to crush margins for $AAPL next quarter. De-risking my portfolio allocation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2021",
+    "published_at": "2026-10-03T22:17:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2022",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $NEE",
+    "description": "Supply chain bottlenecks are going to crush margins for $NEE next quarter. De-risking my portfolio allocation.",
+    "content": "Supply chain bottlenecks are going to crush margins for $NEE next quarter. De-risking my portfolio allocation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2022",
+    "published_at": "2026-10-04T02:56:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2023",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $AMZN",
+    "description": "Disastrous earnings miss from $AMZN. Operating expenses surged 30% and forward guidance was completely pulled. Bearish.",
+    "content": "Disastrous earnings miss from $AMZN. Operating expenses surged 30% and forward guidance was completely pulled. Bearish.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2023",
+    "published_at": "2026-10-06T13:26:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Amazon.com Inc."
+    ],
+    "ticker_symbols": [
+      "AMZN"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Discretionary"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2024",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $CAT",
+    "description": "Credit default swap spreads widening on $CAT. Rising debt rollover costs create refinancing headwinds.",
+    "content": "Credit default swap spreads widening on $CAT. Rising debt rollover costs create refinancing headwinds.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2024",
+    "published_at": "2026-10-07T20:17:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2025",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $LMT",
+    "description": "Institutional rebalancing flows in $LMT ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "content": "Institutional rebalancing flows in $LMT ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2025",
+    "published_at": "2026-10-10T19:36:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Lockheed Martin Corp."
+    ],
+    "ticker_symbols": [
+      "LMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2026",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $AAPL",
+    "description": "Major cyber incident confirmed at Apple Inc. ($AAPL). Expecting significant regulatory penalties and reputational hit.",
+    "content": "Major cyber incident confirmed at Apple Inc. ($AAPL). Expecting significant regulatory penalties and reputational hit.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2026",
+    "published_at": "2026-10-09T14:43:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2027",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $JPM",
+    "description": "Supply chain bottlenecks are going to crush margins for $JPM next quarter. De-risking my portfolio allocation.",
+    "content": "Supply chain bottlenecks are going to crush margins for $JPM next quarter. De-risking my portfolio allocation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2027",
+    "published_at": "2026-10-05T16:12:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2028",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $JNJ",
+    "description": "Disastrous earnings miss from $JNJ. Operating expenses surged 30% and forward guidance was completely pulled. Bearish.",
+    "content": "Disastrous earnings miss from $JNJ. Operating expenses surged 30% and forward guidance was completely pulled. Bearish.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2028",
+    "published_at": "2026-10-05T20:22:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2029",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $MSFT",
+    "description": "Strong balance sheet and free cash flow generation make $MSFT an absolute defensive pillar in this market.",
+    "content": "Strong balance sheet and free cash flow generation make $MSFT an absolute defensive pillar in this market.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2029",
+    "published_at": "2026-10-09T23:25:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2030",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $NVDA",
+    "description": "Disastrous earnings miss from $NVDA. Operating expenses surged 30% and forward guidance was completely pulled. Bearish.",
+    "content": "Disastrous earnings miss from $NVDA. Operating expenses surged 30% and forward guidance was completely pulled. Bearish.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2030",
+    "published_at": "2026-10-07T05:58:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NVIDIA Corporation"
+    ],
+    "ticker_symbols": [
+      "NVDA"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2031",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $NVDA",
+    "description": "Credit default swap spreads widening on $NVDA. Rising debt rollover costs create refinancing headwinds.",
+    "content": "Credit default swap spreads widening on $NVDA. Rising debt rollover costs create refinancing headwinds.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2031",
+    "published_at": "2026-10-03T20:52:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NVIDIA Corporation"
+    ],
+    "ticker_symbols": [
+      "NVDA"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2032",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $WMT",
+    "description": "$WMT just reported huge numbers! Revenue beat by 8% and operating margins are expanding rapidly. Long-term bull case intact. \ud83d\ude80\ud83d\udcc8 #investing",
+    "content": "$WMT just reported huge numbers! Revenue beat by 8% and operating margins are expanding rapidly. Long-term bull case intact. \ud83d\ude80\ud83d\udcc8 #investing",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2032",
+    "published_at": "2026-10-04T09:41:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2033",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $MSFT",
+    "description": "Trading volume in $MSFT is unusually quiet ahead of the CPI inflation print tomorrow. Waiting on macro clarity.",
+    "content": "Trading volume in $MSFT is unusually quiet ahead of the CPI inflation print tomorrow. Waiting on macro clarity.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2033",
+    "published_at": "2026-10-06T16:51:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2034",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $WMT",
+    "description": "$WMT is tumbling after the SEC subpoena news. Serious questions on revenue recognition. Cutting exposure immediately. \u26a0\ufe0f #risk",
+    "content": "$WMT is tumbling after the SEC subpoena news. Serious questions on revenue recognition. Cutting exposure immediately. \u26a0\ufe0f #risk",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2034",
+    "published_at": "2026-10-06T18:27:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2035",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $AAPL",
+    "description": "Market looks range-bound. Mixed signals on $AAPL with solid domestic sales offset by weaker European demand.",
+    "content": "Market looks range-bound. Mixed signals on $AAPL with solid domestic sales offset by weaker European demand.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2035",
+    "published_at": "2026-10-04T14:05:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2036",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $BAC",
+    "description": "Big institutional block buys detected in $BAC. Rating agency upgrade provides strong credit validation.",
+    "content": "Big institutional block buys detected in $BAC. Rating agency upgrade provides strong credit validation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2036",
+    "published_at": "2026-10-06T22:54:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2037",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $AAPL",
+    "description": "DOJ antitrust scrutiny into Apple Inc. ($AAPL) expanding. Expecting legal overhang to depress multiples.",
+    "content": "DOJ antitrust scrutiny into Apple Inc. ($AAPL) expanding. Expecting legal overhang to depress multiples.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2037",
+    "published_at": "2026-10-04T02:16:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2038",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $CAT",
+    "description": "Big institutional block buys detected in $CAT. Rating agency upgrade provides strong credit validation.",
+    "content": "Big institutional block buys detected in $CAT. Rating agency upgrade provides strong credit validation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2038",
+    "published_at": "2026-10-04T01:37:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2039",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $JNJ",
+    "description": "Credit default swap spreads widening on $JNJ. Rising debt rollover costs create refinancing headwinds.",
+    "content": "Credit default swap spreads widening on $JNJ. Rising debt rollover costs create refinancing headwinds.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2039",
+    "published_at": "2026-10-05T18:33:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2040",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $PFE",
+    "description": "Supply chain bottlenecks are going to crush margins for $PFE next quarter. De-risking my portfolio allocation.",
+    "content": "Supply chain bottlenecks are going to crush margins for $PFE next quarter. De-risking my portfolio allocation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2040",
+    "published_at": "2026-10-09T13:08:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2041",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $BAC",
+    "description": "Disastrous earnings miss from $BAC. Operating expenses surged 30% and forward guidance was completely pulled. Bearish.",
+    "content": "Disastrous earnings miss from $BAC. Operating expenses surged 30% and forward guidance was completely pulled. Bearish.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2041",
+    "published_at": "2026-10-07T08:13:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2042",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $JPM",
+    "description": "Institutional rebalancing flows in $JPM ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "content": "Institutional rebalancing flows in $JPM ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2042",
+    "published_at": "2026-10-09T00:47:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2043",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $JNJ",
+    "description": "Big institutional block buys detected in $JNJ. Rating agency upgrade provides strong credit validation.",
+    "content": "Big institutional block buys detected in $JNJ. Rating agency upgrade provides strong credit validation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2043",
+    "published_at": "2026-10-05T13:12:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2044",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $PFE",
+    "description": "DOJ antitrust scrutiny into Pfizer Inc. ($PFE) expanding. Expecting legal overhang to depress multiples.",
+    "content": "DOJ antitrust scrutiny into Pfizer Inc. ($PFE) expanding. Expecting legal overhang to depress multiples.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2044",
+    "published_at": "2026-10-06T07:12:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2045",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $PG",
+    "description": "Institutional rebalancing flows in $PG ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "content": "Institutional rebalancing flows in $PG ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2045",
+    "published_at": "2026-10-05T10:16:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2046",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $AAPL",
+    "description": "The new enterprise rollout from Apple Inc. ($AAPL) is a game changer for efficiency. Cloud adoption numbers look stellar this quarter.",
+    "content": "The new enterprise rollout from Apple Inc. ($AAPL) is a game changer for efficiency. Cloud adoption numbers look stellar this quarter.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2046",
+    "published_at": "2026-10-10T20:04:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2047",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $MSFT",
+    "description": "Big institutional block buys detected in $MSFT. Rating agency upgrade provides strong credit validation.",
+    "content": "Big institutional block buys detected in $MSFT. Rating agency upgrade provides strong credit validation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2047",
+    "published_at": "2026-10-06T10:27:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2048",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $MSFT",
+    "description": "Institutional rebalancing flows in $MSFT ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "content": "Institutional rebalancing flows in $MSFT ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2048",
+    "published_at": "2026-10-08T00:26:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2049",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $JNJ",
+    "description": "The new enterprise rollout from Johnson & Johnson ($JNJ) is a game changer for efficiency. Cloud adoption numbers look stellar this quarter.",
+    "content": "The new enterprise rollout from Johnson & Johnson ($JNJ) is a game changer for efficiency. Cloud adoption numbers look stellar this quarter.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2049",
+    "published_at": "2026-10-05T23:43:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2050",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $CVX",
+    "description": "Credit default swap spreads widening on $CVX. Rising debt rollover costs create refinancing headwinds.",
+    "content": "Credit default swap spreads widening on $CVX. Rising debt rollover costs create refinancing headwinds.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2050",
+    "published_at": "2026-10-07T10:30:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Chevron Corporation"
+    ],
+    "ticker_symbols": [
+      "CVX"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2051",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $AMZN",
+    "description": "DOJ antitrust scrutiny into Amazon.com Inc. ($AMZN) expanding. Expecting legal overhang to depress multiples.",
+    "content": "DOJ antitrust scrutiny into Amazon.com Inc. ($AMZN) expanding. Expecting legal overhang to depress multiples.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2051",
+    "published_at": "2026-10-10T18:35:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Amazon.com Inc."
+    ],
+    "ticker_symbols": [
+      "AMZN"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Discretionary"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2052",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $LMT",
+    "description": "Strong balance sheet and free cash flow generation make $LMT an absolute defensive pillar in this market.",
+    "content": "Strong balance sheet and free cash flow generation make $LMT an absolute defensive pillar in this market.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2052",
+    "published_at": "2026-10-06T16:42:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Lockheed Martin Corp."
+    ],
+    "ticker_symbols": [
+      "LMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2053",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $PFE",
+    "description": "Credit default swap spreads widening on $PFE. Rising debt rollover costs create refinancing headwinds.",
+    "content": "Credit default swap spreads widening on $PFE. Rising debt rollover costs create refinancing headwinds.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2053",
+    "published_at": "2026-10-05T04:53:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2054",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $CAT",
+    "description": "Fed rate decision today is the main driver for $CAT and the broader index. Watching Treasury yields closely.",
+    "content": "Fed rate decision today is the main driver for $CAT and the broader index. Watching Treasury yields closely.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2054",
+    "published_at": "2026-10-09T18:13:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2055",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $JNJ",
+    "description": "Supply chain bottlenecks are going to crush margins for $JNJ next quarter. De-risking my portfolio allocation.",
+    "content": "Supply chain bottlenecks are going to crush margins for $JNJ next quarter. De-risking my portfolio allocation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2055",
+    "published_at": "2026-10-09T14:11:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2056",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $MSFT",
+    "description": "Supply chain bottlenecks are going to crush margins for $MSFT next quarter. De-risking my portfolio allocation.",
+    "content": "Supply chain bottlenecks are going to crush margins for $MSFT next quarter. De-risking my portfolio allocation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2056",
+    "published_at": "2026-10-08T12:13:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2057",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $AMZN",
+    "description": "Major cyber incident confirmed at Amazon.com Inc. ($AMZN). Expecting significant regulatory penalties and reputational hit.",
+    "content": "Major cyber incident confirmed at Amazon.com Inc. ($AMZN). Expecting significant regulatory penalties and reputational hit.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2057",
+    "published_at": "2026-10-09T05:18:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Amazon.com Inc."
+    ],
+    "ticker_symbols": [
+      "AMZN"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Discretionary"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2058",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $WMT",
+    "description": "Fed pivot hints and cooling inflation data provide massive macro tailwinds for $WMT heading into next fiscal year.",
+    "content": "Fed pivot hints and cooling inflation data provide massive macro tailwinds for $WMT heading into next fiscal year.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2058",
+    "published_at": "2026-10-07T02:02:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2059",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $WMT",
+    "description": "Supply chain bottlenecks are going to crush margins for $WMT next quarter. De-risking my portfolio allocation.",
+    "content": "Supply chain bottlenecks are going to crush margins for $WMT next quarter. De-risking my portfolio allocation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2059",
+    "published_at": "2026-10-05T16:47:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2060",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $JNJ",
+    "description": "Supply chain bottlenecks are going to crush margins for $JNJ next quarter. De-risking my portfolio allocation.",
+    "content": "Supply chain bottlenecks are going to crush margins for $JNJ next quarter. De-risking my portfolio allocation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2060",
+    "published_at": "2026-10-10T16:59:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2061",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $PG",
+    "description": "Fed rate decision today is the main driver for $PG and the broader index. Watching Treasury yields closely.",
+    "content": "Fed rate decision today is the main driver for $PG and the broader index. Watching Treasury yields closely.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2061",
+    "published_at": "2026-10-05T04:14:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2062",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $AAPL",
+    "description": "Major cyber incident confirmed at Apple Inc. ($AAPL). Expecting significant regulatory penalties and reputational hit.",
+    "content": "Major cyber incident confirmed at Apple Inc. ($AAPL). Expecting significant regulatory penalties and reputational hit.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2062",
+    "published_at": "2026-10-06T04:18:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2063",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $AMZN",
+    "description": "Big institutional block buys detected in $AMZN. Rating agency upgrade provides strong credit validation.",
+    "content": "Big institutional block buys detected in $AMZN. Rating agency upgrade provides strong credit validation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2063",
+    "published_at": "2026-10-05T13:07:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Amazon.com Inc."
+    ],
+    "ticker_symbols": [
+      "AMZN"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Discretionary"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2064",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $BAC",
+    "description": "Trading volume in $BAC is unusually quiet ahead of the CPI inflation print tomorrow. Waiting on macro clarity.",
+    "content": "Trading volume in $BAC is unusually quiet ahead of the CPI inflation print tomorrow. Waiting on macro clarity.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2064",
+    "published_at": "2026-10-05T22:45:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2065",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $JPM",
+    "description": "Institutional rebalancing flows in $JPM ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "content": "Institutional rebalancing flows in $JPM ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2065",
+    "published_at": "2026-10-09T18:16:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2066",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $BAC",
+    "description": "Strong balance sheet and free cash flow generation make $BAC an absolute defensive pillar in this market.",
+    "content": "Strong balance sheet and free cash flow generation make $BAC an absolute defensive pillar in this market.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2066",
+    "published_at": "2026-10-04T03:32:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2067",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $JNJ",
+    "description": "Disastrous earnings miss from $JNJ. Operating expenses surged 30% and forward guidance was completely pulled. Bearish.",
+    "content": "Disastrous earnings miss from $JNJ. Operating expenses surged 30% and forward guidance was completely pulled. Bearish.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2067",
+    "published_at": "2026-10-08T10:23:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2068",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $NVDA",
+    "description": "Strong balance sheet and free cash flow generation make $NVDA an absolute defensive pillar in this market.",
+    "content": "Strong balance sheet and free cash flow generation make $NVDA an absolute defensive pillar in this market.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2068",
+    "published_at": "2026-10-07T02:13:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NVIDIA Corporation"
+    ],
+    "ticker_symbols": [
+      "NVDA"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2069",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $PFE",
+    "description": "Supply chain bottlenecks are going to crush margins for $PFE next quarter. De-risking my portfolio allocation.",
+    "content": "Supply chain bottlenecks are going to crush margins for $PFE next quarter. De-risking my portfolio allocation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2069",
+    "published_at": "2026-10-04T00:35:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2070",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $JNJ",
+    "description": "The new enterprise rollout from Johnson & Johnson ($JNJ) is a game changer for efficiency. Cloud adoption numbers look stellar this quarter.",
+    "content": "The new enterprise rollout from Johnson & Johnson ($JNJ) is a game changer for efficiency. Cloud adoption numbers look stellar this quarter.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2070",
+    "published_at": "2026-10-06T04:11:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2071",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $PG",
+    "description": "Impressive product execution from Procter & Gamble Co. ($PG). Margins expanding faster than consensus anticipated. Accumulating on any dip.",
+    "content": "Impressive product execution from Procter & Gamble Co. ($PG). Margins expanding faster than consensus anticipated. Accumulating on any dip.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2071",
+    "published_at": "2026-10-06T21:04:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2072",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $NEE",
+    "description": "Trading volume in $NEE is unusually quiet ahead of the CPI inflation print tomorrow. Waiting on macro clarity.",
+    "content": "Trading volume in $NEE is unusually quiet ahead of the CPI inflation print tomorrow. Waiting on macro clarity.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2072",
+    "published_at": "2026-10-04T09:13:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2073",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $MSFT",
+    "description": "Trading volume in $MSFT is unusually quiet ahead of the CPI inflation print tomorrow. Waiting on macro clarity.",
+    "content": "Trading volume in $MSFT is unusually quiet ahead of the CPI inflation print tomorrow. Waiting on macro clarity.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2073",
+    "published_at": "2026-10-08T04:41:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2074",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $NVDA",
+    "description": "Credit default swap spreads widening on $NVDA. Rising debt rollover costs create refinancing headwinds.",
+    "content": "Credit default swap spreads widening on $NVDA. Rising debt rollover costs create refinancing headwinds.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2074",
+    "published_at": "2026-10-04T17:44:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NVIDIA Corporation"
+    ],
+    "ticker_symbols": [
+      "NVDA"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2075",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $AAPL",
+    "description": "$AAPL is tumbling after the SEC subpoena news. Serious questions on revenue recognition. Cutting exposure immediately. \u26a0\ufe0f #risk",
+    "content": "$AAPL is tumbling after the SEC subpoena news. Serious questions on revenue recognition. Cutting exposure immediately. \u26a0\ufe0f #risk",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2075",
+    "published_at": "2026-10-04T13:18:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2076",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $PFE",
+    "description": "$PFE is tumbling after the SEC subpoena news. Serious questions on revenue recognition. Cutting exposure immediately. \u26a0\ufe0f #risk",
+    "content": "$PFE is tumbling after the SEC subpoena news. Serious questions on revenue recognition. Cutting exposure immediately. \u26a0\ufe0f #risk",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2076",
+    "published_at": "2026-10-09T09:47:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2077",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $CAT",
+    "description": "Strong balance sheet and free cash flow generation make $CAT an absolute defensive pillar in this market.",
+    "content": "Strong balance sheet and free cash flow generation make $CAT an absolute defensive pillar in this market.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2077",
+    "published_at": "2026-10-10T04:16:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2078",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $CAT",
+    "description": "Credit default swap spreads widening on $CAT. Rising debt rollover costs create refinancing headwinds.",
+    "content": "Credit default swap spreads widening on $CAT. Rising debt rollover costs create refinancing headwinds.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2078",
+    "published_at": "2026-10-04T14:59:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2079",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $NEE",
+    "description": "Impressive product execution from NextEra Energy Inc. ($NEE). Margins expanding faster than consensus anticipated. Accumulating on any dip.",
+    "content": "Impressive product execution from NextEra Energy Inc. ($NEE). Margins expanding faster than consensus anticipated. Accumulating on any dip.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2079",
+    "published_at": "2026-10-06T05:31:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2080",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $PFE",
+    "description": "Fed pivot hints and cooling inflation data provide massive macro tailwinds for $PFE heading into next fiscal year.",
+    "content": "Fed pivot hints and cooling inflation data provide massive macro tailwinds for $PFE heading into next fiscal year.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2080",
+    "published_at": "2026-10-04T08:56:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2081",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $PFE",
+    "description": "Credit default swap spreads widening on $PFE. Rising debt rollover costs create refinancing headwinds.",
+    "content": "Credit default swap spreads widening on $PFE. Rising debt rollover costs create refinancing headwinds.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2081",
+    "published_at": "2026-10-05T13:20:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2082",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $JPM",
+    "description": "Supply chain bottlenecks are going to crush margins for $JPM next quarter. De-risking my portfolio allocation.",
+    "content": "Supply chain bottlenecks are going to crush margins for $JPM next quarter. De-risking my portfolio allocation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2082",
+    "published_at": "2026-10-04T20:17:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2083",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $AAPL",
+    "description": "Strong balance sheet and free cash flow generation make $AAPL an absolute defensive pillar in this market.",
+    "content": "Strong balance sheet and free cash flow generation make $AAPL an absolute defensive pillar in this market.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2083",
+    "published_at": "2026-10-07T06:17:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2084",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $BAC",
+    "description": "Fed rate decision today is the main driver for $BAC and the broader index. Watching Treasury yields closely.",
+    "content": "Fed rate decision today is the main driver for $BAC and the broader index. Watching Treasury yields closely.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2084",
+    "published_at": "2026-10-07T15:13:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2085",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $PG",
+    "description": "$PG is tumbling after the SEC subpoena news. Serious questions on revenue recognition. Cutting exposure immediately. \u26a0\ufe0f #risk",
+    "content": "$PG is tumbling after the SEC subpoena news. Serious questions on revenue recognition. Cutting exposure immediately. \u26a0\ufe0f #risk",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2085",
+    "published_at": "2026-10-09T15:32:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2086",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $JNJ",
+    "description": "Supply chain bottlenecks are going to crush margins for $JNJ next quarter. De-risking my portfolio allocation.",
+    "content": "Supply chain bottlenecks are going to crush margins for $JNJ next quarter. De-risking my portfolio allocation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2086",
+    "published_at": "2026-10-09T07:03:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Johnson & Johnson"
+    ],
+    "ticker_symbols": [
+      "JNJ"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2087",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $CVX",
+    "description": "Impressive product execution from Chevron Corporation ($CVX). Margins expanding faster than consensus anticipated. Accumulating on any dip.",
+    "content": "Impressive product execution from Chevron Corporation ($CVX). Margins expanding faster than consensus anticipated. Accumulating on any dip.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2087",
+    "published_at": "2026-10-07T20:06:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Chevron Corporation"
+    ],
+    "ticker_symbols": [
+      "CVX"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2088",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $BAC",
+    "description": "Fed pivot hints and cooling inflation data provide massive macro tailwinds for $BAC heading into next fiscal year.",
+    "content": "Fed pivot hints and cooling inflation data provide massive macro tailwinds for $BAC heading into next fiscal year.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2088",
+    "published_at": "2026-10-07T04:23:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2089",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $CAT",
+    "description": "Fed rate decision today is the main driver for $CAT and the broader index. Watching Treasury yields closely.",
+    "content": "Fed rate decision today is the main driver for $CAT and the broader index. Watching Treasury yields closely.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2089",
+    "published_at": "2026-10-08T23:35:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2090",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $CAT",
+    "description": "Credit default swap spreads widening on $CAT. Rising debt rollover costs create refinancing headwinds.",
+    "content": "Credit default swap spreads widening on $CAT. Rising debt rollover costs create refinancing headwinds.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2090",
+    "published_at": "2026-10-06T10:40:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2091",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $PFE",
+    "description": "Institutional rebalancing flows in $PFE ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "content": "Institutional rebalancing flows in $PFE ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2091",
+    "published_at": "2026-10-07T20:38:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2092",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $CVX",
+    "description": "Strong balance sheet and free cash flow generation make $CVX an absolute defensive pillar in this market.",
+    "content": "Strong balance sheet and free cash flow generation make $CVX an absolute defensive pillar in this market.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2092",
+    "published_at": "2026-10-09T00:41:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Chevron Corporation"
+    ],
+    "ticker_symbols": [
+      "CVX"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2093",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $PG",
+    "description": "Fed rate decision today is the main driver for $PG and the broader index. Watching Treasury yields closely.",
+    "content": "Fed rate decision today is the main driver for $PG and the broader index. Watching Treasury yields closely.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2093",
+    "published_at": "2026-10-06T01:54:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2094",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $WMT",
+    "description": "Strong balance sheet and free cash flow generation make $WMT an absolute defensive pillar in this market.",
+    "content": "Strong balance sheet and free cash flow generation make $WMT an absolute defensive pillar in this market.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2094",
+    "published_at": "2026-10-09T09:33:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Walmart Inc."
+    ],
+    "ticker_symbols": [
+      "WMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2095",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $AAPL",
+    "description": "Strong balance sheet and free cash flow generation make $AAPL an absolute defensive pillar in this market.",
+    "content": "Strong balance sheet and free cash flow generation make $AAPL an absolute defensive pillar in this market.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2095",
+    "published_at": "2026-10-08T14:12:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2096",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $PG",
+    "description": "DOJ antitrust scrutiny into Procter & Gamble Co. ($PG) expanding. Expecting legal overhang to depress multiples.",
+    "content": "DOJ antitrust scrutiny into Procter & Gamble Co. ($PG) expanding. Expecting legal overhang to depress multiples.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2096",
+    "published_at": "2026-10-06T04:08:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Procter & Gamble Co."
+    ],
+    "ticker_symbols": [
+      "PG"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Staples"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2097",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $BAC",
+    "description": "Major cyber incident confirmed at Bank of America Corp. ($BAC). Expecting significant regulatory penalties and reputational hit.",
+    "content": "Major cyber incident confirmed at Bank of America Corp. ($BAC). Expecting significant regulatory penalties and reputational hit.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2097",
+    "published_at": "2026-10-08T11:54:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Bank of America Corp."
+    ],
+    "ticker_symbols": [
+      "BAC"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2098",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $JPM",
+    "description": "Market looks range-bound. Mixed signals on $JPM with solid domestic sales offset by weaker European demand.",
+    "content": "Market looks range-bound. Mixed signals on $JPM with solid domestic sales offset by weaker European demand.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2098",
+    "published_at": "2026-10-08T10:46:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2099",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $CAT",
+    "description": "Trading volume in $CAT is unusually quiet ahead of the CPI inflation print tomorrow. Waiting on macro clarity.",
+    "content": "Trading volume in $CAT is unusually quiet ahead of the CPI inflation print tomorrow. Waiting on macro clarity.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2099",
+    "published_at": "2026-10-09T11:32:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2100",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $PFE",
+    "description": "Impressive product execution from Pfizer Inc. ($PFE). Margins expanding faster than consensus anticipated. Accumulating on any dip.",
+    "content": "Impressive product execution from Pfizer Inc. ($PFE). Margins expanding faster than consensus anticipated. Accumulating on any dip.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2100",
+    "published_at": "2026-10-09T03:09:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2101",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $NVDA",
+    "description": "Strong balance sheet and free cash flow generation make $NVDA an absolute defensive pillar in this market.",
+    "content": "Strong balance sheet and free cash flow generation make $NVDA an absolute defensive pillar in this market.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2101",
+    "published_at": "2026-10-08T07:26:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NVIDIA Corporation"
+    ],
+    "ticker_symbols": [
+      "NVDA"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2102",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $CAT",
+    "description": "Institutional rebalancing flows in $CAT ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "content": "Institutional rebalancing flows in $CAT ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2102",
+    "published_at": "2026-10-04T08:28:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2103",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $PFE",
+    "description": "DOJ antitrust scrutiny into Pfizer Inc. ($PFE) expanding. Expecting legal overhang to depress multiples.",
+    "content": "DOJ antitrust scrutiny into Pfizer Inc. ($PFE) expanding. Expecting legal overhang to depress multiples.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2103",
+    "published_at": "2026-10-08T13:14:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Pfizer Inc."
+    ],
+    "ticker_symbols": [
+      "PFE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Healthcare"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2104",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $NEE",
+    "description": "Market looks range-bound. Mixed signals on $NEE with solid domestic sales offset by weaker European demand.",
+    "content": "Market looks range-bound. Mixed signals on $NEE with solid domestic sales offset by weaker European demand.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2104",
+    "published_at": "2026-10-05T21:27:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2105",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $AMZN",
+    "description": "Big institutional block buys detected in $AMZN. Rating agency upgrade provides strong credit validation.",
+    "content": "Big institutional block buys detected in $AMZN. Rating agency upgrade provides strong credit validation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2105",
+    "published_at": "2026-10-05T05:24:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Amazon.com Inc."
+    ],
+    "ticker_symbols": [
+      "AMZN"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Discretionary"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2106",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $XOM",
+    "description": "The new enterprise rollout from Exxon Mobil Corporation ($XOM) is a game changer for efficiency. Cloud adoption numbers look stellar this quarter.",
+    "content": "The new enterprise rollout from Exxon Mobil Corporation ($XOM) is a game changer for efficiency. Cloud adoption numbers look stellar this quarter.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2106",
+    "published_at": "2026-10-06T14:55:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Exxon Mobil Corporation"
+    ],
+    "ticker_symbols": [
+      "XOM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2107",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $XOM",
+    "description": "The new enterprise rollout from Exxon Mobil Corporation ($XOM) is a game changer for efficiency. Cloud adoption numbers look stellar this quarter.",
+    "content": "The new enterprise rollout from Exxon Mobil Corporation ($XOM) is a game changer for efficiency. Cloud adoption numbers look stellar this quarter.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2107",
+    "published_at": "2026-10-08T04:01:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Exxon Mobil Corporation"
+    ],
+    "ticker_symbols": [
+      "XOM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Energy"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2108",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $AMZN",
+    "description": "Major cyber incident confirmed at Amazon.com Inc. ($AMZN). Expecting significant regulatory penalties and reputational hit.",
+    "content": "Major cyber incident confirmed at Amazon.com Inc. ($AMZN). Expecting significant regulatory penalties and reputational hit.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2108",
+    "published_at": "2026-10-06T20:55:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Amazon.com Inc."
+    ],
+    "ticker_symbols": [
+      "AMZN"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Consumer Discretionary"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2109",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $CAT",
+    "description": "$CAT just reported huge numbers! Revenue beat by 8% and operating margins are expanding rapidly. Long-term bull case intact. \ud83d\ude80\ud83d\udcc8 #investing",
+    "content": "$CAT just reported huge numbers! Revenue beat by 8% and operating margins are expanding rapidly. Long-term bull case intact. \ud83d\ude80\ud83d\udcc8 #investing",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2109",
+    "published_at": "2026-10-06T16:47:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Caterpillar Inc."
+    ],
+    "ticker_symbols": [
+      "CAT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2110",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $AAPL",
+    "description": "Supply chain bottlenecks are going to crush margins for $AAPL next quarter. De-risking my portfolio allocation.",
+    "content": "Supply chain bottlenecks are going to crush margins for $AAPL next quarter. De-risking my portfolio allocation.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2110",
+    "published_at": "2026-10-05T02:37:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2111",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $NEE",
+    "description": "Institutional rebalancing flows in $NEE ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "content": "Institutional rebalancing flows in $NEE ahead of quad-witching expiry. Volatility likely elevated into the close.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2111",
+    "published_at": "2026-10-04T01:58:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2112",
+    "source_type": "social_media",
+    "source_name": "MacroAlpha Social",
+    "headline": "Social Sentiment Alert: $AAPL",
+    "description": "Disastrous earnings miss from $AAPL. Operating expenses surged 30% and forward guidance was completely pulled. Bearish.",
+    "content": "Disastrous earnings miss from $AAPL. Operating expenses surged 30% and forward guidance was completely pulled. Bearish.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2112",
+    "published_at": "2026-10-06T22:54:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Apple Inc."
+    ],
+    "ticker_symbols": [
+      "AAPL"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2113",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $JPM",
+    "description": "Credit default swap spreads widening on $JPM. Rising debt rollover costs create refinancing headwinds.",
+    "content": "Credit default swap spreads widening on $JPM. Rising debt rollover costs create refinancing headwinds.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2113",
+    "published_at": "2026-10-08T15:02:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2114",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $MSFT",
+    "description": "Fed pivot hints and cooling inflation data provide massive macro tailwinds for $MSFT heading into next fiscal year.",
+    "content": "Fed pivot hints and cooling inflation data provide massive macro tailwinds for $MSFT heading into next fiscal year.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2114",
+    "published_at": "2026-10-07T13:10:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2115",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $NEE",
+    "description": "Strong balance sheet and free cash flow generation make $NEE an absolute defensive pillar in this market.",
+    "content": "Strong balance sheet and free cash flow generation make $NEE an absolute defensive pillar in this market.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2115",
+    "published_at": "2026-10-04T08:29:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "NextEra Energy Inc."
+    ],
+    "ticker_symbols": [
+      "NEE"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Utilities"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2116",
+    "source_type": "social_media",
+    "source_name": "StockTwits Stream",
+    "headline": "Social Sentiment Alert: $MSFT",
+    "description": "Trading volume in $MSFT is unusually quiet ahead of the CPI inflation print tomorrow. Waiting on macro clarity.",
+    "content": "Trading volume in $MSFT is unusually quiet ahead of the CPI inflation print tomorrow. Waiting on macro clarity.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2116",
+    "published_at": "2026-10-05T10:20:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Microsoft Corporation"
+    ],
+    "ticker_symbols": [
+      "MSFT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Technology"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2117",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $LMT",
+    "description": "Fed rate decision today is the main driver for $LMT and the broader index. Watching Treasury yields closely.",
+    "content": "Fed rate decision today is the main driver for $LMT and the broader index. Watching Treasury yields closely.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2117",
+    "published_at": "2026-10-09T03:54:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Lockheed Martin Corp."
+    ],
+    "ticker_symbols": [
+      "LMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2118",
+    "source_type": "social_media",
+    "source_name": "TraderDesk Social Sentiment",
+    "headline": "Social Sentiment Alert: $JPM",
+    "description": "Fed rate decision today is the main driver for $JPM and the broader index. Watching Treasury yields closely.",
+    "content": "Fed rate decision today is the main driver for $JPM and the broader index. Watching Treasury yields closely.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2118",
+    "published_at": "2026-10-08T02:05:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "JPMorgan Chase & Co."
+    ],
+    "ticker_symbols": [
+      "JPM"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Financial Services"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  },
+  {
+    "article_id": "social-synth-2119",
+    "source_type": "social_media",
+    "source_name": "FinTwit Verified Feed",
+    "headline": "Social Sentiment Alert: $LMT",
+    "description": "Strong balance sheet and free cash flow generation make $LMT an absolute defensive pillar in this market.",
+    "content": "Strong balance sheet and free cash flow generation make $LMT an absolute defensive pillar in this market.",
+    "url": "https://synthetic-social-wire.internal/posts/social-synth-2119",
+    "published_at": "2026-10-08T07:49:25.439880",
+    "ingested_at": "2026-10-10T20:16:25.439880",
+    "company_entities": [
+      "Lockheed Martin Corp."
+    ],
+    "ticker_symbols": [
+      "LMT"
+    ],
+    "country_entities": [
+      "USA"
+    ],
+    "sector_entities": [
+      "Industrials"
+    ],
+    "is_synthetic": true,
+    "data_source_label": "Simulated Financial Social Media Feed"
+  }
+]

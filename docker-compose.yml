@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./riskpulse.db
+      - FRONTEND_ORIGIN=http://localhost:5173
+      - ENABLE_EXTERNAL_NEWS=false
+      - ENABLE_PRETRAINED_NLP=false
+    volumes:
+      - ./data:/app/data
+      - ./backend/riskpulse.db:/app/riskpulse.db
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    restart: unless-stopped

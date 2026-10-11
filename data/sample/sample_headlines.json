@@ -1,0 +1,42 @@
+[
+  {
+    "category": "Corporate Earnings",
+    "ticker": "NVDA",
+    "headline": "NVIDIA Surpasses Q3 Revenue Forecasts on Surging Enterprise AI Demand",
+    "text": "NVIDIA Corporation delivered robust quarterly results this morning, outpacing consensus Wall Street expectations. Diluted EPS reached record highs as revenue expanded 18% year-over-year.",
+    "expected_sentiment": "Positive",
+    "expected_impact": 6
+  },
+  {
+    "category": "Regulatory Action",
+    "ticker": "AAPL",
+    "headline": "Antitrust Regulators File Formal Injunction Against Apple Over App Store Policies",
+    "text": "Federal antitrust authorities initiated formal litigation against Apple Inc., alleging anti-competitive practices and exclusive distribution agreements seeking civil fines of up to $2.2 billion.",
+    "expected_sentiment": "Negative",
+    "expected_impact": 7
+  },
+  {
+    "category": "Interest Rate Change",
+    "ticker": null,
+    "headline": "Central Bank Unexpectedly Hikes Policy Rate by 50 Basis Points to Curb Inflation",
+    "text": "In an emergency inter-meeting adjustment, monetary authorities raised the policy interest rate by 50 basis points. Yield curves steepened sharply as commercial banks recalibrated prime lending rates.",
+    "expected_sentiment": "Negative",
+    "expected_impact": 7
+  },
+  {
+    "category": "Cybersecurity Incident",
+    "ticker": "JPM",
+    "headline": "JPMorgan Discloses Critical Network Intrusion and Halts Affected Trading Portals",
+    "text": "JPMorgan Chase filed an 8-K disclosure acknowledging a sophisticated security breach that compromised internal account authentication services. Management retained third-party cybersecurity investigators.",
+    "expected_sentiment": "Negative",
+    "expected_impact": 8
+  },
+  {
+    "category": "Monetary Policy",
+    "ticker": null,
+    "headline": "Federal Reserve Holds Benchmark Overnight Borrowing Rates Steady at 5.25%",
+    "text": "The Federal Open Market Committee concluded its policy meeting by voting unanimously to hold benchmark rates steady, noting balanced employment conditions and progress on disinflation.",
+    "expected_sentiment": "Neutral",
+    "expected_impact": 4
+  }
+]
