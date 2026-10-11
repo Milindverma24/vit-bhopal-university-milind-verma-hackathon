@@ -200,14 +200,26 @@ def analyze_custom_text(payload: AnalyzeRequest, db: Session = Depends(get_db)):
 
     # Check for existing duplicate signal with identical headline and text
     norm_text = payload.text.strip().lower()
-    norm_hl = payload.headline.strip().lower()
-    existing_signal = db.query(RiskSignal).filter(
-        func.lower(RiskSignal.headline) == norm_hl,
-        func.lower(RiskSignal.text) == norm_text
-    ).first()
+    norm_hl = (payload.headline or "").strip().lower()
+    if norm_hl:
+        existing_signal = db.query(RiskSignal).filter(
+            func.lower(RiskSignal.headline) == norm_hl,
+            func.lower(RiskSignal.text) == norm_text
+        ).first()
+    else:
+        existing_signal = db.query(RiskSignal).filter(
+            func.lower(RiskSignal.text) == norm_text
+        ).first()
 
     if existing_signal:
         db_signal = existing_signal
+        db_signal.headline = signal.headline
+        db_signal.text = signal.text
+        db_signal.source_type = signal.source_type
+        db_signal.source_name = signal.source_name
+        db_signal.primary_ticker = signal.primary_ticker
+        db_signal.primary_company = signal.primary_company
+        db_signal.entities = [e.model_dump() for e in signal.entities]
         db_signal.sentiment_score = signal.sentiment_score
         db_signal.sentiment_label = signal.sentiment_label
         db_signal.sentiment_method = signal.sentiment_method

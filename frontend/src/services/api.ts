@@ -77,7 +77,16 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
-    if (!res.ok) throw new Error('Failed to analyze text');
+    if (!res.ok) {
+      let message = 'Failed to analyze text';
+      try {
+        const data = await res.json();
+        if (data && data.detail) {
+          message = typeof data.detail === 'string' ? data.detail : JSON.stringify(data.detail);
+        }
+      } catch (_) {}
+      throw new Error(message);
+    }
     return res.json();
   },
 
