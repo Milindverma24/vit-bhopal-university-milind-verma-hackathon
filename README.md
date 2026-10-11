@@ -3,8 +3,7 @@
 **Candidate Name:** Milind Verma  
 **College Email ID:** [milind.23bce11695@vitbhopal.ac.in](mailto:milind.23bce11695@vitbhopal.ac.in)  
 **College / Campus:** VIT Bhopal University  
-**Demo Video Link:** [YouTube / Unlisted]  
-**Slide Deck Link (if hosted externally):** [Google Slides / Presentation Link]  
+**Demo Video Link:** [YouTube / Unlisted]
 
 ---
 
