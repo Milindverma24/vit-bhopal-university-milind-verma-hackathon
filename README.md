@@ -80,21 +80,15 @@ Runtime: **Python 3.11+ / Node.js 20+** on **macOS (Apple Silicon / Intel), Ubun
 Step-by-step commands to set up the environment and run your code locally:
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/Milindverma24/vit-bhopal-university-milind-verma-hackathon.git
-cd vit-bhopal-university-milind-verma-hackathon
-
-# 2. Install dependencies from repo root
+# 1. Install backend dependencies (from repo root)
 pip install -r requirements.txt
 
-# 3. Run the backend application (starts on http://127.0.0.1:8000)
+# 2. Start everything: backend (8000) + React frontend (5173).
+#    First run auto-installs frontend deps and seeds demo data.
 python run.py
-
-# 4. In a separate terminal, launch the React frontend (starts on http://localhost:5173)
-cd frontend
-npm install
-npm run dev
 ```
+
+Then open **http://localhost:5173** (API docs at http://127.0.0.1:8000/docs).
 
 ### Alternative Execution Methods
 
@@ -116,7 +110,7 @@ docker-compose up --build
 ```bash
 # Executes all 19 unit & regression tests with 100% pass rate
 python run.py --test
-# or directly via pytest: pytest -v backend/tests
+# or directly via pytest: python -m pytest -v
 ```
 
 ### Key Application URLs:

@@ -3,26 +3,37 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.database import engine, Base, SessionLocal
-from app.api.routes import router, _init_source_statuses
+from app.api.routes import router, _init_source_statuses, refresh_news, refresh_social
+from app.models.models import RiskSignal
 from app.services.index_rebalancing.rebalancer import rebalancer
 from app.services.portfolio.portfolio_manager import PortfolioManager
 from app.services.ingestion.synthetic_generator import SyntheticDataGenerator
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    # Initialize database tables
+def bootstrap() -> None:
+    """Create tables and seed baseline data. Idempotent and safe to call repeatedly."""
     Base.metadata.create_all(bind=engine)
-    
-    # Pre-seed baseline data on startup if clean database
     db = SessionLocal()
     try:
         _init_source_statuses(db)
         rebalancer.initialize_constituents(db)
         PortfolioManager.initialize_portfolio(db)
         SyntheticDataGenerator.save_synthetic_files()
+        # First run: load the demo dataset so every dashboard has data immediately
+        if db.query(RiskSignal).count() == 0:
+            refresh_news(count=40, db=db)
+            refresh_social(count=40, db=db)
+            rebalancer.initialize_constituents(db)
     finally:
         db.close()
-    
+
+
+# Run at import so the app works however it is launched (uvicorn, pytest, TestClient without lifespan)
+bootstrap()
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    bootstrap()
     yield
 
 app = FastAPI(

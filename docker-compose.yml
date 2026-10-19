@@ -14,7 +14,6 @@ services:
       - ENABLE_PRETRAINED_NLP=false
     volumes:
       - ./data:/app/data
-      - ./backend/riskpulse.db:/app/riskpulse.db
     restart: unless-stopped
 
   frontend:

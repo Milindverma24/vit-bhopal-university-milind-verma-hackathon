@@ -55,7 +55,14 @@ export const api = {
 
     const res = await fetch(`${API_BASE}/signals?${q.toString()}`);
     if (!res.ok) throw new Error('Failed to fetch signals');
-    return res.json();
+    const data = await res.json();
+    return {
+      total: data.total ?? 0,
+      page: data.page ?? 1,
+      pageSize: data.pageSize ?? data.page_size ?? 15,
+      totalPages: data.totalPages ?? data.total_pages ?? 1,
+      items: data.items ?? [],
+    };
   },
 
   async getSignalById(signalId: string): Promise<RiskSignal> {

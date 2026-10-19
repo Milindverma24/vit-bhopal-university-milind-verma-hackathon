@@ -1,5 +1,6 @@
 import json
 import random
+import time
 import uuid
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -129,7 +130,7 @@ class SyntheticDataGenerator:
 
     @staticmethod
     def generate_news_records(count: int = 120, seed: Any = 42) -> List[Dict[str, Any]]:
-        rng = random.Random(seed) if seed is not None else random.Random()
+        rng = random.Random(seed) if seed is not None else random.Random(int(time.time() // 60))  # live mode: stable within a minute, new items each minute
         records = []
         now = datetime.utcnow()
 
@@ -150,7 +151,7 @@ class SyntheticDataGenerator:
             delta_mins = rng.randint(1, 45) if seed is None else rng.randint(5, 14 * 24 * 60)
             pub_date = now - timedelta(minutes=delta_mins)
 
-            art_id = f"news-synth-{1000 + i}" if seed is not None else f"news-live-{uuid.uuid4().hex[:8]}"
+            art_id = f"news-synth-{1000 + i}" if seed is not None else f"news-live-{rng.getrandbits(32):08x}"
             rec = {
                 "article_id": art_id,
                 "source_type": "financial_news",
@@ -174,7 +175,7 @@ class SyntheticDataGenerator:
 
     @staticmethod
     def generate_social_records(count: int = 120, seed: Any = 84) -> List[Dict[str, Any]]:
-        rng = random.Random(seed) if seed is not None else random.Random()
+        rng = random.Random(seed) if seed is not None else random.Random(int(time.time() // 60))  # live mode: stable within a minute, new items each minute
         records = []
         now = datetime.utcnow()
 
@@ -190,7 +191,7 @@ class SyntheticDataGenerator:
             delta_mins = rng.randint(1, 45) if seed is None else rng.randint(2, 7 * 24 * 60)
             pub_date = now - timedelta(minutes=delta_mins)
 
-            post_id = f"social-synth-{2000 + i}" if seed is not None else f"soc-live-{uuid.uuid4().hex[:8]}"
+            post_id = f"social-synth-{2000 + i}" if seed is not None else f"soc-live-{rng.getrandbits(32):08x}"
             rec = {
                 "article_id": post_id,
                 "source_type": "social_media",

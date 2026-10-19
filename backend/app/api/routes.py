@@ -522,8 +522,8 @@ def load_sample_dataset(db: Session = Depends(get_db)):
     return {
         "status": "success",
         "message": "Full synthetic demonstration dataset loaded into persistent database.",
-        "news_signals": res_news["new_signals_created"],
-        "social_signals": res_social["new_signals_created"]
+        "news_signals": res_news.inserted_count,
+        "social_signals": res_social["inserted_count"]
     }
 
 @router.get("/ingestion/status", response_model=List[IngestionStatusItem])

@@ -4,7 +4,8 @@ RiskPulse AI — Unified CLI Runner & Entry Point
 S&P Global & CRISIL Campus Hackathon 2026
 
 Usage:
-    python run.py                 # Runs the backend API on http://127.0.0.1:8000
+    python run.py                 # Runs backend (8000) AND React frontend (5173) together
+    python run.py --backend-only  # Runs only the backend API on http://127.0.0.1:8000
     python run.py --test          # Runs backend unit and regression tests
     python run.py --seed          # Pre-seeds synthetic data & baseline index
     python run.py --docs          # Re-generates docs/architecture.png and docs/presentation.pdf
@@ -29,9 +30,25 @@ def run_backend(host="127.0.0.1", port=8000, reload=True):
     print(f"📡  REST API Base:       http://{host}:{port}")
     print(f"📖  Swagger Docs:        http://{host}:{port}/docs")
     print(f"🩺  Health Check:        http://{host}:{port}/api/health")
-    print(f"🖥️  React Frontend:      http://localhost:5173")
     print("=" * 72)
     uvicorn.run("src.main:app", host=host, port=port, reload=reload)
+
+def run_all(host="127.0.0.1", port=8000, reload=True):
+    """Start the React frontend (Vite) in the background, then run the backend in the foreground."""
+    import shutil, subprocess, atexit
+    frontend = ROOT_DIR / "frontend"
+    npm = shutil.which("npm")
+    proc = None
+    if npm is None:
+        print("⚠️  npm not found - install Node.js 20+ to run the frontend. Starting backend only.")
+    else:
+        if not (frontend / "node_modules").exists():
+            print("📦  Installing frontend dependencies (first run only)...")
+            subprocess.run([npm, "install"], cwd=frontend, check=True)
+        proc = subprocess.Popen([npm, "run", "dev", "--", "--host", "127.0.0.1"], cwd=frontend)
+        atexit.register(lambda: proc.poll() is None and proc.terminate())
+        print("🖥️  React Frontend:      http://localhost:5173   <-- open this in your browser")
+    run_backend(host=host, port=port, reload=reload)
 
 def run_tests():
     import pytest
@@ -72,6 +89,7 @@ def main():
     parser.add_argument("--docs", action="store_true", help="Generate docs assets")
     parser.add_argument("--host", default="127.0.0.1", help="Host to bind (default: 127.0.0.1)")
     parser.add_argument("--port", type=int, default=8000, help="Port to bind (default: 8000)")
+    parser.add_argument("--backend-only", action="store_true", help="Do not start the React frontend")
     parser.add_argument("--no-reload", action="store_true", help="Disable auto-reload")
 
     args = parser.parse_args()
@@ -82,8 +100,10 @@ def main():
         run_seed()
     elif args.docs:
         run_docs()
-    else:
+    elif args.backend_only:
         run_backend(host=args.host, port=args.port, reload=not args.no_reload)
+    else:
+        run_all(host=args.host, port=args.port, reload=not args.no_reload)
 
 if __name__ == "__main__":
     main()
