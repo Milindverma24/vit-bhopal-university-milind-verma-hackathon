@@ -23,7 +23,7 @@ export function SegmentedControl<T extends string | number>({
   className = ''
 }: SegmentedControlProps<T>) {
   return (
-    <div className={`inline-flex items-center p-1 bg-[#efefef] rounded-full border border-[#d9d9d9] ${className}`}>
+    <div className={`inline-flex items-center p-1 bg-[#181818] rounded-full border border-[#282828] ${className}`}>
       {options.map((opt) => {
         const isActive = opt.value === value;
         return (
@@ -31,20 +31,20 @@ export function SegmentedControl<T extends string | number>({
             key={String(opt.value)}
             type="button"
             onClick={() => onChange(opt.value)}
-            className={`inline-flex items-center gap-1.5 rounded-full font-medium transition-all duration-150 select-none ${
-              size === 'sm' ? 'px-3 py-1 text-xs' : 'px-4 py-1.5 text-sm'
+            className={`inline-flex items-center gap-1.5 rounded-full font-bold uppercase tracking-[1px] transition-all duration-150 select-none cursor-pointer ${
+              size === 'sm' ? 'px-3 py-1 text-[11px]' : 'px-4 py-1.5 text-xs'
             } ${
               isActive
-                ? 'bg-black text-white shadow-sm'
-                : 'text-[#5e5e5e] hover:text-black hover:bg-[#e2e2e2]'
+                ? 'bg-white text-black shadow-sm'
+                : 'text-[#b3b3b3] hover:text-white hover:bg-[#242424]'
             }`}
           >
             {opt.icon && <span className="inline-flex shrink-0">{opt.icon}</span>}
             <span>{opt.label}</span>
             {opt.count !== undefined && (
               <span
-                className={`text-[11px] px-1.5 py-0.2 rounded-full tabular-nums ${
-                  isActive ? 'bg-[#282828] text-white' : 'bg-[#d9d9d9] text-[#5e5e5e]'
+                className={`text-[10px] px-1.5 py-0.2 rounded-full tabular-nums font-mono ${
+                  isActive ? 'bg-[#e0e0e0] text-black' : 'bg-[#242424] text-[#b3b3b3]'
                 }`}
               >
                 {opt.count}
@@ -74,17 +74,17 @@ export const FilterChip: React.FC<FilterChipProps> = ({
     <button
       type="button"
       onClick={onClick}
-      className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-150 border select-none ${
+      className={`inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-150 border select-none cursor-pointer ${
         active
-          ? 'bg-black text-white border-black shadow-sm'
-          : 'bg-[#efefef] text-[#5e5e5e] border-[#d9d9d9] hover:border-black hover:text-black'
+          ? 'bg-white text-black border-white'
+          : 'bg-[#242424] text-white border-[#333333] hover:border-[#4d4d4d] hover:bg-[#2a2a2a]'
       }`}
     >
       <span>{label}</span>
       {count !== undefined && (
         <span
-          className={`text-[10px] px-1.5 py-0.2 rounded-full tabular-nums ${
-            active ? 'bg-[#282828] text-white' : 'bg-[#d9d9d9] text-black'
+          className={`text-[10px] px-1.5 py-0.2 rounded-full tabular-nums font-mono ${
+            active ? 'bg-[#e0e0e0] text-black' : 'bg-[#181818] text-[#b3b3b3]'
           }`}
         >
           {count}

@@ -4,11 +4,11 @@ import {
   Cpu, 
   Send, 
   Code,
-  Copy,
-  Check,
-  Download,
-  ChevronDown,
-  ChevronUp
+  Copy, 
+  Check, 
+  Download, 
+  ChevronDown, 
+  ChevronUp 
 } from 'lucide-react';
 import { api } from '../services/api';
 import { RiskSignal } from '../types';
@@ -157,24 +157,25 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
 
   return (
     <div className="space-y-8 animate-in fade-in duration-200">
-      {/* 11.1 Header */}
-      <div className="pb-6 border-b border-[#d9d9d9]">
-        <div className="flex items-center gap-2 mb-1">
-          <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#767676]">
-            NLP Engine / Interactive Analysis
+      {/* Header */}
+      <div className="pb-6 border-b border-[#282828]">
+        <div className="flex items-center gap-2 mb-1.5">
+          <span className="w-2 h-2 rounded-full bg-[#1ed760] animate-pulse" />
+          <span className="text-xs font-mono font-bold uppercase tracking-[1.4px] text-[#1ed760]">
+            NLP Risk Engine / Interactive Analysis
           </span>
         </div>
-        <h1 className="text-3xl font-bold tracking-tight text-black">Analyze financial intelligence</h1>
-        <p className="text-sm text-[#5e5e5e] mt-1 max-w-2xl">
-          Transform unstructured financial text into structured risk signals via dual-tier sentiment parsing, event classification, and calibrated impact scoring.
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">Analyze financial intelligence</h1>
+        <p className="text-xs sm:text-sm text-[#b3b3b3] mt-1 max-w-2xl leading-relaxed">
+          Transform unstructured financial text into structured risk signals via dual-tier sentiment parsing, event taxonomy matching, and calibrated impact severity scoring.
         </p>
       </div>
 
-      {/* Preset Scenario Pills (Section 3.1) */}
-      <div className="bg-white rounded-2xl p-4 border border-[#d9d9d9] space-y-2">
-        <div className="flex items-center justify-between text-xs font-medium text-[#767676]">
-          <span>Load verified test scenarios:</span>
-          <span>Single-click testing</span>
+      {/* Preset Scenario Pills */}
+      <div className="bg-[#181818] rounded-[8px] p-6 border border-[#282828] space-y-3 shadow-[0_8px_24px_rgba(0,0,0,0.5)]">
+        <div className="flex items-center justify-between text-xs font-bold uppercase tracking-[1.4px] text-[#7c7c7c]">
+          <span>Verified Scenario Benchmarks</span>
+          <span className="text-[11px] font-mono font-normal lowercase text-[#7c7c7c]">single-click testing</span>
         </div>
         <div className="flex flex-wrap gap-2">
           {PRESET_EXAMPLES.map((p) => (
@@ -182,7 +183,7 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
               key={p.title}
               type="button"
               onClick={() => loadPreset(p)}
-              className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-[#efefef] text-[#5e5e5e] hover:bg-black hover:text-white border border-[#d9d9d9] transition-all select-none"
+              className="px-4 py-2 rounded-full text-xs font-bold bg-[#1f1f1f] text-[#b3b3b3] hover:bg-[#1ed760] hover:text-black border border-[#282828] transition-all select-none cursor-pointer"
             >
               {p.title}
             </button>
@@ -190,7 +191,7 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
         </div>
       </div>
 
-      {/* 11.2 Main Two-Column Layout */}
+      {/* Main Two-Column Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left Column: Form & Controls (5 cols) */}
         <div className="lg:col-span-5 space-y-6">
@@ -270,20 +271,20 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
         {/* Right Column: Analysis Results & Explainability (7 cols) */}
         <div className="lg:col-span-7 space-y-6">
           {/* Top Switcher: Visual Analytics vs Structured JSON API */}
-          <div className="flex items-center justify-between p-1 bg-[#efefef] rounded-xl border border-[#d9d9d9]">
+          <div className="flex items-center justify-between p-1 bg-[#121212] rounded-full border border-[#282828]">
             <button
               type="button"
               onClick={() => setActiveResultTab('visual')}
-              className={`flex-1 py-2 px-4 rounded-lg text-xs font-semibold transition-all flex items-center justify-center gap-2 ${
+              className={`flex-1 py-2 px-4 rounded-full text-xs font-bold uppercase tracking-[1.4px] transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeResultTab === 'visual'
-                  ? 'bg-black text-white shadow-sm'
-                  : 'text-[#5e5e5e] hover:text-black hover:bg-[#e2e2e2]'
+                  ? 'bg-[#1ed760] text-black shadow-[0_2px_8px_rgba(30,215,96,0.4)]'
+                  : 'text-[#b3b3b3] hover:text-white'
               }`}
             >
-              <span>Visual Analytics</span>
+              <span>Visual Dossier</span>
               {result && (
-                <span className={`text-[10px] px-2 py-0.5 rounded-full ${
-                  activeResultTab === 'visual' ? 'bg-[#333] text-white' : 'bg-[#d9d9d9] text-black'
+                <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono ${
+                  activeResultTab === 'visual' ? 'bg-black text-[#1ed760]' : 'bg-[#1f1f1f] text-white'
                 }`}>
                   {result.primary_ticker || 'NVDA'}
                 </span>
@@ -293,20 +294,20 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
             <button
               type="button"
               onClick={() => setActiveResultTab('json')}
-              className={`flex-1 py-2 px-4 rounded-lg text-xs font-semibold transition-all flex items-center justify-center gap-2 ${
+              className={`flex-1 py-2 px-4 rounded-full text-xs font-bold uppercase tracking-[1.4px] transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeResultTab === 'json'
-                  ? 'bg-black text-white shadow-sm'
-                  : 'text-[#5e5e5e] hover:text-black hover:bg-[#e2e2e2]'
+                  ? 'bg-[#1ed760] text-black shadow-[0_2px_8px_rgba(30,215,96,0.4)]'
+                  : 'text-[#b3b3b3] hover:text-white'
               }`}
             >
               <Code className="w-3.5 h-3.5" />
               <span>Structured JSON API response</span>
               <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${
                 activeResultTab === 'json'
-                  ? 'bg-[#333] text-emerald-400'
+                  ? 'bg-black text-[#1ed760]'
                   : result
-                  ? 'bg-emerald-100 text-emerald-800'
-                  : 'bg-[#d9d9d9] text-[#5e5e5e]'
+                  ? 'bg-[#1ed760]/20 text-[#1ed760]'
+                  : 'bg-[#1f1f1f] text-[#7c7c7c]'
               }`}>
                 {result ? '200 OK' : 'API Schema'}
               </span>
@@ -316,9 +317,9 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
           {analyzing ? (
             <Card className="min-h-[420px] flex items-center justify-center text-center">
               <div className="space-y-3">
-                <Cpu className="w-8 h-8 text-black animate-spin mx-auto" />
-                <h3 className="text-sm font-bold text-black">Executing NLP inference...</h3>
-                <p className="text-xs text-[#767676] max-w-sm">
+                <Cpu className="w-8 h-8 text-[#1ed760] animate-spin mx-auto" />
+                <h3 className="text-sm font-bold text-white">Executing NLP inference pipeline...</h3>
+                <p className="text-xs text-[#b3b3b3] max-w-sm leading-relaxed">
                   Extracting entities, parsing financial polarity, matching rule-based event taxonomies, and calibrating market impact.
                 </p>
               </div>
@@ -326,36 +327,38 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
           ) : activeResultTab === 'json' ? (
             /* Dedicated Structured JSON API response View */
             <Card>
-              <div className="flex items-center justify-between pb-3 border-b border-[#d9d9d9]">
-                <div className="flex items-center gap-2">
-                  <Code className="w-4 h-4 text-black" />
+              <div className="flex items-center justify-between pb-4 border-b border-[#282828]">
+                <div className="flex items-center gap-2.5">
+                  <div className="p-1.5 rounded-full bg-[#1f1f1f] text-[#1ed760]">
+                    <Code className="w-4 h-4" />
+                  </div>
                   <div>
-                    <h4 className="text-sm font-bold text-black">Structured JSON API response</h4>
-                    <p className="text-[11px] text-[#767676]">
+                    <h4 className="text-sm font-bold text-white">Structured JSON Output</h4>
+                    <p className="text-[11px] text-[#7c7c7c] font-mono mt-0.5">
                       {result 
-                        ? `Endpoint: POST /api/analyze • Signal ID: ${result.signal_id}` 
-                        : 'Live Schema Specification • POST /api/analyze'}
+                        ? `POST /api/analyze • Signal ID: ${result.signal_id}` 
+                        : 'POST /api/analyze • Schema Specification'}
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${
-                    result ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-[#efefef] text-[#767676] border border-[#d9d9d9]'
+                  <span className={`text-[10px] font-mono px-2.5 py-0.5 rounded-full font-bold ${
+                    result ? 'bg-[#1ed760]/15 text-[#1ed760] border border-[#1ed760]/30' : 'bg-[#1f1f1f] text-[#b3b3b3] border border-[#282828]'
                   }`}>
-                    {result ? 'HTTP 200 OK' : 'API Schema Contract'}
+                    {result ? 'HTTP 200 OK' : 'Schema'}
                   </span>
                   <button
                     type="button"
                     onClick={handleCopyJson}
-                    className="px-3 py-1 rounded-full text-xs font-medium bg-[#efefef] text-black hover:bg-[#e2e2e2] transition-colors inline-flex items-center gap-1"
+                    className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-[1.4px] bg-[#1f1f1f] text-white hover:border-[#1ed760] hover:text-[#1ed760] border border-[#282828] transition-colors inline-flex items-center gap-1 cursor-pointer"
                   >
-                    {copiedJson ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
-                    <span>{copiedJson ? 'Copied' : 'Copy JSON'}</span>
+                    {copiedJson ? <Check className="w-3 h-3 text-[#1ed760]" /> : <Copy className="w-3 h-3" />}
+                    <span>{copiedJson ? 'Copied' : 'Copy'}</span>
                   </button>
                   <button
                     type="button"
                     onClick={handleDownloadJson}
-                    className="px-3 py-1 rounded-full text-xs font-medium bg-[#efefef] text-black hover:bg-[#e2e2e2] transition-colors inline-flex items-center gap-1"
+                    className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-[1.4px] bg-[#1f1f1f] text-white hover:border-[#1ed760] hover:text-[#1ed760] border border-[#282828] transition-colors inline-flex items-center gap-1 cursor-pointer"
                   >
                     <Download className="w-3 h-3" />
                     <span>Download</span>
@@ -363,18 +366,18 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
                 </div>
               </div>
 
-              <div className="mt-3 p-4 bg-[#1e1e1e] text-[#d4d4d4] rounded-xl overflow-x-auto text-xs font-mono max-h-[580px] border border-[#333]">
+              <div className="mt-4 p-4 bg-[#121212] text-gray-200 rounded-[8px] overflow-x-auto text-xs font-mono max-h-[580px] border border-[#282828] leading-relaxed">
                 <pre>{JSON.stringify(result || SAMPLE_API_SCHEMA, null, 2)}</pre>
               </div>
               {!result && (
-                <p className="text-[11px] text-[#767676] mt-2 italic text-center">
+                <p className="text-[11px] text-[#7c7c7c] mt-2.5 italic text-center">
                   * Showing API response contract. Click "Analyze Text" on the left to populate with live inference results.
                 </p>
               )}
             </Card>
           ) : result ? (
             <div className="space-y-6">
-              {/* 11.5 Sentiment & Impact Summary Card */}
+              {/* Sentiment & Impact Summary Card */}
               <Card>
                 <CardHeader
                   title="Analysis results summary"
@@ -383,34 +386,38 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
                 />
 
                 {/* Sentiment Gauge & Impact Metric */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 bg-[#f3f3f3] rounded-xl border border-[#d9d9d9]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-5 bg-[#1f1f1f] rounded-[8px] border border-[#282828]">
                   {/* Sentiment Metric */}
                   <div>
-                    <span className="text-[11px] font-mono font-semibold uppercase text-[#767676] block mb-1">
-                      11.5 Sentiment score
+                    <span className="text-[11px] font-mono font-bold uppercase tracking-[1.4px] text-[#7c7c7c] block mb-1">
+                      Sentiment polarity
                     </span>
                     <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-bold font-mono tracking-tight text-black tabular-nums">
+                      <span className={`text-3xl font-bold font-mono tracking-tight tabular-nums ${
+                        result.sentiment_score >= 0 ? 'text-[#1ed760]' : 'text-[#f3727f]'
+                      }`}>
                         {formatSentiment(result.sentiment_score)}
                       </span>
                       <SentimentBadge score={result.sentiment_score} label={result.sentiment_label} showScore={false} />
                     </div>
-                    <div className="text-[11px] text-[#767676] mt-1">
+                    <div className="text-[11px] text-[#b3b3b3] mt-1">
                       Confidence: <strong>{Math.round(result.sentiment_confidence * 100)}%</strong> • Method: <strong>{result.sentiment_method}</strong>
                     </div>
 
                     {/* Visual Horizontal Scale Gauge (-1.0 to +1.0) */}
-                    <div className="mt-3">
-                      <div className="h-2 w-full bg-[#d9d9d9] rounded-full relative overflow-hidden">
+                    <div className="mt-3.5">
+                      <div className="h-2 w-full bg-[#121212] rounded-full relative overflow-hidden">
                         <div
-                          className="absolute top-0 bottom-0 bg-black rounded-full transition-all duration-300"
+                          className={`absolute top-0 bottom-0 rounded-full transition-all duration-300 ${
+                            result.sentiment_score > 0 ? 'bg-[#1ed760]' : result.sentiment_score < 0 ? 'bg-[#f3727f]' : 'bg-[#7c7c7c]'
+                          }`}
                           style={{
                             left: `${Math.min(sentimentGaugePercent, 50)}%`,
                             width: `${Math.abs(sentimentGaugePercent - 50)}%`
                           }}
                         />
                       </div>
-                      <div className="flex justify-between text-[10px] text-[#767676] mt-1 font-mono">
+                      <div className="flex justify-between text-[10px] text-[#7c7c7c] mt-1 font-mono">
                         <span>-1.0 (Critical Neg)</span>
                         <span>0.0 (Neutral)</span>
                         <span>+1.0 (Positive)</span>
@@ -420,36 +427,36 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
 
                   {/* Impact Metric */}
                   <div>
-                    <span className="text-[11px] font-mono font-semibold uppercase text-[#767676] block mb-1">
-                      11.7 Market impact score
+                    <span className="text-[11px] font-mono font-bold uppercase tracking-[1.4px] text-[#7c7c7c] block mb-1">
+                      Market impact severity
                     </span>
                     <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-bold font-mono tracking-tight text-black tabular-nums">
+                      <span className="text-3xl font-bold font-mono tracking-tight text-white tabular-nums">
                         {result.impact_score}/10
                       </span>
                       <ImpactBadge score={result.impact_score} level={result.impact_level} />
                     </div>
-                    <div className="text-[11px] text-[#767676] mt-1">
+                    <div className="text-[11px] text-[#b3b3b3] mt-1">
                       Severity: <strong>{result.impact_level} potential impact</strong>
                     </div>
-                    <p className="text-xs text-[#5e5e5e] mt-2 leading-relaxed">
+                    <p className="text-xs text-[#cbcbcb] mt-2 leading-relaxed">
                       {result.impact_rationale}
                     </p>
                   </div>
                 </div>
 
-                {/* 11.6 Event Classification */}
-                <div className="mt-4 p-4 border border-[#d9d9d9] rounded-xl bg-white space-y-3">
+                {/* Event Classification */}
+                <div className="mt-4 p-4 border border-[#282828] rounded-[8px] bg-[#1f1f1f] space-y-3">
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className="text-[11px] font-mono uppercase text-[#767676]">
+                      <span className="text-[10px] font-mono uppercase tracking-[1.4px] text-[#7c7c7c] font-bold">
                         Event Category
                       </span>
-                      <h4 className="text-base font-bold text-black mt-0.5">
+                      <h4 className="text-base font-bold text-white mt-0.5">
                         {result.event_type}
                       </h4>
                     </div>
-                    <span className="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#efefef] text-black border border-[#d9d9d9]">
+                    <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#181818] text-[#1ed760] border border-[#282828]">
                       {Math.round(result.event_confidence * 100)}% match confidence
                     </span>
                   </div>
@@ -457,14 +464,14 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
                   {/* Evidence Keywords */}
                   {result.event_evidence && result.event_evidence.length > 0 && (
                     <div>
-                      <span className="text-xs font-medium text-[#767676] block mb-1.5">
+                      <span className="text-xs font-medium text-[#7c7c7c] block mb-1.5">
                         Supporting Syntactic Evidence:
                       </span>
                       <div className="flex flex-wrap gap-1.5">
                         {result.event_evidence.map((ev, idx) => (
                           <span
                             key={idx}
-                            className="px-2.5 py-0.5 rounded-full text-xs font-mono bg-[#efefef] text-black border border-[#d9d9d9]"
+                            className="px-2.5 py-0.5 rounded-full text-xs font-mono bg-[#181818] text-white border border-[#282828]"
                           >
                             {ev}
                           </span>
@@ -475,50 +482,50 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
                 </div>
               </Card>
 
-              {/* 11.8 Explainable Intelligence Panel */}
-              <div className="bg-[#efefef] rounded-2xl p-6 border border-[#d9d9d9] space-y-4">
-                <h3 className="text-base font-bold text-black">
-                  Explainable risk intelligence analysis
+              {/* Explainable Intelligence Panel */}
+              <div className="bg-[#181818] rounded-[8px] p-6 border border-[#282828] space-y-4 shadow-[0_8px_24px_rgba(0,0,0,0.5)]">
+                <h3 className="text-sm font-bold uppercase tracking-[1.4px] text-[#1ed760]">
+                  Explainable Risk Intelligence Breakdown
                 </h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                  <div className="p-3.5 bg-white rounded-xl border border-[#d9d9d9]">
-                    <span className="font-bold text-black block mb-1">What was detected?</span>
-                    <p className="text-[#5e5e5e] leading-relaxed">
-                      Identified a <strong>{result.event_type}</strong> classification with narrative sentiment scored at <strong>{formatSentiment(result.sentiment_score)}</strong>.
+                  <div className="p-4 bg-[#1f1f1f] rounded-[8px] border border-[#282828]">
+                    <span className="font-bold text-white block mb-1">What was detected?</span>
+                    <p className="text-[#b3b3b3] leading-relaxed">
+                      Identified a <strong className="text-white">{result.event_type}</strong> classification with narrative sentiment scored at <strong className="text-[#1ed760]">{formatSentiment(result.sentiment_score)}</strong>.
                     </p>
                   </div>
 
-                  <div className="p-3.5 bg-white rounded-xl border border-[#d9d9d9]">
-                    <span className="font-bold text-black block mb-1">Why does it matter?</span>
-                    <p className="text-[#5e5e5e] leading-relaxed">
-                      Assigned market impact severity of <strong>{result.impact_score}/10 ({result.impact_level})</strong> which influences tactical index allocation penalties.
+                  <div className="p-4 bg-[#1f1f1f] rounded-[8px] border border-[#282828]">
+                    <span className="font-bold text-white block mb-1">Why does it matter?</span>
+                    <p className="text-[#b3b3b3] leading-relaxed">
+                      Assigned market impact severity of <strong className="text-white">{result.impact_score}/10 ({result.impact_level})</strong> which influences tactical index allocation penalties.
                     </p>
                   </div>
 
-                  <div className="p-3.5 bg-white rounded-xl border border-[#d9d9d9]">
-                    <span className="font-bold text-black block mb-1">Which entity is affected?</span>
-                    <p className="text-[#5e5e5e] leading-relaxed">
-                      Primary exposure mapped to <strong>{result.primary_ticker || 'Macro / Market'}</strong> ({result.primary_company || 'Cross-Sector Market'}).
+                  <div className="p-4 bg-[#1f1f1f] rounded-[8px] border border-[#282828]">
+                    <span className="font-bold text-white block mb-1">Which entity is affected?</span>
+                    <p className="text-[#b3b3b3] leading-relaxed">
+                      Primary exposure mapped to <strong className="text-[#1ed760]">{result.primary_ticker || 'Macro / Market'}</strong> ({result.primary_company || 'Cross-Sector Market'}).
                     </p>
                   </div>
 
-                  <div className="p-3.5 bg-white rounded-xl border border-[#d9d9d9]">
-                    <span className="font-bold text-black block mb-1">Model limitations & caveats</span>
-                    <p className="text-[#5e5e5e] leading-relaxed">
+                  <div className="p-4 bg-[#1f1f1f] rounded-[8px] border border-[#282828]">
+                    <span className="font-bold text-white block mb-1">Model limitations & caveats</span>
+                    <p className="text-[#b3b3b3] leading-relaxed">
                       Calculated from headline and excerpt context. Textual sentiment estimates do not guarantee immediate stock price or dividend changes.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* 11.9 Structured JSON Viewer */}
+              {/* Collapsible Structured JSON Viewer */}
               <Card>
-                <div className="flex items-center justify-between pb-3 border-b border-[#d9d9d9]">
+                <div className="flex items-center justify-between pb-3 border-b border-[#282828]">
                   <div className="flex items-center gap-2">
-                    <Code className="w-4 h-4 text-black" />
-                    <h4 className="text-sm font-bold text-black">Structured JSON API response</h4>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
+                    <Code className="w-4 h-4 text-[#1ed760]" />
+                    <h4 className="text-sm font-bold text-white">Structured JSON Output</h4>
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#1ed760]/15 text-[#1ed760] border border-[#1ed760]/30 font-bold">
                       HTTP 200 OK
                     </span>
                   </div>
@@ -526,7 +533,7 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
                     <button
                       type="button"
                       onClick={() => setIsJsonExpanded(!isJsonExpanded)}
-                      className="px-2.5 py-1 rounded-full text-xs font-medium bg-[#efefef] text-black hover:bg-[#e2e2e2] transition-colors inline-flex items-center gap-1"
+                      className="px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-[1.4px] bg-[#1f1f1f] text-white hover:border-[#1ed760] border border-[#282828] transition-colors inline-flex items-center gap-1 cursor-pointer"
                     >
                       {isJsonExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
                       <span>{isJsonExpanded ? 'Collapse' : 'Expand'}</span>
@@ -534,15 +541,15 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
                     <button
                       type="button"
                       onClick={handleCopyJson}
-                      className="px-3 py-1 rounded-full text-xs font-medium bg-[#efefef] text-black hover:bg-[#e2e2e2] transition-colors inline-flex items-center gap-1"
+                      className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-[1.4px] bg-[#1f1f1f] text-white hover:border-[#1ed760] border border-[#282828] transition-colors inline-flex items-center gap-1 cursor-pointer"
                     >
-                      {copiedJson ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
+                      {copiedJson ? <Check className="w-3 h-3 text-[#1ed760]" /> : <Copy className="w-3 h-3" />}
                       <span>{copiedJson ? 'Copied' : 'Copy'}</span>
                     </button>
                     <button
                       type="button"
                       onClick={handleDownloadJson}
-                      className="px-3 py-1 rounded-full text-xs font-medium bg-[#efefef] text-black hover:bg-[#e2e2e2] transition-colors inline-flex items-center gap-1"
+                      className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-[1.4px] bg-[#1f1f1f] text-white hover:border-[#1ed760] border border-[#282828] transition-colors inline-flex items-center gap-1 cursor-pointer"
                     >
                       <Download className="w-3 h-3" />
                       <span>Download</span>
@@ -551,8 +558,8 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
                 </div>
 
                 {isJsonExpanded && (
-                  <div className="mt-3 p-4 bg-[#1e1e1e] text-[#d4d4d4] rounded-xl overflow-x-auto text-xs font-mono max-h-72 border border-[#333]">
-                    <pre>{JSON.stringify(result, null, 2)}</pre>
+                  <div className="mt-3 p-4 bg-[#121212] text-gray-200 rounded-[8px] overflow-x-auto text-xs font-mono max-h-72 border border-[#282828]">
+                    <pre className="text-gray-300 leading-relaxed">{JSON.stringify(result, null, 2)}</pre>
                   </div>
                 )}
               </Card>
@@ -560,11 +567,11 @@ export const NLPEnginePage: React.FC<NLPEnginePageProps> = ({ onSignalCreated })
           ) : (
             <Card className="min-h-[420px] flex items-center justify-center text-center">
               <div className="max-w-md space-y-3">
-                <div className="w-12 h-12 rounded-full bg-[#efefef] text-black flex items-center justify-center mx-auto border border-[#d9d9d9]">
+                <div className="w-12 h-12 rounded-full bg-[#1f1f1f] text-[#1ed760] flex items-center justify-center mx-auto border border-[#282828]">
                   <ShieldAlert className="w-6 h-6" />
                 </div>
-                <h3 className="text-base font-bold text-black">Ready for text analysis</h3>
-                <p className="text-xs text-[#767676] leading-relaxed">
+                <h3 className="text-base font-bold text-white">Ready for text analysis</h3>
+                <p className="text-xs text-[#b3b3b3] leading-relaxed">
                   Submit financial news or social media text on the left, or select one of the pre-loaded scenarios above to evaluate the live risk pipeline.
                 </p>
               </div>

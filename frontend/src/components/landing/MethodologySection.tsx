@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, BookOpen, Layers, Sliders, BarChart3, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Layers, Sliders, BarChart3, ShieldCheck } from 'lucide-react';
 import { Button } from '../ui/Button';
 
 interface MethodologySectionProps {
@@ -10,103 +10,102 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({
   onNavigateMethodology
 }) => {
   return (
-    <section id="methodology" className="py-20 lg:py-28 border-b border-[#d9d9d9] bg-white">
+    <section id="methodology" className="py-20 lg:py-28 border-b border-[#282828] bg-[#121212]">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="max-w-3xl mb-16">
-          <span className="text-xs font-mono font-semibold uppercase tracking-wider text-black bg-[#efefef] px-2.5 py-0.5 rounded-full border border-[#d9d9d9]">
-            GOVERNANCE & TRANSPARENCY
+          <span className="text-[11px] font-mono font-bold uppercase tracking-[1.4px] text-[#1ed760] bg-[#1f1f1f] px-3.5 py-1.5 rounded-full border border-[#333333] inline-block mb-3">
+            Governance & Audit
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-black mt-3">
-            Built to explain the reasoning.
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mt-1">
+            Built for transparent auditability.
           </h2>
-          <p className="text-base text-[#5e5e5e] mt-2 leading-relaxed">
-            Every output should be traceable to an input, a method, and a set of documented assumptions.
+          <p className="text-base text-[#b3b3b3] mt-2 leading-relaxed">
+            Every output is traceable to an input event, a documented mathematical formulation, and explicit portfolio parameters.
           </p>
         </div>
 
         {/* 3 Methodology Blocks */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           {/* Block 1: NLP Methodology */}
-          <div className="p-6 rounded-2xl border border-[#d9d9d9] bg-[#fafafa] flex flex-col justify-between space-y-4">
+          <div className="p-6 rounded-[8px] border border-[#282828] bg-[#181818] hover:bg-[#202020] hover:border-[#383838] transition-all flex flex-col justify-between space-y-4 shadow-[0_4px_12px_rgba(0,0,0,0.3)] group">
             <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-white border border-[#d9d9d9] flex items-center justify-center text-black shadow-sm">
+              <div className="w-10 h-10 rounded-full bg-[#1f1f1f] border border-[#282828] flex items-center justify-center text-[#1ed760] group-hover:bg-[#1ed760] group-hover:text-black transition-colors">
                 <Layers className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-black tracking-tight">
-                NLP Risk Engine Architecture
+              <h3 className="text-base font-bold text-white tracking-tight">
+                NLP Classification Engine
               </h3>
-              <p className="text-xs text-[#5e5e5e] leading-relaxed">
-                Sentiment scoring (-1.0 to +1.0), event taxonomy classification (20 categories), entity extraction, and impact severity (1-10) operate as distinct, decoupled pipelines with rule-based fallbacks to eliminate hallucination.
+              <p className="text-xs text-[#b3b3b3] leading-relaxed">
+                Deterministic sentiment scoring, taxonomy mapping across 20 event categories, and calibrated severity ratings with rule-based fallback verification.
               </p>
             </div>
-            <div className="pt-4 border-t border-[#d9d9d9] text-[11px] font-mono text-[#767676]">
-              Deterministic FinBERT & Syntactic Rules
+            <div className="pt-4 border-t border-[#282828] text-[11px] font-mono text-[#7c7c7c]">
+              FinBERT & Lexicon Validation
             </div>
           </div>
 
           {/* Block 2: Tactical Rebalancing */}
-          <div className="p-6 rounded-2xl border border-[#d9d9d9] bg-[#fafafa] flex flex-col justify-between space-y-4">
+          <div className="p-6 rounded-[8px] border border-[#282828] bg-[#181818] hover:bg-[#202020] hover:border-[#383838] transition-all flex flex-col justify-between space-y-4 shadow-[0_4px_12px_rgba(0,0,0,0.3)] group">
             <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-white border border-[#d9d9d9] flex items-center justify-center text-black shadow-sm">
+              <div className="w-10 h-10 rounded-full bg-[#1f1f1f] border border-[#282828] flex items-center justify-center text-[#1ed760] group-hover:bg-[#1ed760] group-hover:text-black transition-colors">
                 <Sliders className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-black tracking-tight">
-                Constrained Rebalancing Optimization
+              <h3 className="text-base font-bold text-white tracking-tight">
+                Constrained Rebalancing
               </h3>
-              <p className="text-xs text-[#5e5e5e] leading-relaxed">
-                Candidate weight adjustments are constrained within strict bounds ($2.0\% \le w_i \le 20.0\%$), normalized to $\sum w_i = 100\%$, and throttled by one-way turnover limits ($0.5 \sum |\Delta w|$) to prevent erratic turnover.
+              <p className="text-xs text-[#b3b3b3] leading-relaxed">
+                Candidate allocations respect position bounds (2.0% to 20.0%), normalize to 100%, and enforce one-way turnover budgets to control execution friction.
               </p>
             </div>
-            <div className="pt-4 border-t border-[#d9d9d9] text-[11px] font-mono text-[#767676]">
-              Box-Constrained Iterative Solver
+            <div className="pt-4 border-t border-[#282828] text-[11px] font-mono text-[#7c7c7c]">
+              Box-Constrained Optimization
             </div>
           </div>
 
           {/* Block 3: Stress Testing */}
-          <div className="p-6 rounded-2xl border border-[#d9d9d9] bg-[#fafafa] flex flex-col justify-between space-y-4">
+          <div className="p-6 rounded-[8px] border border-[#282828] bg-[#181818] hover:bg-[#202020] hover:border-[#383838] transition-all flex flex-col justify-between space-y-4 shadow-[0_4px_12px_rgba(0,0,0,0.3)] group">
             <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-white border border-[#d9d9d9] flex items-center justify-center text-black shadow-sm">
+              <div className="w-10 h-10 rounded-full bg-[#1f1f1f] border border-[#282828] flex items-center justify-center text-[#1ed760] group-hover:bg-[#1ed760] group-hover:text-black transition-colors">
                 <BarChart3 className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-black tracking-tight">
-                Event-Driven Stress Valuation
+              <h3 className="text-base font-bold text-white tracking-tight">
+                Stress Scenario Valuation
               </h3>
-              <p className="text-xs text-[#5e5e5e] leading-relaxed">
-                Shocks apply strictly to eligible asset classes (duration haircuts on bonds, equity return corrections, incremental IFRS 9 ECL on loans) with zero-delta sector loss reconciliation (&Sigma; Sector Loss = Absolute Loss).
+              <p className="text-xs text-[#b3b3b3] leading-relaxed">
+                Simulates equity corrections, fixed income duration haircuts, and incremental IFRS 9 credit loss provisions with exact sector loss reconciliation.
               </p>
             </div>
-            <div className="pt-4 border-t border-[#d9d9d9] text-[11px] font-mono text-[#767676]">
-              Multi-Asset Basel III & IFRS 9 Shocks
+            <div className="pt-4 border-t border-[#282828] text-[11px] font-mono text-[#7c7c7c]">
+              Multi-Asset Valuation & ECL
             </div>
           </div>
 
         </div>
 
         {/* Transparency Banner & CTA */}
-        <div className="mt-12 p-6 rounded-2xl border border-[#d9d9d9] bg-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="mt-12 p-6 rounded-[8px] border border-[#282828] bg-[#181818] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-[0_4px_16px_rgba(0,0,0,0.4)]">
           <div className="flex items-center gap-3">
-            <ShieldCheck className="w-6 h-6 text-black shrink-0" />
+            <ShieldCheck className="w-6 h-6 text-[#1ed760] shrink-0" />
             <div>
-              <h4 className="text-xs font-bold text-black uppercase font-mono tracking-wider">
+              <h4 className="text-xs font-bold text-white uppercase font-mono tracking-[1.4px]">
                 Prototype Transparency Notice
               </h4>
-              <p className="text-xs text-[#5e5e5e] mt-0.5">
-                RiskPulse AI is an analytical prototype. Model outputs depend on the available data, selected methods, and documented assumptions.
+              <p className="text-xs text-[#b3b3b3] mt-0.5">
+                RiskPulse is an analytical prototype. Model outputs depend on the available data, selected methods, and documented assumptions.
               </p>
             </div>
           </div>
-
           <Button
             variant="secondary"
             size="sm"
             onClick={onNavigateMethodology}
-            className="shrink-0 text-xs font-medium"
-            icon={<ArrowRight className="w-3.5 h-3.5" />}
+            icon={<ArrowRight className="w-4 h-4" />}
+            className="shrink-0"
           >
-            Read the Methodology
+            Inspect Audit Trail
           </Button>
         </div>
 

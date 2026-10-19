@@ -81,17 +81,17 @@ export const PortfolioExplorerPage: React.FC = () => {
 
   return (
     <div className="space-y-8 animate-in fade-in duration-200">
-      {/* 15.1 Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#d9d9d9]">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#282828]">
         <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-black bg-[#efefef] px-2.5 py-0.5 rounded-full border border-[#d9d9d9]">
-              SYNTHETIC PORTFOLIO
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="text-[11px] font-mono font-bold uppercase tracking-[1.4px] text-[#1ed760] bg-[#1f1f1f] px-3.5 py-1.5 rounded-full border border-[#333333]">
+              Synthetic Portfolio
             </span>
-            <span className="text-xs text-[#767676] font-mono">Wholesale Banking Book</span>
+            <span className="text-xs text-[#7c7c7c] font-mono">Wholesale Banking Book</span>
           </div>
-          <h1 className="text-3xl font-bold tracking-tight text-black">Portfolio explorer</h1>
-          <p className="text-sm text-[#5e5e5e] mt-1 max-w-2xl">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">Portfolio explorer</h1>
+          <p className="text-sm text-[#b3b3b3] mt-1 max-w-2xl leading-relaxed">
             Inspect synthetic wholesale banking assets, counterparty exposures, and portfolio concentration under Basel III risk-weight classifications.
           </p>
         </div>
@@ -104,12 +104,12 @@ export const PortfolioExplorerPage: React.FC = () => {
             loading={loading}
             icon={<RefreshCw className="w-3.5 h-3.5" />}
           >
-            Refresh Portfolio
+            Refresh
           </Button>
         </div>
       </div>
 
-      {/* 15.2 KPI Cards Row */}
+      {/* KPI Cards Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard
           title="Total portfolio value"
@@ -136,7 +136,7 @@ export const PortfolioExplorerPage: React.FC = () => {
         />
       </div>
 
-      {/* 15.3 Asset Allocation Section */}
+      {/* Asset Allocation Section */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Allocation Bar Chart (7 cols) */}
         <div className="lg:col-span-7">
@@ -149,23 +149,24 @@ export const PortfolioExplorerPage: React.FC = () => {
               {assetAllocationData.length > 0 ? (
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={assetAllocationData} margin={{ top: 10, right: 20, left: -10, bottom: 0 }}>
-                    <XAxis dataKey="name" stroke="#767676" fontSize={11} tickLine={false} />
-                    <YAxis stroke="#767676" fontSize={11} unit="M" tickLine={false} />
+                    <XAxis dataKey="name" stroke="#7c7c7c" fontSize={11} tickLine={false} />
+                    <YAxis stroke="#7c7c7c" fontSize={11} unit="M" tickLine={false} />
                     <Tooltip
                       contentStyle={{
-                        backgroundColor: '#ffffff',
-                        borderColor: '#d9d9d9',
+                        backgroundColor: '#181818',
+                        borderColor: '#282828',
                         borderRadius: '8px',
+                        boxShadow: '0 8px 24px rgba(0,0,0,0.5)',
                         fontSize: '12px',
-                        color: '#000000'
+                        color: '#ffffff'
                       }}
                       formatter={(val: any) => [`$${val}M`, 'Exposure']}
                     />
-                    <Bar dataKey="exposure" fill="#000000" radius={[4, 4, 0, 0]} />
+                    <Bar dataKey="exposure" fill="#1ed760" radius={[4, 4, 0, 0]} />
                   </BarChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="h-full flex items-center justify-center text-xs text-[#767676]">
+                <div className="h-full flex items-center justify-center text-xs text-[#7c7c7c]">
                   No asset allocation data.
                 </div>
               )}
@@ -183,20 +184,20 @@ export const PortfolioExplorerPage: React.FC = () => {
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs border-collapse">
                 <thead>
-                  <tr className="bg-[#efefef] border-b border-[#d9d9d9] text-[#5e5e5e] font-semibold">
+                  <tr className="bg-[#1f1f1f] border-b border-[#282828] text-white font-bold uppercase tracking-[1.4px] text-[11px]">
                     <th className="py-2.5 px-3">Asset Class</th>
                     <th className="py-2.5 px-3 text-right">Exposure</th>
                     <th className="py-2.5 px-3 text-right">Share (%)</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#d9d9d9]">
+                <tbody className="divide-y divide-[#282828]">
                   {assetAllocationData.map((item) => (
-                    <tr key={item.name} className="hover:bg-[#f3f3f3] transition-colors">
-                      <td className="py-2.5 px-3 font-medium text-black">{item.name}</td>
-                      <td className="py-2.5 px-3 text-right font-mono text-black font-semibold tabular-nums">
+                    <tr key={item.name} className="hover:bg-[#202020] transition-colors">
+                      <td className="py-2.5 px-3 font-medium text-white">{item.name}</td>
+                      <td className="py-2.5 px-3 text-right font-mono text-[#1ed760] font-bold tabular-nums">
                         ${item.exposure}M
                       </td>
-                      <td className="py-2.5 px-3 text-right font-mono text-[#767676] tabular-nums">
+                      <td className="py-2.5 px-3 text-right font-mono text-[#b3b3b3] tabular-nums">
                         {item.pct}%
                       </td>
                     </tr>
@@ -208,67 +209,69 @@ export const PortfolioExplorerPage: React.FC = () => {
         </div>
       </div>
 
-      {/* 15.5 Filters & Search */}
-      <div className="bg-white rounded-2xl p-5 border border-[#d9d9d9] space-y-4">
-        <div className="flex flex-col sm:flex-row gap-3">
-          <div className="flex-1">
-            <SearchInput
-              value={search}
-              onChange={setSearch}
-              placeholder="Search synthetic asset name, customer ID, or transaction ID..."
+      {/* Filters & Search */}
+      <Card>
+        <div className="space-y-4">
+          <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex-1">
+              <SearchInput
+                value={search}
+                onChange={setSearch}
+                placeholder="Search synthetic asset name, customer ID, or transaction ID..."
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 border-t border-[#282828]">
+            <SelectInput
+              label="Asset class"
+              value={assetType}
+              onChange={(e) => setAssetType(e.target.value)}
+              options={[
+                { label: 'All Asset Types', value: '' },
+                { label: 'Corporate Loan', value: 'Corporate Loan' },
+                { label: 'Corporate Bond', value: 'Corporate Bond' },
+                { label: 'Sovereign Bond', value: 'Sovereign Bond' },
+                { label: 'Equity Holding', value: 'Equity Holding' },
+                { label: 'FX / Derivative', value: 'FX / Derivative' },
+                { label: 'Liquid Cash', value: 'Liquid Cash' }
+              ]}
+            />
+
+            <SelectInput
+              label="Industry sector"
+              value={sector}
+              onChange={(e) => setSector(e.target.value)}
+              options={[
+                { label: 'All Sectors', value: '' },
+                { label: 'Technology', value: 'Technology' },
+                { label: 'Financial Services', value: 'Financial Services' },
+                { label: 'Energy', value: 'Energy' },
+                { label: 'Healthcare', value: 'Healthcare' },
+                { label: 'Industrials', value: 'Industrials' },
+                { label: 'Consumer Discretionary', value: 'Consumer Discretionary' },
+                { label: 'Sovereign', value: 'Sovereign' }
+              ]}
+            />
+
+            <SelectInput
+              label="Country jurisdiction"
+              value={country}
+              onChange={(e) => setCountry(e.target.value)}
+              options={[
+                { label: 'All Jurisdictions', value: '' },
+                { label: 'USA', value: 'USA' },
+                { label: 'UK', value: 'UK' },
+                { label: 'Eurozone', value: 'Eurozone' },
+                { label: 'Japan', value: 'Japan' },
+                { label: 'Global', value: 'Global' }
+              ]}
             />
           </div>
         </div>
+      </Card>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 border-t border-[#f3f3f3]">
-          <SelectInput
-            label="Asset class"
-            value={assetType}
-            onChange={(e) => setAssetType(e.target.value)}
-            options={[
-              { label: 'All Asset Types', value: '' },
-              { label: 'Corporate Loan', value: 'Corporate Loan' },
-              { label: 'Corporate Bond', value: 'Corporate Bond' },
-              { label: 'Sovereign Bond', value: 'Sovereign Bond' },
-              { label: 'Equity Holding', value: 'Equity Holding' },
-              { label: 'FX / Derivative', value: 'FX / Derivative' },
-              { label: 'Liquid Cash', value: 'Liquid Cash' }
-            ]}
-          />
-
-          <SelectInput
-            label="Industry sector"
-            value={sector}
-            onChange={(e) => setSector(e.target.value)}
-            options={[
-              { label: 'All Sectors', value: '' },
-              { label: 'Technology', value: 'Technology' },
-              { label: 'Financial Services', value: 'Financial Services' },
-              { label: 'Energy', value: 'Energy' },
-              { label: 'Healthcare', value: 'Healthcare' },
-              { label: 'Industrials', value: 'Industrials' },
-              { label: 'Consumer Discretionary', value: 'Consumer Discretionary' },
-              { label: 'Sovereign', value: 'Sovereign' }
-            ]}
-          />
-
-          <SelectInput
-            label="Country jurisdiction"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-            options={[
-              { label: 'All Jurisdictions', value: '' },
-              { label: 'USA', value: 'USA' },
-              { label: 'UK', value: 'UK' },
-              { label: 'Eurozone', value: 'Eurozone' },
-              { label: 'Japan', value: 'Japan' },
-              { label: 'Global', value: 'Global' }
-            ]}
-          />
-        </div>
-      </div>
-
-      {/* 15.4 Holdings Table */}
+      {/* Holdings Table */}
       <Card>
         <CardHeader
           title="Synthetic holdings ledger"
@@ -277,7 +280,7 @@ export const PortfolioExplorerPage: React.FC = () => {
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs border-collapse">
             <thead>
-              <tr className="bg-[#efefef] border-b border-[#d9d9d9] text-[#5e5e5e] font-semibold">
+              <tr className="bg-[#1f1f1f] border-b border-[#282828] text-white font-bold uppercase tracking-[1.4px] text-[11px]">
                 <th className="py-3 px-3 font-mono">Trans ID</th>
                 <th className="py-3 px-3">Asset Name</th>
                 <th className="py-3 px-2">Type</th>
@@ -290,17 +293,17 @@ export const PortfolioExplorerPage: React.FC = () => {
                 <th className="py-3 px-3 text-right">Action</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#d9d9d9]">
+            <tbody className="divide-y divide-[#282828]">
               {loading ? (
                 <tr>
-                  <td colSpan={10} className="py-12 text-center text-[#767676]">
-                    <RefreshCw className="w-5 h-5 animate-spin mx-auto mb-2 text-black" />
+                  <td colSpan={10} className="py-12 text-center text-[#b3b3b3]">
+                    <RefreshCw className="w-5 h-5 animate-spin mx-auto mb-2 text-[#1ed760]" />
                     Loading synthetic portfolio holdings...
                   </td>
                 </tr>
               ) : filteredHoldings.length === 0 ? (
                 <tr>
-                  <td colSpan={10} className="py-12 text-center text-[#767676]">
+                  <td colSpan={10} className="py-12 text-center text-[#7c7c7c]">
                     No holdings match current search filters.
                   </td>
                 </tr>
@@ -309,35 +312,35 @@ export const PortfolioExplorerPage: React.FC = () => {
                   <tr
                     key={h.asset_id}
                     onClick={() => setSelectedHolding(h)}
-                    className="hover:bg-[#f3f3f3] cursor-pointer transition-colors"
+                    className="hover:bg-[#202020] cursor-pointer transition-colors"
                   >
-                    <td className="py-3 px-3 font-mono text-[#767676]">{h.transaction_id}</td>
-                    <td className="py-3 px-3 font-semibold text-black">
+                    <td className="py-3 px-3 font-mono text-[#7c7c7c]">{h.transaction_id}</td>
+                    <td className="py-3 px-3 font-semibold text-white">
                       <div>{h.asset_name}</div>
-                      <span className="text-[10px] font-mono text-[#767676]">{h.synthetic_customer_id}</span>
+                      <span className="text-[10px] font-mono text-[#7c7c7c]">{h.synthetic_customer_id}</span>
                     </td>
-                    <td className="py-3 px-2 text-[#5e5e5e] whitespace-nowrap">{h.asset_type}</td>
-                    <td className="py-3 px-2 text-[#5e5e5e]">{h.sector}</td>
-                    <td className="py-3 px-2 text-[#5e5e5e]">{h.country}</td>
-                    <td className="py-3 px-3 text-right font-mono font-medium text-black tabular-nums whitespace-nowrap">
+                    <td className="py-3 px-2 text-[#b3b3b3] whitespace-nowrap">{h.asset_type}</td>
+                    <td className="py-3 px-2 text-[#b3b3b3]">{h.sector}</td>
+                    <td className="py-3 px-2 text-[#b3b3b3]">{h.country}</td>
+                    <td className="py-3 px-3 text-right font-mono font-medium text-[#b3b3b3] tabular-nums whitespace-nowrap">
                       {formatCurrency(h.notional_amount)}
                     </td>
-                    <td className="py-3 px-3 text-right font-mono font-bold text-black tabular-nums whitespace-nowrap">
+                    <td className="py-3 px-3 text-right font-mono font-bold text-white tabular-nums whitespace-nowrap">
                       {formatCurrency(h.market_value)}
                     </td>
                     <td className="py-3 px-2 text-center">
-                      <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-[#efefef] text-black border border-[#d9d9d9]">
+                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-[#1f1f1f] text-[#1ed760] border border-[#282828]">
                         {h.credit_rating}
                       </span>
                     </td>
-                    <td className="py-3 px-2 text-right font-mono text-[#767676] tabular-nums">
+                    <td className="py-3 px-2 text-right font-mono text-[#7c7c7c] tabular-nums">
                       {h.duration.toFixed(1)}y
                     </td>
                     <td className="py-3 px-3 text-right" onClick={(e) => e.stopPropagation()}>
                       <button
                         type="button"
                         onClick={() => setSelectedHolding(h)}
-                        className="px-3 py-1 rounded-full text-xs font-medium bg-black text-white hover:bg-[#282828] transition-colors"
+                        className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-[1.4px] bg-[#1f1f1f] text-white hover:border-[#1ed760] hover:text-[#1ed760] border border-[#282828] transition-colors"
                       >
                         Inspect
                       </button>
@@ -350,54 +353,54 @@ export const PortfolioExplorerPage: React.FC = () => {
         </div>
       </Card>
 
-      {/* 15.6 Holding Detail Modal */}
+      {/* Holding Detail Modal */}
       {selectedHolding && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-          <div className="bg-white rounded-2xl p-6 max-w-lg w-full border border-[#d9d9d9] shadow-[0_8px_32px_rgba(0,0,0,0.16)] space-y-4">
-            <div className="flex items-center justify-between pb-3 border-b border-[#d9d9d9]">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-xs p-4">
+          <div className="bg-[#242424] rounded-[8px] p-6 max-w-lg w-full border border-[#282828] shadow-[0_8px_24px_rgba(0,0,0,0.5)] space-y-4 animate-in fade-in zoom-in-95 duration-150">
+            <div className="flex items-center justify-between pb-3 border-b border-[#282828]">
               <div>
-                <span className="text-[10px] font-mono font-semibold uppercase px-2 py-0.5 rounded bg-[#efefef] text-black border border-[#d9d9d9]">
+                <span className="text-[10px] font-mono font-bold uppercase tracking-[1.4px] px-2.5 py-0.5 rounded-full bg-[#1f1f1f] text-[#1ed760] border border-[#282828]">
                   {selectedHolding.transaction_id}
                 </span>
-                <h3 className="text-lg font-bold text-black mt-1">{selectedHolding.asset_name}</h3>
+                <h3 className="text-lg font-bold text-white mt-1.5">{selectedHolding.asset_name}</h3>
               </div>
               <button
                 type="button"
                 onClick={() => setSelectedHolding(null)}
-                className="text-[#767676] hover:text-black p-1"
+                className="text-[#7c7c7c] hover:text-white p-1.5 rounded-full hover:bg-[#1f1f1f] transition-colors cursor-pointer"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
             <div className="grid grid-cols-2 gap-3 text-xs">
-              <div className="p-3 bg-[#f3f3f3] rounded-xl border border-[#d9d9d9]">
-                <span className="text-[10px] font-mono text-[#767676] uppercase block">Notional Exposure</span>
-                <span className="text-base font-bold font-mono text-black">{formatCurrency(selectedHolding.notional_amount)}</span>
+              <div className="p-3 bg-[#1f1f1f] rounded-[8px] border border-[#282828]">
+                <span className="text-[10px] font-mono text-[#7c7c7c] uppercase tracking-wider block mb-0.5">Notional Exposure</span>
+                <span className="text-base font-bold font-mono text-white">{formatCurrency(selectedHolding.notional_amount)}</span>
               </div>
-              <div className="p-3 bg-[#f3f3f3] rounded-xl border border-[#d9d9d9]">
-                <span className="text-[10px] font-mono text-[#767676] uppercase block">Market Valuation</span>
-                <span className="text-base font-bold font-mono text-black">{formatCurrency(selectedHolding.market_value)}</span>
+              <div className="p-3 bg-[#1f1f1f] rounded-[8px] border border-[#282828]">
+                <span className="text-[10px] font-mono text-[#7c7c7c] uppercase tracking-wider block mb-0.5">Market Valuation</span>
+                <span className="text-base font-bold font-mono text-[#1ed760]">{formatCurrency(selectedHolding.market_value)}</span>
               </div>
-              <div className="p-3 bg-[#f3f3f3] rounded-xl border border-[#d9d9d9]">
-                <span className="text-[10px] font-mono text-[#767676] uppercase block">Credit Rating</span>
-                <span className="text-base font-bold font-mono text-black">{selectedHolding.credit_rating}</span>
+              <div className="p-3 bg-[#1f1f1f] rounded-[8px] border border-[#282828]">
+                <span className="text-[10px] font-mono text-[#7c7c7c] uppercase tracking-wider block mb-0.5">Credit Rating</span>
+                <span className="text-base font-bold font-mono text-white">{selectedHolding.credit_rating}</span>
               </div>
-              <div className="p-3 bg-[#f3f3f3] rounded-xl border border-[#d9d9d9]">
-                <span className="text-[10px] font-mono text-[#767676] uppercase block">Duration / Maturity</span>
-                <span className="text-base font-bold font-mono text-black">{selectedHolding.duration.toFixed(1)} years</span>
+              <div className="p-3 bg-[#1f1f1f] rounded-[8px] border border-[#282828]">
+                <span className="text-[10px] font-mono text-[#7c7c7c] uppercase tracking-wider block mb-0.5">Duration / Maturity</span>
+                <span className="text-base font-bold font-mono text-white">{selectedHolding.duration.toFixed(1)} years</span>
               </div>
             </div>
 
-            <div className="p-3 bg-[#efefef] rounded-xl text-xs space-y-1 text-[#5e5e5e]">
-              <div><strong>Asset Type:</strong> {selectedHolding.asset_type}</div>
-              <div><strong>Sector:</strong> {selectedHolding.sector}</div>
-              <div><strong>Jurisdiction:</strong> {selectedHolding.country} ({selectedHolding.currency})</div>
-              <div><strong>Probability of Default (PD):</strong> {(selectedHolding.probability_of_default * 100).toFixed(2)}%</div>
-              <div><strong>Loss Given Default (LGD):</strong> {(selectedHolding.loss_given_default * 100).toFixed(0)}%</div>
+            <div className="p-4 bg-[#1f1f1f] rounded-[8px] border border-[#282828] text-xs space-y-1.5 text-[#b3b3b3]">
+              <div><strong className="text-white">Asset Type:</strong> {selectedHolding.asset_type}</div>
+              <div><strong className="text-white">Sector:</strong> {selectedHolding.sector}</div>
+              <div><strong className="text-white">Jurisdiction:</strong> {selectedHolding.country} ({selectedHolding.currency})</div>
+              <div><strong className="text-white">Probability of Default (PD):</strong> {(selectedHolding.probability_of_default * 100).toFixed(2)}%</div>
+              <div><strong className="text-white">Loss Given Default (LGD):</strong> {(selectedHolding.loss_given_default * 100).toFixed(0)}%</div>
             </div>
 
-            <div className="flex justify-end pt-3 border-t border-[#d9d9d9]">
+            <div className="flex justify-end pt-3 border-t border-[#282828]">
               <Button variant="secondary" size="sm" onClick={() => setSelectedHolding(null)}>
                 Close
               </Button>

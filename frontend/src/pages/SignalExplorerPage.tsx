@@ -4,9 +4,8 @@ import {
   Search, 
   ChevronLeft, 
   ChevronRight, 
-  RefreshCw,
-  Download,
-  X
+  RefreshCw, 
+  Download 
 } from 'lucide-react';
 import { api } from '../services/api';
 import { RiskSignal } from '../types';
@@ -125,21 +124,22 @@ export const SignalExplorerPage: React.FC<SignalExplorerPageProps> = ({ onSelect
 
   return (
     <div className="space-y-8 animate-in fade-in duration-200">
-      {/* 12.1 Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#d9d9d9]">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#282828]">
         <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#767676]">
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="w-2 h-2 rounded-full bg-[#1ed760] animate-pulse" />
+            <span className="text-xs font-mono font-bold uppercase tracking-[1.4px] text-[#1ed760]">
               Intelligence / Repository
             </span>
           </div>
-          <h1 className="text-3xl font-bold tracking-tight text-black">Risk signal explorer</h1>
-          <p className="text-sm text-[#5e5e5e] mt-1 max-w-2xl">
-            Search, filter, and investigate generated financial risk signals persisted across continuous data ingestion runs.
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">Risk signal explorer</h1>
+          <p className="text-xs sm:text-sm text-[#b3b3b3] mt-1 max-w-2xl leading-relaxed">
+            Search, filter, and audit persisted financial risk signals across multi-source ingestion channels.
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2.5 shrink-0">
           <Button
             variant="secondary"
             size="sm"
@@ -161,8 +161,8 @@ export const SignalExplorerPage: React.FC<SignalExplorerPageProps> = ({ onSelect
         </div>
       </div>
 
-      {/* 12.2 Filter Bar */}
-      <div className="bg-white rounded-2xl p-5 border border-[#d9d9d9] space-y-4">
+      {/* Filter Bar */}
+      <div className="bg-[#181818] rounded-[8px] p-5 border border-[#282828] shadow-[0_8px_24px_rgba(0,0,0,0.5)] space-y-4">
         <form onSubmit={handleSearchSubmit} className="flex flex-col sm:flex-row gap-3">
           <div className="flex-1">
             <SearchInput
@@ -174,12 +174,12 @@ export const SignalExplorerPage: React.FC<SignalExplorerPageProps> = ({ onSelect
           <Button type="submit" variant="primary" size="sm">
             Search
           </Button>
-          <Button type="button" variant="subtle" size="sm" onClick={handleClearFilters}>
+          <Button type="button" variant="secondary" size="sm" onClick={handleClearFilters}>
             Clear Filters
           </Button>
         </form>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2 border-t border-[#f3f3f3]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-3 border-t border-[#282828]">
           <SelectInput
             label="Ticker universe"
             value={ticker}
@@ -233,36 +233,36 @@ export const SignalExplorerPage: React.FC<SignalExplorerPageProps> = ({ onSelect
         </div>
       </div>
 
-      {/* 12.3 Data Table */}
-      <Card>
-        <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#d9d9d9]">
+      {/* Data Table Card */}
+      <Card hoverEffect>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-[#282828]">
           <div>
-            <h3 className="text-base font-bold text-black tracking-tight">Structured risk signals repository</h3>
-            <p className="text-xs text-[#5e5e5e] mt-0.5">
-              Showing {signals.length} of {total} verified signals
+            <h3 className="text-base font-bold text-white tracking-tight">Structured Risk Signals Grid</h3>
+            <p className="text-xs text-[#b3b3b3] mt-0.5">
+              Displaying {signals.length} of {total} verified signals
             </p>
           </div>
           <div className="flex items-center gap-2 text-xs">
-            <span className="text-[#767676]">Page size:</span>
+            <span className="text-[#7c7c7c] font-bold uppercase text-[10px] tracking-[1.4px]">Page size:</span>
             <select
               value={pageSize}
               onChange={(e) => {
                 setPageSize(Number(e.target.value));
                 setPage(1);
               }}
-              className="bg-[#efefef] rounded-lg px-2.5 py-1 text-xs border border-[#d9d9d9] font-medium"
+              className="bg-[#1f1f1f] rounded-[8px] px-3 py-1.5 text-xs border border-[#282828] font-medium text-white cursor-pointer hover:border-[#4d4d4d]"
             >
-              <option value="15">15</option>
-              <option value="30">30</option>
-              <option value="50">50</option>
+              <option value="15">15 rows</option>
+              <option value="30">30 rows</option>
+              <option value="50">50 rows</option>
             </select>
           </div>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto -mx-6 px-6">
           <table className="w-full text-left text-xs border-collapse">
             <thead>
-              <tr className="bg-[#efefef] border-b border-[#d9d9d9] text-[#5e5e5e] font-semibold">
+              <tr className="bg-[#1f1f1f] border-y border-[#282828] text-white font-bold uppercase tracking-[1.4px]">
                 <th className="py-3 px-3">Timestamp</th>
                 <th className="py-3 px-4">Headline</th>
                 <th className="py-3 px-3">Company</th>
@@ -274,17 +274,17 @@ export const SignalExplorerPage: React.FC<SignalExplorerPageProps> = ({ onSelect
                 <th className="py-3 px-3 text-right">Actions</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#d9d9d9]">
+            <tbody className="divide-y divide-[#282828]">
               {loading ? (
                 <tr>
-                  <td colSpan={9} className="py-12 text-center text-[#767676]">
-                    <RefreshCw className="w-5 h-5 animate-spin mx-auto mb-2 text-black" />
+                  <td colSpan={9} className="py-12 text-center text-[#b3b3b3]">
+                    <RefreshCw className="w-5 h-5 animate-spin mx-auto mb-2 text-[#1ed760]" />
                     Querying signal repository...
                   </td>
                 </tr>
               ) : signals.length === 0 ? (
                 <tr>
-                  <td colSpan={9} className="py-12 text-center text-[#767676]">
+                  <td colSpan={9} className="py-12 text-center text-[#7c7c7c]">
                     No signals matching the selected criteria.
                   </td>
                 </tr>
@@ -293,25 +293,25 @@ export const SignalExplorerPage: React.FC<SignalExplorerPageProps> = ({ onSelect
                   <tr
                     key={sig.signal_id}
                     onClick={() => onSelectSignal(sig)}
-                    className="hover:bg-[#f3f3f3] cursor-pointer transition-colors"
+                    className="hover:bg-[#202020] cursor-pointer transition-colors"
                   >
-                    <td className="py-3 px-3 font-mono text-[#767676] whitespace-nowrap tabular-nums">
+                    <td className="py-3 px-3 font-mono text-[#7c7c7c] whitespace-nowrap tabular-nums text-[11px]">
                       {formatTimestamp(sig.published_at || sig.processed_at)}
                     </td>
-                    <td className="py-3 px-4 font-medium text-black max-w-xs">
-                      <p className="line-clamp-2">{sig.headline}</p>
+                    <td className="py-3 px-4 font-semibold text-white max-w-xs">
+                      <p className="line-clamp-2 leading-snug">{sig.headline}</p>
                     </td>
-                    <td className="py-3 px-3 text-[#5e5e5e] font-medium truncate max-w-[120px]">
+                    <td className="py-3 px-3 text-[#b3b3b3] font-medium truncate max-w-[120px]">
                       {sig.primary_company || 'Macro / Market'}
                     </td>
-                    <td className="py-3 px-2 font-mono font-bold text-black">
+                    <td className="py-3 px-2 font-mono font-bold text-[#1ed760]">
                       {sig.primary_ticker || '—'}
                     </td>
                     <td className="py-3 px-3 text-center whitespace-nowrap">
                       <SentimentBadge score={sig.sentiment_score} label={sig.sentiment_label} />
                     </td>
                     <td className="py-3 px-3 whitespace-nowrap">
-                      <span className="px-2 py-0.5 rounded-full text-[10px] bg-[#efefef] text-[#5e5e5e] border border-[#d9d9d9]">
+                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-[#1f1f1f] text-[#cbcbcb] border border-[#282828]">
                         {sig.event_type}
                       </span>
                     </td>
@@ -325,7 +325,7 @@ export const SignalExplorerPage: React.FC<SignalExplorerPageProps> = ({ onSelect
                       <button
                         type="button"
                         onClick={() => onSelectSignal(sig)}
-                        className="px-3 py-1 rounded-full text-xs font-medium bg-black text-white hover:bg-[#282828] transition-colors"
+                        className="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-[1.4px] bg-[#1f1f1f] text-white hover:border-[#1ed760] hover:text-[#1ed760] border border-[#282828] transition-colors cursor-pointer"
                       >
                         Inspect
                       </button>
@@ -337,10 +337,10 @@ export const SignalExplorerPage: React.FC<SignalExplorerPageProps> = ({ onSelect
           </table>
         </div>
 
-        {/* 12.6 Pagination */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 mt-4 border-t border-[#d9d9d9] text-xs">
-          <span className="text-[#767676]">
-            Page <strong>{page}</strong> of <strong>{totalPages || 1}</strong> ({total} total records)
+        {/* Pagination */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 mt-4 border-t border-[#282828] text-xs">
+          <span className="text-[#b3b3b3] font-medium">
+            Page <strong className="text-white">{page}</strong> of <strong className="text-white">{totalPages || 1}</strong> ({total} total records)
           </span>
 
           <div className="flex items-center gap-2">

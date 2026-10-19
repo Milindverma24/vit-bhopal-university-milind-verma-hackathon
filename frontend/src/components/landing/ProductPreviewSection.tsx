@@ -1,97 +1,88 @@
-import React, { useState } from 'react';
-import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, AreaChart, Area } from 'recharts';
-import { Card } from '../ui/Card';
+import React, { useEffect, useState } from 'react';
+import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 import { ImpactBadge, SentimentBadge } from '../ui/Badges';
-
-const DEMO_SIGNALS = [
-  {
-    id: 'SIG-101',
-    time: '14:22 UTC',
-    ticker: 'JPM',
-    headline: 'JPMorgan Chase expands net interest income forecast following robust corporate loan demand',
-    sentiment: 0.83,
-    event: 'Corporate Earnings',
-    impact: 6
-  },
-  {
-    id: 'SIG-102',
-    time: '12:45 UTC',
-    ticker: 'AAPL',
-    headline: 'Department of Justice initiates formal scrutiny over exclusive vendor ecosystem contracts',
-    sentiment: -0.68,
-    event: 'Regulatory Action',
-    impact: 7
-  },
-  {
-    id: 'SIG-103',
-    time: '10:15 UTC',
-    ticker: 'NVDA',
-    headline: 'Critical semiconductor foundry halts high-density packaging line due to thermal bottleneck',
-    sentiment: -0.74,
-    event: 'Supply Chain Disruption',
-    impact: 8
-  },
-  {
-    id: 'SIG-104',
-    time: '08:30 UTC',
-    ticker: 'XOM',
-    headline: 'Upstream exploration yield exceeds quarterly guidance across Permian basin assets',
-    sentiment: 0.62,
-    event: 'Positive Business Development',
-    impact: 5
-  },
-  {
-    id: 'SIG-105',
-    time: '06:10 UTC',
-    ticker: 'CVX',
-    headline: 'European credit rating agency affirms negative outlook citing prolonged pipeline downtime',
-    sentiment: -0.85,
-    event: 'Credit Event',
-    impact: 8
-  }
-];
-
-const SECTOR_DISTRIBUTION = [
-  { sector: 'Tech', count: 34 },
-  { sector: 'Finance', count: 28 },
-  { sector: 'Energy', count: 24 },
-  { sector: 'Health', count: 18 },
-  { sector: 'Industrial', count: 22 }
-];
+import { api } from '../../services/api';
+import { RiskSignal, DashboardSummary } from '../../types';
 
 export const ProductPreviewSection: React.FC = () => {
-  const [activeSignal, setActiveSignal] = useState(DEMO_SIGNALS[1]);
+  const [signals, setSignals] = useState<RiskSignal[]>([]);
+  const [activeSignal, setActiveSignal] = useState<RiskSignal | null>(null);
+  const [distributionData, setDistributionData] = useState<{ name: string; count: number }[]>([
+    { name: 'Credit', count: 12 },
+    { name: 'Supply', count: 9 },
+    { name: 'Earnings', count: 8 },
+    { name: 'Reg', count: 5 },
+    { name: 'Macro', count: 2 }
+  ]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let mounted = true;
+    async function loadData() {
+      try {
+        const [sigRes, sumRes] = await Promise.all([
+          api.getSignals({ pageSize: 5 }),
+          api.getDashboardSummary().catch(() => null)
+        ]);
+        if (!mounted) return;
+        if (sigRes.items && sigRes.items.length > 0) {
+          setSignals(sigRes.items);
+          setActiveSignal(sigRes.items[0]);
+        }
+        if (sumRes && sumRes.event_distribution) {
+          const formatted = Object.entries(sumRes.event_distribution)
+            .slice(0, 5)
+            .map(([k, v]) => ({
+              name: k.replace(/ Event| Action| Disruption/g, '').slice(0, 8),
+              count: v
+            }));
+          if (formatted.length > 0) {
+            setDistributionData(formatted);
+          }
+        }
+      } catch (err) {
+        console.error('Failed to load ProductPreviewSection data:', err);
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    }
+    loadData();
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  const currentSig = activeSignal || signals[0];
 
   return (
-    <section id="product-preview" className="py-20 lg:py-28 border-b border-[#d9d9d9] bg-[#fafafa]">
+    <section id="product-preview" className="py-20 lg:py-28 border-b border-[#282828] bg-[#121212]">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-mono font-semibold uppercase tracking-wider text-black bg-[#efefef] px-2.5 py-0.5 rounded-full border border-[#d9d9d9]">
-            ANALYTICAL PLATFORM CAPABILITIES
+          <span className="text-[11px] font-mono font-bold uppercase tracking-[1.4px] text-[#1ed760] bg-[#1f1f1f] px-3.5 py-1.5 rounded-full border border-[#333333] inline-block mb-3">
+            Signal Discovery
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-black mt-3">
-            See the signal behind the story.
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mt-1">
+            Real-time risk signals as market headlines break.
           </h2>
-          <p className="text-base text-[#5e5e5e] mt-2 leading-relaxed">
-            From unstructured information to structured risk analysis, every stage is designed to make financial signals easier to inspect.
+          <p className="text-base text-[#b3b3b3] mt-2 leading-relaxed">
+            Review automated sentiment scores, identified entities, and estimated impact across the portfolio.
           </p>
         </div>
 
         {/* Analytical Preview Container */}
-        <div className="rounded-2xl border border-[#d9d9d9] bg-white p-6 lg:p-8 shadow-[0_8px_32px_rgba(0,0,0,0.03)] space-y-8">
+        <div className="rounded-[8px] border border-[#282828] bg-[#181818] p-6 lg:p-8 space-y-8 shadow-[0_8px_24px_rgba(0,0,0,0.5)]">
           
           {/* Top Panel Controls */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#d9d9d9]">
-            <div className="flex items-center gap-3">
-              <span className="w-2.5 h-2.5 rounded-full bg-black"></span>
-              <span className="text-xs font-mono uppercase font-bold text-black tracking-wider">
-                Risk Signal Explorer Preview
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#282828]">
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-mono uppercase font-bold text-white tracking-[1.4px]">
+                Live Risk Signal Stream
               </span>
             </div>
-            <span className="text-[11px] font-mono text-[#767676] bg-[#f3f3f3] px-2.5 py-1 rounded border border-[#d9d9d9]">
-              Live Ingestion Simulation · Standard Benchmark
+            <span className="text-[11px] font-mono text-[#b3b3b3] bg-[#1f1f1f] px-3 py-1 rounded-full border border-[#282828]">
+              S&P 500 Constituent Coverage
             </span>
           </div>
 
@@ -100,39 +91,43 @@ export const ProductPreviewSection: React.FC = () => {
             
             {/* Left Column: Signal Table (7 cols) */}
             <div className="lg:col-span-7 space-y-3">
-              <span className="text-xs font-mono uppercase text-[#767676] tracking-wider block mb-1">
-                Incoming Structured Risk Signals
+              <span className="text-[11px] font-mono uppercase text-[#7c7c7c] tracking-[1.4px] block mb-1">
+                Recent Detected Events
               </span>
 
               <div className="space-y-2">
-                {DEMO_SIGNALS.map((sig) => {
-                  const isSelected = activeSignal.id === sig.id;
+                {signals.map((sig) => {
+                  const isSelected = currentSig?.signal_id === sig.signal_id;
+                  const sigTicker = sig.primary_ticker || sig.entities?.[0]?.ticker || 'CORP';
+                  const eventDisplay = sig.event_type.replace(/_/g, ' ');
                   return (
                     <div
-                      key={sig.id}
+                      key={sig.signal_id}
                       onClick={() => setActiveSignal(sig)}
-                      className={`p-3.5 rounded-xl border transition-all cursor-pointer text-left ${
+                      className={`p-4 rounded-[8px] border transition-all cursor-pointer text-left ${
                         isSelected 
-                          ? 'border-black bg-[#f3f3f3] shadow-sm' 
-                          : 'border-[#d9d9d9] bg-white hover:border-black'
+                          ? 'border-[#1ed760] bg-[#242424] shadow-[0_4px_16px_rgba(0,0,0,0.6)]' 
+                          : 'border-[#282828] bg-[#1f1f1f] hover:bg-[#252525] hover:border-[#4d4d4d]'
                       }`}
                     >
                       <div className="flex items-center justify-between gap-2 mb-1.5 text-xs font-mono">
                         <div className="flex items-center gap-2">
-                          <span className="font-bold text-black">{sig.ticker}</span>
-                          <span className="text-[#767676]">•</span>
-                          <span className="text-[#5e5e5e]">{sig.time}</span>
+                          <span className={`font-bold ${isSelected ? 'text-[#1ed760]' : 'text-white'}`}>{sigTicker}</span>
+                          <span className="text-[#4d4d4d]">•</span>
+                          <span className="text-[#b3b3b3]">
+                            {sig.published_at ? new Date(sig.published_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Live'}
+                          </span>
                         </div>
                         <div className="flex items-center gap-1.5">
-                          <SentimentBadge score={sig.sentiment} />
-                          <ImpactBadge score={sig.impact} />
+                          <SentimentBadge score={sig.sentiment_score} />
+                          <ImpactBadge score={sig.impact_score} />
                         </div>
                       </div>
-                      <p className="text-xs text-black font-medium leading-snug line-clamp-2">
+                      <p className="text-xs text-white font-medium leading-snug line-clamp-2">
                         {sig.headline}
                       </p>
-                      <div className="mt-1.5 text-[11px] font-mono text-[#767676]">
-                        Event: <span className="text-black">{sig.event}</span>
+                      <div className="mt-1.5 text-[11px] font-mono text-[#7c7c7c]">
+                        Event: <span className="text-[#cbcbcb] font-medium">{eventDisplay}</span>
                       </div>
                     </div>
                   );
@@ -144,43 +139,54 @@ export const ProductPreviewSection: React.FC = () => {
             <div className="lg:col-span-5 space-y-6">
               
               {/* Selected Signal Deep Inspection */}
-              <div className="p-4 rounded-xl border border-[#d9d9d9] bg-[#f3f3f3] space-y-3">
-                <span className="text-xs font-mono uppercase text-[#767676] tracking-wider block">
-                  Active Signal Inspection
-                </span>
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-sm font-bold text-black">{activeSignal.ticker}</span>
-                  <span className="text-xs font-mono bg-white px-2 py-0.5 rounded border border-[#d9d9d9] text-black">
-                    Impact {activeSignal.impact} / 10
+              {currentSig && (
+                <div className="p-4 rounded-[8px] border border-[#282828] bg-[#1f1f1f] space-y-3">
+                  <span className="text-[11px] font-mono uppercase text-[#7c7c7c] tracking-[1.4px] block">
+                    Active Signal Inspection
                   </span>
-                </div>
-                <div className="grid grid-cols-2 gap-2 text-xs font-mono pt-1">
-                  <div className="p-2.5 rounded-lg bg-white border border-[#d9d9d9]">
-                    <span className="text-[10px] text-[#767676] block">Sentiment</span>
-                    <span className="text-base font-bold text-black tabular-nums">
-                      {activeSignal.sentiment > 0 ? `+${activeSignal.sentiment}` : activeSignal.sentiment}
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-sm font-bold text-white">
+                      {currentSig.primary_ticker || currentSig.entities?.[0]?.ticker || 'INDEX'}
+                    </span>
+                    <span className="text-xs font-mono bg-[#181818] px-2.5 py-0.5 rounded-full border border-[#282828] text-white">
+                      Impact {currentSig.impact_score} / 10
                     </span>
                   </div>
-                  <div className="p-2.5 rounded-lg bg-white border border-[#d9d9d9]">
-                    <span className="text-[10px] text-[#767676] block">Event Category</span>
-                    <span className="text-xs font-semibold text-black truncate block mt-0.5">
-                      {activeSignal.event}
-                    </span>
+                  <div className="grid grid-cols-2 gap-2 text-xs font-mono pt-1">
+                    <div className="p-3 rounded-[6px] bg-[#181818] border border-[#282828]">
+                      <span className="text-[10px] text-[#7c7c7c] block">Sentiment</span>
+                      <span className={`text-base font-bold tabular-nums ${currentSig.sentiment_score >= 0 ? 'text-[#1ed760]' : 'text-[#f3727f]'}`}>
+                        {currentSig.sentiment_score > 0 ? `+${currentSig.sentiment_score.toFixed(2)}` : currentSig.sentiment_score.toFixed(2)}
+                      </span>
+                    </div>
+                    <div className="p-3 rounded-[6px] bg-[#181818] border border-[#282828]">
+                      <span className="text-[10px] text-[#7c7c7c] block">Event Category</span>
+                      <span className="text-xs font-semibold text-white truncate block mt-0.5">
+                        {currentSig.event_type.replace(/_/g, ' ')}
+                      </span>
+                    </div>
                   </div>
+                  <p className="text-xs text-[#b3b3b3] leading-relaxed pt-1 line-clamp-3">
+                    {currentSig.impact_rationale || currentSig.text}
+                  </p>
                 </div>
-              </div>
+              )}
 
-              {/* Sector Distribution Histogram */}
-              <div className="p-4 rounded-xl border border-[#d9d9d9] bg-white space-y-3">
-                <span className="text-xs font-mono uppercase text-[#767676] tracking-wider block">
-                  Signals by Market Sector
+              {/* Event / Sector Distribution Histogram */}
+              <div className="p-4 rounded-[8px] border border-[#282828] bg-[#1f1f1f] space-y-3">
+                <span className="text-[11px] font-mono uppercase text-[#7c7c7c] tracking-[1.4px] block">
+                  Signals by Event Taxonomy
                 </span>
                 <div className="h-36 w-full">
                   <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={SECTOR_DISTRIBUTION} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
-                      <XAxis dataKey="sector" tick={{ fontSize: 11, fill: '#767676' }} axisLine={false} tickLine={false} />
-                      <YAxis tick={{ fontSize: 10, fill: '#767676' }} axisLine={false} tickLine={false} />
-                      <Bar dataKey="count" fill="#111111" radius={[4, 4, 0, 0]} isAnimationActive={false} />
+                    <BarChart data={distributionData} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
+                      <XAxis dataKey="name" tick={{ fontSize: 11, fill: '#b3b3b3' }} axisLine={false} tickLine={false} />
+                      <YAxis tick={{ fontSize: 10, fill: '#7c7c7c' }} axisLine={false} tickLine={false} />
+                      <Tooltip 
+                        contentStyle={{ backgroundColor: '#181818', borderColor: '#282828', borderRadius: '8px', color: '#fff' }}
+                        cursor={{ fill: 'rgba(255,255,255,0.05)' }}
+                      />
+                      <Bar dataKey="count" fill="#1ed760" radius={[4, 4, 0, 0]} isAnimationActive={false} />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
@@ -191,13 +197,13 @@ export const ProductPreviewSection: React.FC = () => {
           </div>
 
           {/* Bottom Summary Bar */}
-          <div className="pt-4 border-t border-[#d9d9d9] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-[#5e5e5e]">
+          <div className="pt-4 border-t border-[#282828] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-[#b3b3b3]">
             <div className="flex items-center gap-2">
-              <span className="font-semibold text-black">Pipeline Throughput:</span>
-              <span>120+ signals processed per batch</span>
+              <span className="font-semibold text-white">Coverage:</span>
+              <span>Live constituent feeds across 20 financial event categories</span>
             </div>
-            <div className="font-mono text-[11px] text-[#767676]">
-              All signals traceable to raw financial text & evidence markers
+            <div className="font-mono text-[11px] text-[#7c7c7c]">
+              Deterministic sentiment and audit trails for every signal
             </div>
           </div>
 

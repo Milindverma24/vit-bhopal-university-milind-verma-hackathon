@@ -4,9 +4,7 @@ import {
   RefreshCw, 
   Server, 
   ShieldCheck, 
-  Radio, 
   Download,
-  AlertTriangle,
   Lock,
   CheckCircle2
 } from 'lucide-react';
@@ -78,21 +76,21 @@ export const DataSourcesPage: React.FC = () => {
 
   return (
     <div className="space-y-8 animate-in fade-in duration-200">
-      {/* 17.1 Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#d9d9d9]">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#282828]">
         <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#767676]">
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="text-[11px] font-mono font-bold uppercase tracking-[1.4px] text-[#1ed760] bg-[#1f1f1f] px-3.5 py-1.5 rounded-full border border-[#333333]">
               System / Ingestion Infrastructure
             </span>
           </div>
-          <h1 className="text-3xl font-bold tracking-tight text-black">Data sources</h1>
-          <p className="text-sm text-[#5e5e5e] mt-1 max-w-2xl">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">Data sources</h1>
+          <p className="text-sm text-[#b3b3b3] mt-1 max-w-2xl leading-relaxed">
             Monitor public data providers, ingestion activity, and synthetic demonstration datasets.
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <Button
             variant="secondary"
             size="sm"
@@ -117,22 +115,22 @@ export const DataSourcesPage: React.FC = () => {
 
       {/* Action Notification Banner */}
       {actionMessage && (
-        <div className="p-4 bg-white rounded-2xl border border-black text-xs font-medium text-black flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-black shrink-0" />
+        <div className="p-4 bg-[#181818] text-white rounded-[8px] border border-[#282828] text-xs font-medium flex items-center justify-between animate-in fade-in shadow-[0_4px_16px_rgba(0,0,0,0.5)]">
+          <div className="flex items-center gap-2.5">
+            <CheckCircle2 className="w-4 h-4 text-[#1ed760] shrink-0" />
             <span>{actionMessage}</span>
           </div>
           <button
             type="button"
             onClick={() => setActionMessage(null)}
-            className="text-xs underline text-[#767676] hover:text-black"
+            className="text-xs text-[#7c7c7c] hover:text-white transition-colors ml-4 shrink-0 cursor-pointer"
           >
             Dismiss
           </button>
         </div>
       )}
 
-      {/* 17.2 Source Cards Grid */}
+      {/* Source Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {sources.map((src) => {
           const isConnected = src.status === 'Active' || src.status === 'Online' || src.status === 'Connected';
@@ -141,38 +139,38 @@ export const DataSourcesPage: React.FC = () => {
           return (
             <div
               key={src.source_id}
-              className="bg-white rounded-2xl p-6 border border-[#d9d9d9] flex flex-col justify-between space-y-4"
+              className="bg-[#181818] rounded-[8px] p-6 border border-[#282828] flex flex-col justify-between space-y-4 hover:bg-[#202020] hover:border-[#383838] transition-all shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-2">
-                  <span className="text-xs font-mono uppercase text-[#767676]">
+                  <span className="text-[11px] font-mono uppercase tracking-[1.4px] text-[#7c7c7c]">
                     {src.source_type.replace('_', ' ')}
                   </span>
-                  <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-semibold border ${
-                    isConnected ? 'bg-black text-white border-black' : 'bg-[#efefef] text-[#767676] border-[#d9d9d9]'
+                  <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold border ${
+                    isConnected ? 'bg-[#1ed760]/15 text-[#1ed760] border-[#1ed760]/30' : 'bg-[#1f1f1f] text-[#7c7c7c] border-[#282828]'
                   }`}>
                     {src.status}
                   </span>
                 </div>
 
-                <h3 className="text-base font-bold text-black tracking-tight">{src.source_name}</h3>
-                <p className="text-xs text-[#5e5e5e] mt-1">
-                  Access Method: <strong>{src.mode}</strong>
+                <h3 className="text-base font-bold text-white tracking-tight">{src.source_name}</h3>
+                <p className="text-xs text-[#b3b3b3] mt-1">
+                  Access Method: <strong className="text-white font-medium">{src.mode}</strong>
                 </p>
               </div>
 
-              <div className="p-3 bg-[#f3f3f3] rounded-xl border border-[#d9d9d9] text-xs space-y-1 font-mono">
+              <div className="p-3.5 bg-[#1f1f1f] rounded-[6px] border border-[#282828] text-xs space-y-1.5 font-mono">
                 <div className="flex justify-between">
-                  <span className="text-[#767676]">Records Ingested:</span>
-                  <strong className="text-black tabular-nums">{src.records_processed}</strong>
+                  <span className="text-[#7c7c7c]">Records Ingested:</span>
+                  <strong className="text-[#1ed760] tabular-nums">{src.records_processed}</strong>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-[#767676]">Last Ingestion:</span>
-                  <span className="text-black tabular-nums">{formatTimestamp(src.last_ingestion_at)}</span>
+                  <span className="text-[#7c7c7c]">Last Ingestion:</span>
+                  <span className="text-white tabular-nums">{formatTimestamp(src.last_ingestion_at)}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-[#767676]">Classification:</span>
-                  <span className="text-black">{isSynthetic ? 'Synthetic' : 'Public Feed'}</span>
+                  <span className="text-[#7c7c7c]">Classification:</span>
+                  <span className="text-white font-medium">{isSynthetic ? 'Synthetic' : 'Public Feed'}</span>
                 </div>
               </div>
 
@@ -199,7 +197,7 @@ export const DataSourcesPage: React.FC = () => {
                   </Button>
                 ) : (
                   <Button
-                    variant="subtle"
+                    variant="secondary"
                     size="sm"
                     className="w-full"
                     onClick={handleLoadFullSample}
@@ -214,14 +212,14 @@ export const DataSourcesPage: React.FC = () => {
         })}
       </div>
 
-      {/* 17.5 API Key Privacy & Governance Note */}
-      <div className="bg-[#efefef] rounded-2xl p-6 border border-[#d9d9d9] space-y-3">
+      {/* API Key Privacy & Governance Note */}
+      <div className="bg-[#181818] rounded-[8px] p-6 border border-[#282828] space-y-3 shadow-[0_8px_24px_rgba(0,0,0,0.5)]">
         <div className="flex items-center gap-2">
-          <Lock className="w-4 h-4 text-black" />
-          <h3 className="text-base font-bold text-black">API key privacy & governance disclosure</h3>
+          <Lock className="w-4 h-4 text-[#1ed760]" />
+          <h3 className="text-base font-bold text-white">API key privacy & governance disclosure</h3>
         </div>
-        <p className="text-xs text-[#5e5e5e] leading-relaxed">
-          The RiskPulse AI engine enforces strict cryptographic privacy: zero external commercial API keys are required for operation.
+        <p className="text-xs text-[#b3b3b3] leading-relaxed">
+          The RiskPulse engine enforces strict cryptographic privacy: zero external commercial API keys are required for operation.
           The pipeline utilizes authenticated open endpoints (SEC EDGAR public RSS, open market tickers, financial news syndication) with automated fallback to the pre-seeded deterministic synthetic dataset.
           No confidential institutional records or private customer credentials are ever requested or stored.
         </p>

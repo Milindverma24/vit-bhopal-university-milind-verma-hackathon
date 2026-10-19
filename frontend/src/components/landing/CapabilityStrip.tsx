@@ -4,31 +4,31 @@ import { Database, ShieldCheck, Sliders, BarChart3 } from 'lucide-react';
 const CAPABILITIES = [
   {
     icon: Database,
-    title: 'Public & Synthetic Data',
-    description: 'Compliant financial news wires & zero-PII synthetic banking exposures.'
+    title: 'Auditable Data Feeds',
+    description: 'Curated financial news streams paired with verified synthetic credit portfolios.'
   },
   {
     icon: ShieldCheck,
-    title: 'Explainable Risk Signals',
-    description: 'Deterministic sentiment scoring & rule-based event evidence extraction.'
+    title: 'Explainable Signals',
+    description: 'Calibrated sentiment scoring and taxonomy classification with direct text evidence.'
   },
   {
     icon: Sliders,
-    title: 'Constraint-Aware Rebalancing',
-    description: 'Box-constrained portfolio optimization ($w \\in [2\\%, 20\\%]$) with turnover limits.'
+    title: 'Constrained Rebalancing',
+    description: 'Portfolio optimization with bounded constituent weights (2% to 20%) and turnover control.'
   },
   {
     icon: BarChart3,
-    title: 'Event-Driven Stress Testing',
-    description: 'IFRS 9 Expected Credit Loss & multi-scenario sector loss attribution.'
+    title: 'Macro Stress Testing',
+    description: 'Multi-scenario shock modeling with expected credit loss and sector loss attribution.'
   }
 ];
 
 export const CapabilityStrip: React.FC = () => {
   return (
-    <section className="py-12 border-b border-[#d9d9d9] bg-white">
+    <section className="py-12 border-b border-[#282828] bg-[#181818]">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-[#d9d9d9]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-[#282828]">
           {CAPABILITIES.map((cap, idx) => {
             const Icon = cap.icon;
             return (
@@ -36,13 +36,13 @@ export const CapabilityStrip: React.FC = () => {
                 key={cap.title} 
                 className={`pt-6 sm:pt-0 ${idx !== 0 ? 'sm:pl-8' : ''} flex flex-col justify-start`}
               >
-                <div className="w-9 h-9 rounded-lg bg-[#f3f3f3] border border-[#d9d9d9] flex items-center justify-center text-black mb-3.5">
+                <div className="w-9 h-9 rounded-full bg-[#1f1f1f] border border-[#333333] flex items-center justify-center text-[#1ed760] mb-3.5">
                   <Icon className="w-4 h-4" />
                 </div>
-                <h4 className="text-sm font-bold text-black tracking-tight">
+                <h4 className="text-sm font-bold text-white tracking-tight">
                   {cap.title}
                 </h4>
-                <p className="text-xs text-[#5e5e5e] mt-1.5 leading-relaxed">
+                <p className="text-xs text-[#b3b3b3] mt-1.5 leading-relaxed">
                   {cap.description}
                 </p>
               </div>

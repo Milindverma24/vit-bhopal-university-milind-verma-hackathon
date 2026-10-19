@@ -3,21 +3,18 @@ import {
   Rss, 
   Search, 
   RefreshCw, 
-  ExternalLink, 
   MessageSquare, 
   Newspaper, 
   Database,
-  Building2,
-  Copy,
-  Check,
-  X
+  Copy, 
+  Check, 
+  X 
 } from 'lucide-react';
 import { RiskSignal } from '../types';
 import { api } from '../services/api';
 import { Button } from '../components/ui/Button';
 import { SentimentBadge, ImpactBadge, SourceBadge } from '../components/ui/Badges';
 import { SearchInput } from '../components/ui/Inputs';
-import { Card } from '../components/ui/Card';
 import { formatTimestamp } from '../utils/formatters';
 
 interface FeedPageProps {
@@ -207,21 +204,22 @@ export const FeedPage: React.FC<FeedPageProps> = ({
 
   return (
     <div className="space-y-8 animate-in fade-in duration-200">
-      {/* 10.1 Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#d9d9d9]">
+      {/* Page Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#282828]">
         <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#767676]">
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="w-2 h-2 rounded-full bg-[#1ed760] animate-pulse" />
+            <span className="text-xs font-mono font-bold uppercase tracking-[1.4px] text-[#1ed760]">
               Intelligence / Raw Feeds
             </span>
           </div>
-          <h1 className="text-3xl font-bold tracking-tight text-black">News and social intelligence</h1>
-          <p className="text-sm text-[#5e5e5e] mt-1 max-w-2xl">
-            Explore financial narratives entering the risk engine from verified news wires and synthesized FinTwit & StockTwits market discourse.
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">News & social intelligence</h1>
+          <p className="text-xs sm:text-sm text-[#b3b3b3] mt-1 max-w-2xl leading-relaxed">
+            Surveil financial narratives entering the risk engine from verified news wires and synthesized FinTwit market discourse.
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2.5 shrink-0">
           <Button
             variant="secondary"
             size="sm"
@@ -247,31 +245,37 @@ export const FeedPage: React.FC<FeedPageProps> = ({
       {/* Ingestion Feedback Alert Banner */}
       {ingestionNotice && (
         <div
-          className={`p-4 rounded-xl border flex items-start justify-between gap-3 text-xs animate-in fade-in select-none ${
+          className={`p-4 rounded-[8px] border flex items-start justify-between gap-3 text-xs animate-in fade-in select-none shadow-[0_4px_16px_rgba(0,0,0,0.5)] ${
             ingestionNotice.type === 'success'
-              ? 'bg-[#f7f7f7] border-black text-black'
+              ? 'bg-[#1ed760]/10 border-[#1ed760]/30 text-white'
               : ingestionNotice.type === 'rate_limited' || ingestionNotice.type === 'warning'
-              ? 'bg-[#efefef] border-[#767676] text-black'
-              : 'bg-[#efefef] border-black text-black'
+              ? 'bg-[#ffa42b]/10 border-[#ffa42b]/30 text-white'
+              : 'bg-[#f3727f]/10 border-[#f3727f]/30 text-white'
           }`}
         >
-          <div className="space-y-1">
-            <div className="flex items-center gap-2">
-              <span className="font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-black text-white text-[10px]">
+          <div className="space-y-1.5">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className={`font-mono font-bold uppercase tracking-[1.4px] px-2.5 py-0.5 rounded-full text-[10px] ${
+                ingestionNotice.type === 'success'
+                  ? 'bg-[#1ed760] text-black'
+                  : ingestionNotice.type === 'rate_limited' || ingestionNotice.type === 'warning'
+                  ? 'bg-[#ffa42b] text-black'
+                  : 'bg-[#f3727f] text-white'
+              }`}>
                 {ingestionNotice.type.toUpperCase()}
               </span>
-              <strong className="text-black font-semibold">{ingestionNotice.title}</strong>
+              <strong className="font-semibold text-white text-xs sm:text-sm">{ingestionNotice.title}</strong>
             </div>
-            <p className="text-[#5e5e5e]">{ingestionNotice.message}</p>
+            <p className="text-[#b3b3b3] text-xs leading-relaxed">{ingestionNotice.message}</p>
             {ingestionNotice.details && (
-              <div className="flex flex-wrap items-center gap-3 text-[11px] text-[#767676] font-mono pt-1">
-                <span>Source: <strong className="text-black">{ingestionNotice.details.source}</strong></span>
+              <div className="flex flex-wrap items-center gap-3 text-[11px] text-[#7c7c7c] font-mono pt-1">
+                <span>Source: <strong className="text-white">{ingestionNotice.details.source}</strong></span>
                 <span>•</span>
-                <span>Fetched: <strong className="text-black">{ingestionNotice.details.fetched}</strong></span>
+                <span>Fetched: <strong className="text-white">{ingestionNotice.details.fetched}</strong></span>
                 <span>•</span>
-                <span>Inserted: <strong className="text-black">{ingestionNotice.details.inserted}</strong></span>
+                <span>Inserted: <strong className="text-white">{ingestionNotice.details.inserted}</strong></span>
                 <span>•</span>
-                <span>Duplicates: <strong className="text-black">{ingestionNotice.details.duplicates}</strong></span>
+                <span>Duplicates: <strong className="text-white">{ingestionNotice.details.duplicates}</strong></span>
                 <span>•</span>
                 <span>Time: <strong>{ingestionNotice.details.timestamp}</strong></span>
               </div>
@@ -280,15 +284,15 @@ export const FeedPage: React.FC<FeedPageProps> = ({
           <button
             type="button"
             onClick={() => setIngestionNotice(null)}
-            className="p-1 hover:bg-[#e2e2e2] rounded-full transition-colors text-[#767676] hover:text-black"
+            className="p-1 hover:bg-[#282828] rounded-full transition-colors text-[#7c7c7c] hover:text-white cursor-pointer"
           >
             <X className="w-4 h-4" />
           </button>
         </div>
       )}
 
-      {/* 10.2 Filter Bar with Pill Shapes */}
-      <div className="bg-white rounded-2xl p-5 border border-[#d9d9d9] space-y-4">
+      {/* Filter Bar with Pill Shapes */}
+      <div className="bg-[#181818] rounded-[8px] p-6 border border-[#282828] space-y-4 shadow-[0_8px_24px_rgba(0,0,0,0.5)]">
         <div className="flex flex-col sm:flex-row gap-3">
           <div className="flex-1">
             <SearchInput
@@ -299,12 +303,12 @@ export const FeedPage: React.FC<FeedPageProps> = ({
           </div>
 
           {/* Source Filter Pills */}
-          <div className="inline-flex items-center p-1 bg-[#efefef] rounded-full border border-[#d9d9d9] shrink-0">
+          <div className="inline-flex items-center p-1 bg-[#121212] rounded-full border border-[#282828] shrink-0 self-start sm:self-auto">
             <button
               type="button"
               onClick={() => setSourceFilter('all')}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
-                sourceFilter === 'all' ? 'bg-black text-white shadow-xs' : 'text-[#5e5e5e] hover:text-black'
+              className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[1.4px] transition-all cursor-pointer ${
+                sourceFilter === 'all' ? 'bg-[#1ed760] text-black shadow-[0_2px_8px_rgba(30,215,96,0.4)]' : 'text-[#b3b3b3] hover:text-white'
               }`}
             >
               All Sources
@@ -312,8 +316,8 @@ export const FeedPage: React.FC<FeedPageProps> = ({
             <button
               type="button"
               onClick={() => setSourceFilter('financial_news')}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
-                sourceFilter === 'financial_news' ? 'bg-black text-white shadow-xs' : 'text-[#5e5e5e] hover:text-black'
+              className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[1.4px] transition-all cursor-pointer ${
+                sourceFilter === 'financial_news' ? 'bg-[#1ed760] text-black shadow-[0_2px_8px_rgba(30,215,96,0.4)]' : 'text-[#b3b3b3] hover:text-white'
               }`}
             >
               Financial News
@@ -321,8 +325,8 @@ export const FeedPage: React.FC<FeedPageProps> = ({
             <button
               type="button"
               onClick={() => setSourceFilter('social_media')}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
-                sourceFilter === 'social_media' ? 'bg-black text-white shadow-xs' : 'text-[#5e5e5e] hover:text-black'
+              className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[1.4px] transition-all cursor-pointer ${
+                sourceFilter === 'social_media' ? 'bg-[#1ed760] text-black shadow-[0_2px_8px_rgba(30,215,96,0.4)]' : 'text-[#b3b3b3] hover:text-white'
               }`}
             >
               Social Media
@@ -331,18 +335,18 @@ export const FeedPage: React.FC<FeedPageProps> = ({
         </div>
 
         {/* Tickers Filter Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-1 text-xs">
-          <span className="text-[#767676] font-medium shrink-0">Ticker:</span>
+        <div className="flex items-center gap-2 overflow-x-auto pb-1 text-xs no-scrollbar">
+          <span className="text-[#7c7c7c] font-bold uppercase text-[10px] tracking-[1.4px] shrink-0">Ticker:</span>
           <div className="flex items-center gap-1.5">
             {tickers.map((t) => (
               <button
                 key={t}
                 type="button"
                 onClick={() => setSelectedTicker(t)}
-                className={`px-3 py-1 rounded-full text-xs font-mono font-medium transition-all shrink-0 ${
+                className={`px-3 py-1 rounded-full text-xs font-mono font-bold transition-all shrink-0 cursor-pointer ${
                   selectedTicker === t
-                    ? 'bg-black text-white'
-                    : 'bg-[#efefef] text-[#5e5e5e] hover:bg-[#e2e2e2] hover:text-black border border-[#d9d9d9]'
+                    ? 'bg-[#1ed760] text-black'
+                    : 'bg-[#1f1f1f] text-[#b3b3b3] hover:border-[#4d4d4d] hover:text-white border border-[#282828]'
                 }`}
               >
                 {t}
@@ -352,18 +356,18 @@ export const FeedPage: React.FC<FeedPageProps> = ({
         </div>
 
         {/* Sentiment Filter Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto text-xs">
-          <span className="text-[#767676] font-medium shrink-0">Sentiment:</span>
+        <div className="flex items-center gap-2 overflow-x-auto text-xs no-scrollbar">
+          <span className="text-[#7c7c7c] font-bold uppercase text-[10px] tracking-[1.4px] shrink-0">Sentiment:</span>
           <div className="flex items-center gap-1.5">
             {sentiments.map((s) => (
               <button
                 key={s}
                 type="button"
                 onClick={() => setSelectedSentiment(s)}
-                className={`px-3 py-1 rounded-full text-xs font-medium transition-all shrink-0 ${
+                className={`px-3 py-1 rounded-full text-xs font-bold transition-all shrink-0 cursor-pointer ${
                   selectedSentiment === s
-                    ? 'bg-black text-white'
-                    : 'bg-[#efefef] text-[#5e5e5e] hover:bg-[#e2e2e2] hover:text-black border border-[#d9d9d9]'
+                    ? 'bg-[#1ed760] text-black'
+                    : 'bg-[#1f1f1f] text-[#b3b3b3] hover:border-[#4d4d4d] hover:text-white border border-[#282828]'
                 }`}
               >
                 {s}
@@ -373,25 +377,27 @@ export const FeedPage: React.FC<FeedPageProps> = ({
         </div>
       </div>
 
-      {/* 10.3 Signal Feed Cards List */}
+      {/* Signal Feed Cards List */}
       <div className="space-y-4">
-        <div className="flex items-center justify-between text-xs text-[#767676] px-1">
-          <span>Displaying <strong>{feedSignals.length}</strong> {sourceFilter === 'social_media' ? 'social discourse' : sourceFilter === 'financial_news' ? 'news wire' : 'narrative intelligence'} records (Total available: {totalCount})</span>
+        <div className="flex items-center justify-between text-xs text-[#7c7c7c] px-1">
+          <span>Displaying <strong className="text-white">{feedSignals.length}</strong> {sourceFilter === 'social_media' ? 'social discourse' : sourceFilter === 'financial_news' ? 'news wire' : 'narrative intelligence'} records (Total available: {totalCount})</span>
           <span className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-black inline-block animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-[#1ed760] inline-block animate-pulse"></span>
             Real-time feed sync active
           </span>
         </div>
 
         {feedLoading && feedSignals.length === 0 ? (
-          <div className="p-16 text-center text-[#767676] bg-white rounded-2xl border border-[#d9d9d9]">
-            <RefreshCw className="w-6 h-6 animate-spin mx-auto mb-2 text-black" />
-            <p className="text-xs">Ingesting financial intelligence feed...</p>
+          <div className="p-16 text-center text-[#b3b3b3] bg-[#181818] rounded-[8px] border border-[#282828] shadow-[0_8px_24px_rgba(0,0,0,0.5)]">
+            <RefreshCw className="w-7 h-7 animate-spin mx-auto mb-3 text-[#1ed760]" />
+            <p className="text-xs font-medium">Ingesting financial intelligence feed...</p>
           </div>
         ) : feedSignals.length === 0 ? (
-          <div className="p-16 text-center text-[#767676] bg-white rounded-2xl border border-[#d9d9d9]">
-            <h3 className="text-base font-bold text-black mb-1">No risk signals found</h3>
-            <p className="text-xs mb-4">Try clearing your filters or click "Fetch Social" / "Fetch News" to ingest fresh signals.</p>
+          <div className="p-16 text-center text-[#b3b3b3] bg-[#181818] rounded-[8px] border border-[#282828] shadow-[0_8px_24px_rgba(0,0,0,0.5)]">
+            <h3 className="text-base font-bold text-white mb-1">No risk signals found</h3>
+            <p className="text-xs text-[#b3b3b3] mb-4 max-w-sm mx-auto leading-relaxed">
+              Try clearing your filters or click "Fetch Social" / "Fetch News" to ingest fresh signals into the repository.
+            </p>
             <div className="flex items-center justify-center gap-2">
               <Button
                 variant="secondary"
@@ -421,15 +427,15 @@ export const FeedPage: React.FC<FeedPageProps> = ({
           feedSignals.map((signal) => (
             <div
               key={signal.signal_id}
-              className="bg-white rounded-2xl p-6 border border-[#d9d9d9] hover:border-black transition-all duration-150 space-y-4"
+              className="bg-[#181818] rounded-[8px] p-6 border border-[#282828] hover:bg-[#202020] hover:border-[#383838] transition-all space-y-4 shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
             >
               {/* Top Meta Header */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-[#f3f3f3] text-xs">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-[#282828] text-xs">
                 <div className="flex items-center gap-2 flex-wrap">
                   <SourceBadge sourceType={signal.source_type} isSynthetic={signal.is_synthetic} />
-                  <span className="font-semibold text-black">{signal.source_name}</span>
-                  <span className="text-[#767676]">•</span>
-                  <span className="text-[#767676] tabular-nums">
+                  <span className="font-semibold text-white">{signal.source_name}</span>
+                  <span className="text-[#4d4d4d]">•</span>
+                  <span className="text-[#7c7c7c] tabular-nums font-mono text-[11px]">
                     {formatTimestamp(signal.published_at || signal.processed_at)}
                   </span>
                 </div>
@@ -442,24 +448,24 @@ export const FeedPage: React.FC<FeedPageProps> = ({
 
               {/* Headline & Body Context */}
               <div>
-                <h3 className="text-base font-bold tracking-tight text-black leading-snug">
+                <h3 className="text-base font-bold tracking-tight text-white leading-snug">
                   {signal.headline}
                 </h3>
-                <p className="text-xs text-[#5e5e5e] leading-relaxed mt-2 p-3 bg-[#f3f3f3] rounded-xl border border-[#d9d9d9]">
+                <p className="text-xs text-[#b3b3b3] leading-relaxed mt-2.5 p-3.5 bg-[#1f1f1f] rounded-[6px] border border-[#282828] font-normal">
                   {signal.text}
                 </p>
               </div>
 
               {/* Bottom Entity & Action Row */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 text-xs">
-                <div className="flex items-center gap-2">
-                  <span className="font-mono font-bold text-xs bg-[#efefef] px-2.5 py-1 rounded-full text-black border border-[#d9d9d9]">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="font-mono font-bold text-xs bg-[#1f1f1f] px-2.5 py-0.5 rounded-full text-[#1ed760] border border-[#282828]">
                     {signal.primary_ticker || 'MACRO'}
                   </span>
-                  <span className="text-[#5e5e5e] font-medium truncate max-w-xs">
+                  <span className="text-[#b3b3b3] font-medium truncate max-w-xs">
                     {signal.primary_company || 'Cross-Market Stance'}
                   </span>
-                  <span className="px-2 py-0.5 rounded-full text-[10px] bg-[#efefef] text-[#767676] border border-[#d9d9d9]">
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-[#1f1f1f] text-[#cbcbcb] border border-[#282828]">
                     {signal.event_type}
                   </span>
                 </div>
@@ -468,10 +474,10 @@ export const FeedPage: React.FC<FeedPageProps> = ({
                   <button
                     type="button"
                     onClick={() => handleCopyProvenance(signal)}
-                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs text-[#5e5e5e] hover:text-black bg-[#efefef] hover:bg-[#e2e2e2] transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[1.4px] text-white bg-[#1f1f1f] hover:border-[#1ed760] hover:text-[#1ed760] border border-[#282828] transition-colors cursor-pointer"
                     title="Copy Source Provenance"
                   >
-                    {copiedId === signal.signal_id ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
+                    {copiedId === signal.signal_id ? <Check className="w-3.5 h-3.5 text-[#1ed760]" /> : <Copy className="w-3.5 h-3.5 text-[#7c7c7c]" />}
                     <span>{copiedId === signal.signal_id ? 'Copied' : 'Provenance'}</span>
                   </button>
 

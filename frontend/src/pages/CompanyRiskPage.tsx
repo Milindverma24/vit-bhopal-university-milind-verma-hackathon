@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { 
   ArrowLeft, 
-  RefreshCw
+  RefreshCw,
+  Building2,
+  TrendingUp,
+  TrendingDown,
+  Info
 } from 'lucide-react';
 import { 
-  LineChart, 
-  Line, 
   XAxis, 
   YAxis, 
   Tooltip, 
   ResponsiveContainer, 
   ReferenceLine, 
   BarChart, 
-  Bar
+  Bar,
+  AreaChart,
+  Area
 } from 'recharts';
 import { api } from '../services/api';
 import { CompanyBasketItem, CompanyRiskDetail, RiskSignal } from '../types';
@@ -118,20 +122,20 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
     if (active && payload && payload.length) {
       const d = payload[0].payload;
       return (
-        <div className="bg-white p-3 rounded-xl border border-[#d9d9d9] shadow-lg text-xs space-y-1.5 max-w-xs select-none">
-          <div className="flex items-center justify-between gap-2 border-b border-[#efefef] pb-1">
-            <span className="font-mono font-bold text-black">{d.ticker}</span>
-            <span className="font-mono text-[10px] text-[#767676]">{d.fullDate}</span>
+        <div className="bg-[#181818] p-3.5 rounded-[8px] border border-[#282828] shadow-[0_8px_24px_rgba(0,0,0,0.5)] text-xs space-y-1.5 max-w-xs select-none">
+          <div className="flex items-center justify-between gap-2 border-b border-[#282828] pb-1">
+            <span className="font-mono font-bold text-[#1ed760]">{d.ticker}</span>
+            <span className="font-mono text-[10px] text-[#7c7c7c]">{d.fullDate}</span>
           </div>
-          <p className="font-medium text-black line-clamp-2">{d.headline}</p>
+          <p className="font-medium text-white line-clamp-2 leading-snug">{d.headline}</p>
           <div className="flex items-center justify-between pt-1">
-            <span className="text-[#5e5e5e] font-medium">{d.event_type}</span>
-            <span className="font-mono font-bold text-black">
+            <span className="text-[#b3b3b3] font-medium">{d.event_type}</span>
+            <span className={`font-mono font-bold ${d.sentiment >= 0 ? 'text-[#1ed760]' : 'text-[#f3727f]'}`}>
               Score: {d.sentiment > 0 ? `+${d.sentiment}` : d.sentiment}
             </span>
           </div>
-          <div className="text-[10px] text-[#767676]">
-            Impact severity: <strong className="text-black">{d.impact}/10</strong> • Stance: <strong className="text-black">{d.sentiment_label}</strong>
+          <div className="text-[10px] text-[#7c7c7c]">
+            Severity: <strong className="text-white">{d.impact}/10</strong> • Stance: <strong className="text-white">{d.sentiment_label}</strong>
           </div>
         </div>
       );
@@ -142,15 +146,16 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
   return (
     <div className="space-y-8 animate-in fade-in duration-200">
       {/* Page Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#d9d9d9]">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#282828]">
         <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#767676]">
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="w-2 h-2 rounded-full bg-[#1ed760] animate-pulse" />
+            <span className="text-xs font-mono font-bold uppercase tracking-[1.4px] text-[#1ed760]">
               Intelligence / Risk Surveillance
             </span>
           </div>
-          <h1 className="text-3xl font-bold tracking-tight text-black">Company risk profiles</h1>
-          <p className="text-sm text-[#5e5e5e] mt-1 max-w-2xl">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">Company risk profiles</h1>
+          <p className="text-xs sm:text-sm text-[#b3b3b3] mt-1 max-w-2xl leading-relaxed">
             Institutional risk surveillance across constituent companies derived from continuous NLP parsing and verified event extraction.
           </p>
         </div>
@@ -171,29 +176,29 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
       {selectedTicker && companyRisk ? (
         <div className="space-y-6">
           {/* Company Title Banner */}
-          <div className="bg-white rounded-2xl p-6 border border-[#d9d9d9] flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="bg-[#181818] rounded-[8px] p-6 border border-[#282828] shadow-[0_8px_24px_rgba(0,0,0,0.5)] flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-lg font-mono">
+              <div className="w-12 h-12 rounded-full bg-[#1ed760] text-black flex items-center justify-center font-bold text-lg font-mono shadow-[0_2px_8px_rgba(30,215,96,0.4)]">
                 {companyRisk.ticker.slice(0, 2)}
               </div>
               <div>
-                <div className="flex items-center gap-2.5">
-                  <h2 className="text-2xl font-bold tracking-tight text-black">{companyRisk.name}</h2>
-                  <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold bg-[#efefef] text-black border border-[#d9d9d9]">
+                <div className="flex items-center gap-2.5 flex-wrap">
+                  <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-white">{companyRisk.name}</h2>
+                  <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-[#1f1f1f] text-[#1ed760] border border-[#282828]">
                     {companyRisk.ticker}
                   </span>
                 </div>
-                <div className="flex items-center gap-3 text-xs text-[#5e5e5e] mt-1">
-                  <span>Sector: <strong>{companyRisk.sector}</strong></span>
+                <div className="flex items-center gap-3 text-xs text-[#b3b3b3] mt-1 flex-wrap">
+                  <span>Sector: <strong className="text-white font-semibold">{companyRisk.sector}</strong></span>
                   <span>•</span>
-                  <span>Index Weight: <strong>{formatPercentage(companyRisk.current_weight)}</strong></span>
+                  <span>Index Weight: <strong className="text-white font-mono font-semibold">{formatPercentage(companyRisk.current_weight)}</strong></span>
                   <span>•</span>
-                  <span>Provenance: <strong>Public Market Data</strong></span>
+                  <span>Provenance: <strong className="text-white font-semibold">Public Market Feeds</strong></span>
                 </div>
               </div>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2.5 shrink-0">
               <SentimentBadge score={companyRisk.average_sentiment} />
               <ImpactBadge score={companyRisk.max_impact} />
             </div>
@@ -216,7 +221,7 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
             <MetricCard
               title="Signals captured"
               value={companyRisk.signals_count}
-              description="Recent verified intelligence items"
+              description="Verified intelligence items"
             />
             <MetricCard
               title="Simulated weight"
@@ -228,7 +233,7 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
           {/* Charts Row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Sentiment History */}
-            <Card>
+            <Card hoverEffect>
               <CardHeader
                 title="Sentiment trend history"
                 description="Historical sentiment score trajectory for this constituent (zero-line indicates neutral threshold)."
@@ -236,26 +241,33 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
               <div className="h-64 w-full">
                 {sentimentHistoryData.length > 0 ? (
                   <ResponsiveContainer width="100%" height="100%">
-                    <LineChart
+                    <AreaChart
                       data={sentimentHistoryData}
                       margin={{ top: 10, right: 20, left: -20, bottom: 0 }}
                     >
-                      <XAxis dataKey="timeKey" stroke="#767676" fontSize={11} tickLine={false} />
-                      <YAxis stroke="#767676" fontSize={11} domain={[-1, 1]} tickLine={false} />
-                      <ReferenceLine y={0} stroke="#d9d9d9" strokeDasharray="3 3" />
+                      <defs>
+                        <linearGradient id="companySentimentGrad" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="5%" stopColor="#1ed760" stopOpacity={0.25} />
+                          <stop offset="95%" stopColor="#1ed760" stopOpacity={0.0} />
+                        </linearGradient>
+                      </defs>
+                      <XAxis dataKey="timeKey" stroke="#7c7c7c" fontSize={11} tickLine={false} />
+                      <YAxis stroke="#7c7c7c" fontSize={11} domain={[-1, 1]} tickLine={false} />
+                      <ReferenceLine y={0} stroke="#383838" strokeDasharray="3 3" />
                       <Tooltip content={<CustomSentimentTooltip />} />
-                      <Line
+                      <Area
                         type="monotone"
                         dataKey="sentiment"
-                        stroke="#000000"
+                        stroke="#1ed760"
                         strokeWidth={2}
-                        dot={{ r: 3, fill: '#000000' }}
-                        activeDot={{ r: 5 }}
+                        fill="url(#companySentimentGrad)"
+                        dot={{ r: 3, fill: '#1ed760' }}
+                        activeDot={{ r: 5, fill: '#ffffff' }}
                       />
-                    </LineChart>
+                    </AreaChart>
                   </ResponsiveContainer>
                 ) : (
-                  <div className="h-full flex items-center justify-center text-xs text-[#767676]">
+                  <div className="h-full flex items-center justify-center text-xs text-[#7c7c7c]">
                     No historical sentiment records available for this company.
                   </div>
                 )}
@@ -263,7 +275,7 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
             </Card>
 
             {/* Impact Distribution */}
-            <Card>
+            <Card hoverEffect>
               <CardHeader
                 title="Event impact severity"
                 description="Severity score (1-10) for each ingested signal impacting this organization."
@@ -274,27 +286,28 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
                     <BarChart
                       data={[...companyRisk.recent_signals].reverse().map((s, idx) => ({
                         idx: idx + 1,
-                        name: s.event_type,
+                        name: s.event_type.length > 18 ? s.event_type.slice(0, 16) + '...' : s.event_type,
                         impact: s.impact_score
                       }))}
                       margin={{ top: 10, right: 20, left: -20, bottom: 0 }}
                     >
-                      <XAxis dataKey="name" stroke="#767676" fontSize={10} tickLine={false} />
-                      <YAxis stroke="#767676" fontSize={11} domain={[0, 10]} tickLine={false} />
+                      <XAxis dataKey="name" stroke="#7c7c7c" fontSize={10} tickLine={false} />
+                      <YAxis stroke="#7c7c7c" fontSize={11} domain={[0, 10]} tickLine={false} />
                       <Tooltip
                         contentStyle={{
-                          backgroundColor: '#ffffff',
-                          borderColor: '#d9d9d9',
+                          backgroundColor: '#181818',
+                          borderColor: '#282828',
                           borderRadius: '8px',
                           fontSize: '12px',
-                          color: '#000000'
+                          color: '#ffffff',
+                          boxShadow: '0 8px 24px rgba(0,0,0,0.5)'
                         }}
                       />
-                      <Bar dataKey="impact" fill="#000000" radius={[4, 4, 0, 0]} />
+                      <Bar dataKey="impact" fill="#1ed760" radius={[4, 4, 0, 0]} />
                     </BarChart>
                   </ResponsiveContainer>
                 ) : (
-                  <div className="h-full flex items-center justify-center text-xs text-[#767676]">
+                  <div className="h-full flex items-center justify-center text-xs text-[#7c7c7c]">
                     No impact records found.
                   </div>
                 )}
@@ -303,9 +316,9 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
           </div>
 
           {/* Explainable Intelligence & Audit Limitations */}
-          <div className="bg-[#efefef] rounded-2xl p-6 border border-[#d9d9d9]">
-            <h3 className="text-base font-bold text-black mb-2">Company risk methodology & interpretation</h3>
-            <p className="text-xs text-[#5e5e5e] leading-relaxed mb-3">
+          <div className="bg-[#181818] rounded-[8px] p-6 border border-[#282828] shadow-[0_8px_24px_rgba(0,0,0,0.5)]">
+            <h3 className="text-sm font-bold uppercase tracking-[1.4px] text-[#1ed760] mb-2">Company Risk Methodology & Interpretation</h3>
+            <p className="text-xs text-[#b3b3b3] leading-relaxed mb-3">
               This entity's risk stance is determined from {companyRisk.signals_count} distinct observations across financial news wires and authenticated feeds. 
               {companyRisk.average_sentiment < -0.1
                 ? ' Elevated negative narrative velocity is detected, indicating downside headline volatility.'
@@ -313,21 +326,21 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
                 ? ' Favorable corporate narrative sentiment prevails based on positive operational milestones.'
                 : ' Narrative flow remains neutral with balanced positive and negative event streams.'}
             </p>
-            <div className="p-3 bg-white rounded-lg border border-[#d9d9d9] text-[11px] text-[#767676]">
-              <strong>Methodological Disclosure:</strong> Signals reflect NLP model estimates based on available media and documented lexicon models. Individual sentiment observations do not establish future stock valuation or guaranteed cashflow performance.
+            <div className="p-3 bg-[#1f1f1f] rounded-[6px] border border-[#282828] text-[11px] text-[#b3b3b3]">
+              <strong className="text-white">Methodological Disclosure:</strong> Signals reflect NLP model estimates based on available media and documented lexicon models. Individual sentiment observations do not establish future stock valuation or guaranteed cashflow performance.
             </div>
           </div>
 
           {/* Recent Signals Table */}
-          <Card>
+          <Card hoverEffect>
             <CardHeader
               title="Recent verified risk signals"
               description="Ingested signals referencing this ticker with full NLP classification."
             />
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto -mx-6 px-6">
               <table className="w-full text-left text-xs border-collapse">
                 <thead>
-                  <tr className="bg-[#efefef] border-b border-[#d9d9d9] text-[#5e5e5e] font-semibold">
+                  <tr className="bg-[#1f1f1f] border-y border-[#282828] text-white font-bold uppercase tracking-[1.4px]">
                     <th className="py-3 px-4">Headline</th>
                     <th className="py-3 px-3">Event Type</th>
                     <th className="py-3 px-3 text-center">Sentiment</th>
@@ -336,32 +349,32 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
                     <th className="py-3 px-3 text-right">Action</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#d9d9d9]">
+                <tbody className="divide-y divide-[#282828]">
                   {companyRisk.recent_signals.length > 0 ? (
                     companyRisk.recent_signals.map((sig) => (
-                      <tr key={sig.signal_id} className="hover:bg-[#f3f3f3] transition-colors">
-                        <td className="py-3.5 px-4 font-medium text-black max-w-md">
-                          <p className="line-clamp-2">{sig.headline}</p>
+                      <tr key={sig.signal_id} className="hover:bg-[#202020] transition-colors">
+                        <td className="py-3.5 px-4 font-semibold text-white max-w-md">
+                          <p className="line-clamp-2 leading-snug">{sig.headline}</p>
                         </td>
-                        <td className="py-3.5 px-3">
-                          <span className="px-2 py-0.5 rounded-full text-[11px] bg-[#efefef] text-[#5e5e5e] border border-[#d9d9d9]">
+                        <td className="py-3.5 px-3 whitespace-nowrap">
+                          <span className="px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-[#1f1f1f] text-[#cbcbcb] border border-[#282828]">
                             {sig.event_type}
                           </span>
                         </td>
-                        <td className="py-3.5 px-3 text-center">
+                        <td className="py-3.5 px-3 text-center whitespace-nowrap">
                           <SentimentBadge score={sig.sentiment_score} />
                         </td>
-                        <td className="py-3.5 px-3 text-center">
+                        <td className="py-3.5 px-3 text-center whitespace-nowrap">
                           <ImpactBadge score={sig.impact_score} />
                         </td>
-                        <td className="py-3.5 px-3 text-[#767676] tabular-nums">
+                        <td className="py-3.5 px-3 text-[#7c7c7c] font-mono tabular-nums text-[11px] whitespace-nowrap">
                           {formatTimestamp(sig.processed_at)}
                         </td>
-                        <td className="py-3.5 px-3 text-right">
+                        <td className="py-3.5 px-3 text-right whitespace-nowrap">
                           <button
                             type="button"
                             onClick={() => onSelectSignal(sig)}
-                            className="px-3 py-1 text-xs rounded-full bg-black text-white hover:bg-[#282828] transition-colors"
+                            className="px-3.5 py-1 text-xs rounded-full font-bold uppercase tracking-[1.4px] bg-[#1f1f1f] text-white hover:border-[#1ed760] hover:text-[#1ed760] border border-[#282828] transition-colors cursor-pointer"
                           >
                             Inspect
                           </button>
@@ -370,7 +383,7 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
                     ))
                   ) : (
                     <tr>
-                      <td colSpan={6} className="py-8 text-center text-[#767676]">
+                      <td colSpan={6} className="py-8 text-center text-[#7c7c7c]">
                         No signals currently recorded for {companyRisk.name}.
                       </td>
                     </tr>
@@ -393,16 +406,16 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
               />
             </div>
 
-            <div className="flex flex-wrap items-center gap-1.5 overflow-x-auto pb-1 max-w-full">
+            <div className="flex flex-wrap items-center gap-1.5 overflow-x-auto pb-1 max-w-full no-scrollbar">
               {sectors.map((sec) => (
                 <button
                   key={sec}
                   type="button"
                   onClick={() => setSectorFilter(sec)}
-                  className={`px-3 py-1 rounded-full text-xs font-medium transition-all select-none ${
+                  className={`px-3 py-1 rounded-full text-xs font-bold transition-all select-none cursor-pointer ${
                     sectorFilter === sec
-                      ? 'bg-black text-white'
-                      : 'bg-[#efefef] text-[#5e5e5e] hover:bg-[#e2e2e2] hover:text-black border border-[#d9d9d9]'
+                      ? 'bg-[#1ed760] text-black shadow-[0_2px_8px_rgba(30,215,96,0.4)]'
+                      : 'bg-[#1f1f1f] text-[#b3b3b3] hover:border-[#4d4d4d] hover:text-white border border-[#282828]'
                   }`}
                 >
                   {sec}
@@ -412,15 +425,15 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
           </div>
 
           {/* Companies Table */}
-          <Card>
+          <Card hoverEffect>
             <CardHeader
               title="Constituent companies universe"
               description={`Displaying ${filteredCompanies.length} constituents monitored by the RiskPulse NLP engine.`}
             />
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto -mx-6 px-6">
               <table className="w-full text-left text-xs border-collapse">
                 <thead>
-                  <tr className="bg-[#efefef] border-b border-[#d9d9d9] text-[#5e5e5e] font-semibold">
+                  <tr className="bg-[#1f1f1f] border-y border-[#282828] text-white font-bold uppercase tracking-[1.4px]">
                     <th className="py-3 px-4">Ticker</th>
                     <th className="py-3 px-4">Company Name</th>
                     <th className="py-3 px-4">Sector</th>
@@ -428,34 +441,34 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
                     <th className="py-3 px-4 text-right">Actions</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#d9d9d9]">
+                <tbody className="divide-y divide-[#282828]">
                   {loadingList ? (
                     <tr>
-                      <td colSpan={5} className="py-12 text-center text-[#767676]">
-                        <RefreshCw className="w-5 h-5 animate-spin mx-auto mb-2 text-black" />
+                      <td colSpan={5} className="py-12 text-center text-[#b3b3b3]">
+                        <RefreshCw className="w-5 h-5 animate-spin mx-auto mb-2 text-[#1ed760]" />
                         Loading company universe...
                       </td>
                     </tr>
                   ) : filteredCompanies.length === 0 ? (
                     <tr>
-                      <td colSpan={5} className="py-12 text-center text-[#767676]">
+                      <td colSpan={5} className="py-12 text-center text-[#7c7c7c]">
                         No companies match the specified search or sector filter.
                       </td>
                     </tr>
                   ) : (
                     filteredCompanies.map((c) => (
-                      <tr key={c.ticker} className="hover:bg-[#f3f3f3] transition-colors">
-                        <td className="py-3.5 px-4 font-mono font-bold text-black">
+                      <tr key={c.ticker} className="hover:bg-[#202020] transition-colors">
+                        <td className="py-3.5 px-4 font-mono font-bold text-[#1ed760]">
                           {c.ticker}
                         </td>
-                        <td className="py-3.5 px-4 font-medium text-black">
+                        <td className="py-3.5 px-4 font-semibold text-white">
                           {c.name}
                         </td>
-                        <td className="py-3.5 px-4 text-[#5e5e5e]">
+                        <td className="py-3.5 px-4 text-[#b3b3b3]">
                           {c.sector}
                         </td>
                         <td className="py-3.5 px-4 text-center">
-                          <span className="px-2 py-0.5 rounded-full text-[10px] bg-[#efefef] text-[#5e5e5e] border border-[#d9d9d9]">
+                          <span className="px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-[#1f1f1f] text-[#cbcbcb] border border-[#282828]">
                             Public / Synthetic
                           </span>
                         </td>
@@ -463,7 +476,7 @@ export const CompanyRiskPage: React.FC<CompanyRiskPageProps> = ({
                           <button
                             type="button"
                             onClick={() => setSelectedTicker(c.ticker)}
-                            className="px-4 py-1.5 rounded-full text-xs font-medium bg-black text-white hover:bg-[#282828] transition-colors"
+                            className="px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[1.4px] bg-[#1f1f1f] text-white hover:border-[#1ed760] hover:text-[#1ed760] border border-[#282828] transition-colors cursor-pointer"
                           >
                             View risk profile
                           </button>

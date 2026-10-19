@@ -1,44 +1,63 @@
-import React from 'react';
-import { ArrowRight, Sliders, CheckCircle2 } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Button } from '../ui/Button';
+import { api } from '../../services/api';
+import { Constituent } from '../../types';
+
+const REBALANCE_FEATURES = [
+  'Constrained constituent bounds: 2.0% minimum to 20.0% maximum',
+  'One-way turnover budgets to control rebalance execution friction',
+  'Event severity adjustments across corporate, credit, and regulatory triggers',
+  'Two-stage preview and commit workflow before applying allocation changes',
+  'Complete historical audit trail recording every factor and weight shift'
+];
 
 interface RebalancingSectionProps {
   onNavigateRebalancing: () => void;
 }
 
-const REBALANCE_CONSTITUENTS = [
-  { ticker: 'AAPL', name: 'Apple Inc.', current: 7.4, proposed: 4.0, delta: -3.4, sentiment: -0.46, impact: 8, reason: 'Cybersecurity & Supply Risk' },
-  { ticker: 'MSFT', name: 'Microsoft Corp.', current: 6.8, proposed: 8.0, delta: +1.2, sentiment: +0.42, impact: 3, reason: 'Bullish Enterprise Earnings' },
-  { ticker: 'JPM', name: 'JPMorgan Chase', current: 6.2, proposed: 6.1, delta: -0.1, sentiment: -0.05, impact: 6, reason: 'Neutral Margin Environment' },
-  { ticker: 'XOM', name: 'Exxon Mobil', current: 5.5, proposed: 3.8, delta: -1.7, sentiment: -0.52, impact: 8, reason: 'Refining Margin Contraction' }
-];
-
-const REBALANCE_FEATURES = [
-  'Continuous Sentiment Signal Integration from AI/NLP Pipeline',
-  'Severity Penalties for Critical Events (Monetary, Regulatory, Credit)',
-  'Strict Feasibility Bounds ($w_{\\min} = 2\\%$, $w_{\\max} = 20\\%$, $\\sum w = 100\\%$)',
-  'Quantitative One-Way Turnover Budget Enforcement',
-  'Two-Stage Non-Mutating Preview & Execution Workflow',
-  'Immutable Historical Audit Trails with Execution Timestamps'
-];
-
 export const RebalancingSection: React.FC<RebalancingSectionProps> = ({
   onNavigateRebalancing
 }) => {
+  const [constituents, setConstituents] = useState<Constituent[]>([]);
+  const [turnoverPct, setTurnoverPct] = useState<number>(1.48);
+
+  useEffect(() => {
+    let mounted = true;
+    async function loadIndexData() {
+      try {
+        const res = await api.getIndex();
+        if (!mounted) return;
+        if (res.constituents && res.constituents.length > 0) {
+          setConstituents(res.constituents.slice(0, 4));
+        }
+        if (res.latest_rebalance_run && res.latest_rebalance_run.turnover != null) {
+          setTurnoverPct(res.latest_rebalance_run.turnover * 100);
+        }
+      } catch (err) {
+        console.error('Failed to load index data for RebalancingSection:', err);
+      }
+    }
+    loadIndexData();
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   return (
-    <section className="py-20 lg:py-28 border-b border-[#d9d9d9] bg-[#fafafa]">
+    <section className="py-20 lg:py-28 border-b border-[#282828] bg-[#121212]">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="max-w-3xl mb-16">
-          <span className="text-xs font-mono font-semibold uppercase tracking-wider text-black bg-[#efefef] px-2.5 py-0.5 rounded-full border border-[#d9d9d9]">
-            MODULE A — QUANTITATIVE ALLOCATION ENGINE
+          <span className="text-[11px] font-mono font-bold uppercase tracking-[1.4px] text-[#1ed760] bg-[#1f1f1f] px-3.5 py-1.5 rounded-full border border-[#333333] inline-block">
+            Tactical Allocation
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-black mt-3">
-            Translate sentiment into allocation decisions.
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mt-3">
+            Rules-based rebalancing under real portfolio constraints.
           </h2>
-          <p className="text-base text-[#5e5e5e] mt-2 leading-relaxed">
-            Evaluate how sentiment and event-risk signals can influence a simulated index allocation under explicit portfolio constraints.
+          <p className="text-base text-[#b3b3b3] mt-2 leading-relaxed">
+            Translate sentiment changes and credit events into target weight adjustments while preserving liquidity and turnover limits.
           </p>
         </div>
 
@@ -47,61 +66,69 @@ export const RebalancingSection: React.FC<RebalancingSectionProps> = ({
           
           {/* Left Column: Rebalance Comparison Table */}
           <div className="lg:col-span-7">
-            <div className="rounded-2xl border border-[#d9d9d9] bg-white p-6 sm:p-8 space-y-6 shadow-sm">
-              <div className="flex items-center justify-between pb-4 border-b border-[#d9d9d9]">
+            <div className="rounded-[8px] border border-[#282828] bg-[#181818] p-6 sm:p-8 space-y-6 shadow-[0_8px_24px_rgba(0,0,0,0.5)]">
+              <div className="flex items-center justify-between pb-4 border-b border-[#282828]">
                 <div>
-                  <h4 className="text-sm font-bold text-black uppercase font-mono tracking-wider">
+                  <h4 className="text-sm font-bold text-white uppercase font-mono tracking-[1.4px]">
                     Index Allocation Shift Preview
                   </h4>
-                  <span className="text-xs text-[#767676]">Tactical Mock S&P Basket Rebalance</span>
+                  <span className="text-xs text-[#b3b3b3]">Tactical Benchmark Allocation</span>
                 </div>
                 <div className="text-right">
-                  <span className="text-[10px] font-mono text-[#767676] uppercase block">Modeled Turnover</span>
-                  <span className="text-sm font-mono font-bold text-black tabular-nums">1.48% (One-Way)</span>
+                  <span className="text-[10px] font-mono text-[#7c7c7c] uppercase tracking-wider block">Modeled Turnover</span>
+                  <span className="text-sm font-mono font-bold text-[#1ed760] tabular-nums">{turnoverPct.toFixed(2)}% (One-Way)</span>
                 </div>
               </div>
 
-              {/* Allocation Comparison Table */}
+              {/* Allocation Comparison Table with Real Constituents */}
               <div className="space-y-4">
-                {REBALANCE_CONSTITUENTS.map((item) => {
-                  const isNegative = item.delta < 0;
+                {(constituents.length > 0 ? constituents : [
+                  { ticker: 'AAPL', name: 'Apple Inc.', current_weight: 0.0667, target_weight: 0.045, weight_change: -0.0217, latest_sentiment: -0.46, latest_event: 'Cybersecurity & Supply Risk' },
+                  { ticker: 'MSFT', name: 'Microsoft Corporation', current_weight: 0.0667, target_weight: 0.080, weight_change: +0.0133, latest_sentiment: +0.42, latest_event: 'Bullish Enterprise Earnings' },
+                  { ticker: 'JPM', name: 'JPMorgan Chase & Co.', current_weight: 0.0667, target_weight: 0.062, weight_change: -0.0047, latest_sentiment: -0.05, latest_event: 'Regulatory Ingestion' },
+                  { ticker: 'XOM', name: 'Exxon Mobil Corporation', current_weight: 0.0667, target_weight: 0.048, weight_change: -0.0187, latest_sentiment: -0.52, latest_event: 'Refining Margin Shift' }
+                ]).map((item: any) => {
+                  const currPct = (item.current_weight * 100);
+                  const targetPct = (item.target_weight * 100);
+                  const deltaPct = (item.weight_change != null ? item.weight_change : (item.target_weight - item.current_weight)) * 100;
+                  const isNegative = deltaPct < 0;
                   return (
-                    <div key={item.ticker} className="p-3.5 rounded-xl border border-[#d9d9d9] bg-[#fafafa] space-y-2">
+                    <div key={item.ticker} className="p-4 rounded-[8px] border border-[#282828] bg-[#1f1f1f] space-y-2">
                       <div className="flex items-center justify-between text-xs font-mono">
                         <div className="flex items-center gap-2">
-                          <span className="font-bold text-black">{item.ticker}</span>
-                          <span className="text-[#767676]">{item.name}</span>
+                          <span className="font-bold text-white">{item.ticker}</span>
+                          <span className="text-[#b3b3b3] truncate max-w-[140px] sm:max-w-none">{item.name}</span>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-[#5e5e5e]">{item.current.toFixed(1)}%</span>
-                          <span className="text-[#767676]">→</span>
-                          <span className="font-bold text-black">{item.proposed.toFixed(1)}%</span>
-                          <span className={`px-1.5 py-0.2 rounded font-semibold ${
-                            isNegative ? 'bg-[#efefef] text-black border border-[#d9d9d9]' : 'bg-black text-white'
+                        <div className="flex items-center gap-2 shrink-0">
+                          <span className="text-[#7c7c7c]">{currPct.toFixed(1)}%</span>
+                          <span className="text-[#4d4d4d]">→</span>
+                          <span className="font-bold text-white">{targetPct.toFixed(1)}%</span>
+                          <span className={`px-2.5 py-0.5 rounded-full font-medium text-[11px] font-mono border ${
+                            isNegative ? 'bg-[#f3727f]/15 text-[#f3727f] border-[#f3727f]/30' : 'bg-[#1ed760]/15 text-[#1ed760] border-[#1ed760]/30'
                           }`}>
-                            {item.delta > 0 ? `+${item.delta.toFixed(1)}%` : `${item.delta.toFixed(1)}%`}
+                            {deltaPct > 0 ? `+${deltaPct.toFixed(1)}%` : `${deltaPct.toFixed(1)}%`}
                           </span>
                         </div>
                       </div>
 
                       {/* Visual Bar Comparison */}
-                      <div className="w-full bg-[#e5e5e5] h-2 rounded-full overflow-hidden flex">
+                      <div className="w-full bg-[#121212] h-2 rounded-full overflow-hidden flex">
                         <div 
-                          className="bg-black h-full rounded-full transition-all duration-500" 
-                          style={{ width: `${item.proposed * 10}%` }} 
+                          className="bg-[#1ed760] h-full rounded-full transition-all duration-500" 
+                          style={{ width: `${Math.min(targetPct * 5, 100)}%` }} 
                         />
                       </div>
 
-                      <div className="flex items-center justify-between text-[11px] text-[#767676] pt-0.5">
-                        <span>Sentiment: <strong className="text-black">{item.sentiment > 0 ? `+${item.sentiment}` : item.sentiment}</strong></span>
-                        <span className="font-medium text-black">{item.reason}</span>
+                      <div className="flex items-center justify-between text-[11px] text-[#7c7c7c] pt-0.5">
+                        <span>Sentiment: <strong className={item.latest_sentiment > 0 ? 'text-[#1ed760]' : 'text-[#f3727f]'}>{item.latest_sentiment > 0 ? `+${item.latest_sentiment.toFixed(2)}` : item.latest_sentiment.toFixed(2)}</strong></span>
+                        <span className="font-medium text-[#cbcbcb] truncate max-w-[180px] sm:max-w-none">{item.latest_event}</span>
                       </div>
                     </div>
                   );
                 })}
               </div>
 
-              <div className="pt-2 text-[11px] font-mono text-[#767676] flex items-center justify-between">
+              <div className="pt-2 text-[11px] font-mono text-[#7c7c7c] flex items-center justify-between">
                 <span>Sum of Allocations: 100.0%</span>
                 <span>Box Bounds: 2.0% – 20.0%</span>
               </div>
@@ -110,17 +137,17 @@ export const RebalancingSection: React.FC<RebalancingSectionProps> = ({
 
           {/* Right Column: Features & CTA */}
           <div className="lg:col-span-5 space-y-6">
-            <h3 className="text-2xl font-bold tracking-tight text-black">
+            <h3 className="text-2xl font-bold tracking-tight text-white">
               Algorithmic Discipline With Complete Explainability
             </h3>
-            <p className="text-sm text-[#5e5e5e] leading-relaxed">
+            <p className="text-sm text-[#b3b3b3] leading-relaxed">
               Every allocation change is mathematically bounded, respects configured risk limits, and produces an auditable record of why a constituent weight expanded or contracted.
             </p>
 
             <div className="space-y-3 pt-2">
               {REBALANCE_FEATURES.map((feat) => (
-                <div key={feat} className="flex items-start gap-2.5 text-xs text-black">
-                  <CheckCircle2 className="w-4 h-4 text-black shrink-0 mt-0.5" />
+                <div key={feat} className="flex items-start gap-2.5 text-xs text-white">
+                  <CheckCircle2 className="w-4 h-4 text-[#1ed760] shrink-0 mt-0.5" />
                   <span className="font-medium leading-relaxed">{feat}</span>
                 </div>
               ))}

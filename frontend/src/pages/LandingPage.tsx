@@ -18,7 +18,7 @@ interface LandingPageProps {
 
 export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
   return (
-    <div className="min-h-screen bg-white text-black flex flex-col font-sans selection:bg-[#efefef] selection:text-black">
+    <div className="min-h-screen bg-[#121212] text-white flex flex-col font-sans selection:bg-[#1ed760] selection:text-black">
       {/* 1. Sticky Navigation Header */}
       <LandingHeader 
         onOpenDashboard={() => onNavigate('overview')}

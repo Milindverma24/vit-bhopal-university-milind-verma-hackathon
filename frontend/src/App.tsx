@@ -153,12 +153,14 @@ export const App: React.FC = () => {
     loadInitialData();
   };
 
-  // Find active tab title for header
+  // Find active tab title and section for header
   let activeTabTitle = 'Executive Overview';
+  let activeTabSection = 'Platform';
   for (const sec of NAV_SECTIONS) {
     const item = sec.items.find((i) => i.id === activeTab);
     if (item) {
       activeTabTitle = item.label;
+      activeTabSection = sec.title;
       break;
     }
   }
@@ -179,7 +181,7 @@ export const App: React.FC = () => {
 
   return (
     <ToastProvider>
-      <div className="min-h-screen bg-white text-black flex flex-col font-sans selection:bg-[#efefef] selection:text-black">
+      <div className="min-h-screen bg-[#121212] text-white flex flex-col font-sans selection:bg-[#1ed760] selection:text-black">
         {/* Left Sidebar Navigation (Desktop Fixed, Mobile Drawer) */}
         <SidebarNavigation
           activeTab={activeTab}
@@ -188,17 +190,17 @@ export const App: React.FC = () => {
           onCloseMobile={() => setMobileMenuOpen(false)}
         />
 
-        {/* Main Content Layout Container (Offset by lg:pl-64) */}
-        <div className="lg:pl-64 flex flex-col flex-1 min-h-screen">
+        {/* Main Content Layout Container (Offset by lg:pl-72) */}
+        <div className="lg:pl-72 flex flex-col flex-1 min-h-screen">
           {/* Top Sticky Institutional Header */}
           <AppHeader
-            systemStatus={systemStatus}
             onRefresh={handleRefreshAll}
             refreshing={refreshing}
             onToggleMobileMenu={() => setMobileMenuOpen(true)}
             onOpenMethodology={() => handleNavigate('methodology')}
             onOpenLanding={() => handleNavigate('landing')}
             activeTabTitle={activeTabTitle}
+            activeTabSection={activeTabSection}
           />
 
           {/* Analytical Page Content */}

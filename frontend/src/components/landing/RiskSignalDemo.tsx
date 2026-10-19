@@ -1,20 +1,8 @@
-import React, { useState } from 'react';
-import { 
-  Play, 
-  RotateCcw, 
-  Sparkles, 
-  CheckCircle2, 
-  AlertCircle, 
-  ShieldCheck, 
-  ArrowRight,
-  TrendingUp,
-  TrendingDown,
-  Layers
-} from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Play, RotateCcw, AlertCircle } from 'lucide-react';
 import { api } from '../../services/api';
 import { RiskSignal } from '../../types';
 import { Button } from '../ui/Button';
-import { ImpactBadge, SentimentBadge } from '../ui/Badges';
 
 interface DemoPreset {
   title: string;
@@ -31,7 +19,7 @@ interface DemoPreset {
 
 const DEMO_PRESETS: DemoPreset[] = [
   {
-    title: 'Surging Banking Earnings',
+    title: 'JPM · Earnings',
     ticker: 'JPM',
     headline: 'JPMorgan Chase reported record investment banking fees and strong net interest income.',
     text: 'JPMorgan Chase delivered exceptional quarterly performance this morning, outpacing analyst projections with net interest income climbing 14% year-over-year. Management cited robust corporate borrowing and resilient consumer loan quality.',
@@ -43,7 +31,7 @@ const DEMO_PRESETS: DemoPreset[] = [
     rationale: 'Earnings beat establishes strong fundamental momentum (+0.83). High profitability reinforces counterparty capital adequacy.'
   },
   {
-    title: 'Antitrust Regulatory Probe',
+    title: 'AAPL · Antitrust',
     ticker: 'AAPL',
     headline: 'Antitrust authorities file formal injunction alleging exclusionary distribution agreements.',
     text: 'Federal regulatory agencies initiated formal legal proceedings against the consumer technology conglomerate, seeking structural behavioral remedies and potential civil penalties up to $2.5 billion.',
@@ -55,7 +43,7 @@ const DEMO_PRESETS: DemoPreset[] = [
     rationale: 'Formal regulatory intervention carries mandatory legal defense costs, fine exposure, and long-term operating margin headwinds.'
   },
   {
-    title: 'Semiconductor Supply Choke',
+    title: 'NVDA · Supply Chain',
     ticker: 'NVDA',
     headline: 'Global maritime choke-point halts advanced semiconductor packaging shipments.',
     text: 'Logistical bottlenecks and critical assembly facility shutdowns have disrupted international distribution networks, delaying delivery timelines for high-density enterprise computing clusters.',
@@ -67,7 +55,7 @@ const DEMO_PRESETS: DemoPreset[] = [
     rationale: 'Severe component shortfall directly chokes revenue recognition across downstream technology hardware and industrial sectors.'
   },
   {
-    title: 'Sovereign Debt Downgrade',
+    title: 'SOV · Debt Watch',
     ticker: 'SOV',
     headline: 'International rating agencies downgrade regional sovereign debt to negative watch.',
     text: 'Credit rating agencies downgraded long-term sovereign foreign currency obligations, citing rising fiscal deficits, debt servicing constraints, and elevated currency depreciation pressure.',
@@ -81,13 +69,44 @@ const DEMO_PRESETS: DemoPreset[] = [
 ];
 
 export const RiskSignalDemo: React.FC = () => {
+  const [presets, setPresets] = useState<DemoPreset[]>(DEMO_PRESETS);
   const [selectedPresetIndex, setSelectedPresetIndex] = useState(0);
   const [customText, setCustomText] = useState('');
   const [analyzing, setAnalyzing] = useState(false);
   const [liveResult, setLiveResult] = useState<RiskSignal | null>(null);
   const [apiError, setApiError] = useState<string | null>(null);
 
-  const activePreset = DEMO_PRESETS[selectedPresetIndex];
+  useEffect(() => {
+    let mounted = true;
+    async function loadPresets() {
+      try {
+        const res = await api.getSignals({ pageSize: 4 });
+        if (mounted && res.items && res.items.length > 0) {
+          const liveMapped: DemoPreset[] = res.items.slice(0, 4).map((sig) => ({
+            title: `${sig.primary_ticker || 'MKT'} · ${sig.event_type.replace(/_/g, ' ')}`,
+            ticker: sig.primary_ticker || sig.entities?.[0]?.ticker || 'CORP',
+            headline: sig.headline,
+            text: sig.text || sig.headline,
+            sentiment: sig.sentiment_score,
+            label: sig.sentiment_label,
+            event: sig.event_type.replace(/_/g, ' '),
+            impact: sig.impact_score,
+            scenario: 'Crisis Scenario Shock',
+            rationale: sig.impact_rationale || sig.text
+          }));
+          setPresets(liveMapped);
+        }
+      } catch (err) {
+        console.error('Failed to load live presets for RiskSignalDemo:', err);
+      }
+    }
+    loadPresets();
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  const activePreset = presets[selectedPresetIndex] || DEMO_PRESETS[0];
 
   const handleSelectPreset = (idx: number) => {
     setSelectedPresetIndex(idx);
@@ -130,44 +149,45 @@ export const RiskSignalDemo: React.FC = () => {
   const currentEvent = liveResult ? liveResult.event_type : activePreset.event;
   const currentImpact = liveResult ? liveResult.impact_score : activePreset.impact;
   const currentRationale = liveResult ? liveResult.impact_rationale : activePreset.rationale;
-  const currentMethod = liveResult ? liveResult.sentiment_method : 'FinBERT + Lexicon Syntactic Fallback';
+  const currentMethod = liveResult ? liveResult.sentiment_method : 'FinBERT & Quantitative Engine';
 
   return (
-    <section className="py-20 lg:py-28 border-b border-[#d9d9d9] bg-[#fafafa]">
+    <section className="py-16 lg:py-24 border-b border-[#282828] bg-[#121212]">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="max-w-3xl mb-12">
-          <span className="text-xs font-mono font-semibold uppercase tracking-wider text-black bg-[#efefef] px-2.5 py-0.5 rounded-full border border-[#d9d9d9]">
-            INTERACTIVE CAPABILITY DEMONSTRATION
+        <div className="max-w-2xl mb-10">
+          <span className="text-xs font-mono font-bold uppercase tracking-[1.4px] text-[#1ed760] bg-[#181818] px-3 py-1 rounded-full border border-[#282828] inline-block mb-3">
+            INTERACTIVE TESTBENCH
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-black mt-3">
-            Explore a risk signal in real time.
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mt-1">
+            Test financial text in real time.
           </h2>
-          <p className="text-base text-[#5e5e5e] mt-2 leading-relaxed">
-            Select a financial scenario preset or paste any market headline to test how the AI/NLP engine processes unstructured text into structured intelligence.
+          <p className="text-base text-[#b3b3b3] mt-2 leading-relaxed">
+            Select a sample market event or test custom headline copy to observe entity resolution, sentiment scoring, and severity assessment.
           </p>
         </div>
 
         {/* Demo Container Card */}
-        <div className="rounded-2xl border border-[#d9d9d9] bg-white p-6 sm:p-8 lg:p-10 shadow-sm space-y-8">
+        <div className="rounded-2xl border border-[#282828] bg-[#181818] p-6 sm:p-8 space-y-6 shadow-xl">
           
           {/* Preset Buttons Rail */}
-          <div className="space-y-2">
-            <span className="text-xs font-mono uppercase text-[#767676] tracking-wider block">
-              1. Choose a Standard Event Preset
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-[#242424]">
+            <span className="text-xs font-mono uppercase text-[#7c7c7c] tracking-wider shrink-0">
+              Sample Market Events
             </span>
             <div className="flex flex-wrap gap-2">
-              {DEMO_PRESETS.map((preset, idx) => {
+              {presets.map((preset, idx) => {
                 const isSelected = selectedPresetIndex === idx && !liveResult;
                 return (
                   <button
                     key={preset.title}
+                    type="button"
                     onClick={() => handleSelectPreset(idx)}
-                    className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
+                    className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer select-none whitespace-nowrap ${
                       isSelected
-                        ? 'bg-black text-white'
-                        : 'bg-[#f3f3f3] text-black border border-[#d9d9d9] hover:border-black'
+                        ? 'bg-white text-black font-bold'
+                        : 'bg-[#121212] text-[#999] border border-[#282828] hover:text-white hover:bg-[#1a1a1a]'
                     }`}
                   >
                     {preset.title}
@@ -177,126 +197,116 @@ export const RiskSignalDemo: React.FC = () => {
             </div>
           </div>
 
-          {/* Or Custom Text Input */}
-          <div className="space-y-2 pt-2 border-t border-[#d9d9d9]">
-            <span className="text-xs font-mono uppercase text-[#767676] tracking-wider block">
-              2. Or Test Your Own Custom Financial Sentence
-            </span>
-            <div className="flex flex-col sm:flex-row gap-3">
+          {/* Custom Text Input Bar */}
+          <div className="space-y-3">
+            <div className="flex flex-col sm:flex-row gap-2.5">
               <input
                 type="text"
                 value={customText}
                 onChange={(e) => setCustomText(e.target.value)}
-                placeholder="e.g. Central bank unexpected 50 bps rate hike triggers currency volatility..."
-                className="flex-1 px-4 py-2.5 rounded-xl border border-[#d9d9d9] bg-[#fafafa] text-xs font-sans text-black placeholder:text-[#767676] focus:outline-none focus:border-black"
+                placeholder="Or test a custom headline (e.g. Enterprise software firm raises annual cloud revenue forecast 15%)..."
+                className="flex-1 px-4 py-2.5 min-h-[42px] rounded-full border border-[#282828] bg-[#121212] text-xs font-sans text-white placeholder:text-[#666] focus:outline-none focus:border-[#1ed760] transition-colors"
               />
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 shrink-0">
                 <Button
                   variant="primary"
                   size="sm"
                   onClick={handleAnalyzeCustom}
                   loading={analyzing}
                   disabled={!customText.trim()}
-                  icon={<Play className="w-3.5 h-3.5" />}
+                  icon={<Play className="w-3.5 h-3.5 fill-current shrink-0" />}
+                  className="px-5 min-h-[42px] text-xs font-bold"
                 >
-                  Analyze with Engine
+                  Analyze
                 </Button>
                 {(liveResult || customText) && (
                   <Button
                     variant="secondary"
                     size="sm"
                     onClick={handleReset}
-                    icon={<RotateCcw className="w-3.5 h-3.5" />}
+                    icon={<RotateCcw className="w-3.5 h-3.5 shrink-0" />}
+                    className="px-4 min-h-[42px] text-xs"
                   >
                     Reset
                   </Button>
                 )}
               </div>
             </div>
+
             {apiError && (
-              <div className="flex items-center gap-2 text-xs text-black bg-[#efefef] p-2.5 rounded-lg border border-[#d9d9d9]">
+              <div className="flex items-center gap-2 text-xs text-[#f87171] bg-[#f87171]/10 p-3 rounded-lg border border-[#f87171]/20">
                 <AlertCircle className="w-4 h-4 shrink-0" />
                 <span>{apiError}</span>
               </div>
             )}
           </div>
 
-          {/* Output Display Panel */}
-          <div className="p-6 rounded-xl border border-[#d9d9d9] bg-[#fafafa] space-y-6">
+          {/* Clean Output Display Panel */}
+          <div className="rounded-xl border border-[#282828] bg-[#121212] p-5 sm:p-6 space-y-5">
             
-            <div className="flex items-center justify-between pb-3 border-b border-[#d9d9d9]">
+            {/* Header / Meta Row */}
+            <div className="flex items-center justify-between pb-3 border-b border-[#222222]">
               <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-black" />
-                <span className="text-xs font-mono font-bold uppercase text-black">
-                  Structured Signal Analysis Output
-                </span>
-              </div>
-              <span className="text-[11px] font-mono text-[#767676]">
-                {liveResult ? 'Live API Evaluation' : 'Verified Preset Output'}
-              </span>
-            </div>
-
-            {/* Headline Card */}
-            <div className="space-y-1.5">
-              <div className="flex items-center gap-2 text-xs font-mono">
-                <span className="font-bold text-black bg-black text-white px-2 py-0.5 rounded">
+                <span className="font-mono text-xs font-bold px-2.5 py-0.5 rounded-full bg-[#1ed760] text-black">
                   {currentTicker}
                 </span>
-                <span className="text-[#767676]">•</span>
-                <span className="text-[#5e5e5e]">{currentEvent}</span>
+                <span className="text-[#404040] text-xs font-mono">•</span>
+                <span className="text-xs text-[#999] font-medium">{currentEvent}</span>
               </div>
-              <h4 className="text-base font-semibold text-black leading-snug">
-                "{currentHeadline}"
-              </h4>
+              <span className="text-[11px] font-mono text-[#666]">
+                {liveResult ? 'Live Model Output' : 'Pre-computed Signal'}
+              </span>
             </div>
 
-            {/* 4 Quant Badges */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-              <div className="p-3 rounded-xl bg-white border border-[#d9d9d9]">
-                <span className="text-[10px] font-mono text-[#767676] block">Sentiment Score</span>
-                <span className="text-base font-bold font-mono text-black mt-1 block tabular-nums">
-                  {currentSentiment > 0 ? `+${currentSentiment.toFixed(2)}` : currentSentiment.toFixed(2)}
-                </span>
-                <span className="text-[10px] font-medium text-black block">{currentLabel}</span>
+            {/* Headline Text */}
+            <p className="text-base sm:text-lg font-semibold text-white leading-snug">
+              "{currentHeadline}"
+            </p>
+
+            {/* 3 Clean, Balanced Metric Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="p-3.5 rounded-lg bg-[#181818] border border-[#242424]">
+                <span className="text-[11px] font-mono text-[#7c7c7c] block">Sentiment</span>
+                <div className="flex items-baseline gap-2 mt-1">
+                  <span className={`text-base font-bold font-mono tabular-nums ${
+                    currentSentiment > 0 ? 'text-[#1ed760]' : 'text-[#f87171]'
+                  }`}>
+                    {currentSentiment > 0 ? `+${currentSentiment.toFixed(2)}` : currentSentiment.toFixed(2)}
+                  </span>
+                  <span className="text-xs text-[#999] font-medium">{currentLabel}</span>
+                </div>
               </div>
 
-              <div className="p-3 rounded-xl bg-white border border-[#d9d9d9]">
-                <span className="text-[10px] font-mono text-[#767676] block">Event Category</span>
-                <span className="text-xs font-bold text-black mt-1.5 block truncate">
+              <div className="p-3.5 rounded-lg bg-[#181818] border border-[#242424]">
+                <span className="text-[11px] font-mono text-[#7c7c7c] block">Event Classification</span>
+                <span className="text-sm font-semibold text-white mt-1 block truncate">
                   {currentEvent}
                 </span>
-                <span className="text-[10px] text-[#5e5e5e] block">Taxonomy Match</span>
               </div>
 
-              <div className="p-3 rounded-xl bg-white border border-black">
-                <span className="text-[10px] font-mono text-[#767676] block">Impact Severity</span>
-                <span className="text-base font-bold font-mono text-black mt-1 block">
-                  {currentImpact} / 10
-                </span>
-                <span className="text-[10px] font-semibold text-black block">Explainable Rating</span>
-              </div>
-
-              <div className="p-3 rounded-xl bg-white border border-[#d9d9d9]">
-                <span className="text-[10px] font-mono text-[#767676] block">Eligible Crisis Shock</span>
-                <span className="text-xs font-bold text-black mt-1.5 block truncate">
-                  {!liveResult ? activePreset.scenario : 'Crisis Scenario Shock'}
-                </span>
-                <span className="text-[10px] text-[#5e5e5e] block">Downstream Trigger</span>
+              <div className="p-3.5 rounded-lg bg-[#181818] border border-[#242424]">
+                <span className="text-[11px] font-mono text-[#7c7c7c] block">Impact Severity</span>
+                <div className="flex items-baseline gap-2 mt-1">
+                  <span className="text-base font-bold font-mono text-white">
+                    {currentImpact} <span className="text-xs text-[#7c7c7c] font-normal">/ 10</span>
+                  </span>
+                  <span className="text-xs text-[#999] font-medium">
+                    {currentImpact >= 7 ? 'High' : currentImpact >= 4 ? 'Moderate' : 'Low'}
+                  </span>
+                </div>
               </div>
             </div>
 
-            {/* Explainable Rationale */}
-            <div className="p-4 rounded-xl bg-white border border-[#d9d9d9] text-xs space-y-1.5">
-              <span className="font-mono font-bold text-black uppercase tracking-wider text-[10px]">
-                Decision Rationale & Evidence:
-              </span>
-              <p className="text-[#5e5e5e] leading-relaxed">
-                {currentRationale}
-              </p>
-              <div className="pt-2 text-[10px] font-mono text-[#767676] flex items-center justify-between border-t border-[#f3f3f3]">
-                <span>Processing Engine: {currentMethod}</span>
-                <span>Audit Verified</span>
-              </div>
+            {/* Analysis Rationale */}
+            <div className="pt-3 border-t border-[#222222] text-xs text-[#a3a3a3] leading-relaxed">
+              <span className="text-white font-semibold mr-1.5">Rationale:</span>
+              {currentRationale}
+            </div>
+
+            {/* Engine Sub-footer */}
+            <div className="text-[10px] font-mono text-[#666] flex items-center justify-between pt-1">
+              <span>Engine: {currentMethod}</span>
+              <span className="text-[#1ed760]">Audit Verified</span>
             </div>
 
           </div>

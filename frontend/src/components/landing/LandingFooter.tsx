@@ -10,7 +10,7 @@ export const LandingFooter: React.FC<LandingFooterProps> = ({
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[#d9d9d9] bg-white text-black py-16">
+    <footer className="border-t border-[#282828] bg-[#121212] text-white py-16">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Main Footer Links Grid */}
@@ -19,39 +19,30 @@ export const LandingFooter: React.FC<LandingFooterProps> = ({
           {/* Left Brand Identity (6 cols) */}
           <div className="md:col-span-6 space-y-4 max-w-sm">
             <div className="flex items-center gap-2.5">
-              <div className="w-7 h-7 bg-black rounded flex items-center justify-center text-white">
-                <div className="flex items-center gap-[2px] h-3">
-                  <span className="w-[2px] h-1.5 bg-white rounded-full"></span>
-                  <span className="w-[2px] h-3 bg-white rounded-full"></span>
-                  <span className="w-[2px] h-2 bg-white rounded-full"></span>
-                  <span className="w-[2px] h-3 bg-white rounded-full"></span>
-                  <span className="w-[2px] h-1.5 bg-white rounded-full"></span>
-                </div>
-              </div>
-              <span className="text-base font-bold tracking-tight text-black flex items-center gap-1">
-                RiskPulse <span className="font-mono text-xs px-1.5 py-0.2 bg-[#efefef] rounded text-black border border-[#d9d9d9]">AI</span>
+              <span className="text-xl font-bold tracking-tight text-white">
+                RiskPulse
               </span>
             </div>
             
-            <p className="text-xs text-[#5e5e5e] leading-relaxed">
-              AI-powered financial risk intelligence for explainable analysis and portfolio scenario evaluation.
+            <p className="text-sm text-[#b3b3b3] leading-relaxed">
+              Autonomous institutional financial risk intelligence platform combining domain NLP, Bayesian probability, and multi-scenario portfolio stress testing.
             </p>
 
-            <div className="pt-2 flex items-center gap-2 text-[11px] font-mono text-[#767676]">
+            <div className="pt-2 flex items-center gap-2 text-xs font-mono text-[#7c7c7c]">
               <span>S&P Global & CRISIL Campus Hackathon 2026</span>
             </div>
           </div>
 
           {/* Right Product Columns (3 cols) */}
           <div className="md:col-span-3 space-y-3">
-            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-black">
+            <h4 className="text-xs font-mono font-bold uppercase tracking-[1.4px] text-white">
               Product Systems
             </h4>
-            <ul className="space-y-2 text-xs text-[#5e5e5e]">
+            <ul className="space-y-2.5 text-sm text-[#b3b3b3]">
               <li>
                 <button 
                   onClick={() => onNavigateRoute('overview')} 
-                  className="hover:text-black transition-colors focus:outline-none"
+                  className="hover:text-white transition-colors focus:outline-none cursor-pointer"
                 >
                   Executive Overview
                 </button>
@@ -59,7 +50,7 @@ export const LandingFooter: React.FC<LandingFooterProps> = ({
               <li>
                 <button 
                   onClick={() => onNavigateRoute('nlp')} 
-                  className="hover:text-black transition-colors focus:outline-none"
+                  className="hover:text-white transition-colors focus:outline-none cursor-pointer"
                 >
                   NLP Risk Engine
                 </button>
@@ -67,7 +58,7 @@ export const LandingFooter: React.FC<LandingFooterProps> = ({
               <li>
                 <button 
                   onClick={() => onNavigateRoute('signals')} 
-                  className="hover:text-black transition-colors focus:outline-none"
+                  className="hover:text-white transition-colors focus:outline-none cursor-pointer"
                 >
                   Risk Signal Explorer
                 </button>
@@ -75,7 +66,7 @@ export const LandingFooter: React.FC<LandingFooterProps> = ({
               <li>
                 <button 
                   onClick={() => onNavigateRoute('rebalancing')} 
-                  className="hover:text-black transition-colors focus:outline-none"
+                  className="hover:text-white transition-colors focus:outline-none cursor-pointer"
                 >
                   Tactical Index Rebalancing
                 </button>
@@ -83,7 +74,7 @@ export const LandingFooter: React.FC<LandingFooterProps> = ({
               <li>
                 <button 
                   onClick={() => onNavigateRoute('stress')} 
-                  className="hover:text-black transition-colors focus:outline-none"
+                  className="hover:text-white transition-colors focus:outline-none cursor-pointer"
                 >
                   Portfolio Stress Testing
                 </button>
@@ -93,14 +84,14 @@ export const LandingFooter: React.FC<LandingFooterProps> = ({
 
           {/* Right Resources Columns (3 cols) */}
           <div className="md:col-span-3 space-y-3">
-            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-black">
+            <h4 className="text-xs font-mono font-bold uppercase tracking-[1.4px] text-white">
               Governance & Data
             </h4>
-            <ul className="space-y-2 text-xs text-[#5e5e5e]">
+            <ul className="space-y-2.5 text-sm text-[#b3b3b3]">
               <li>
                 <button 
                   onClick={() => onNavigateRoute('methodology')} 
-                  className="hover:text-black transition-colors focus:outline-none"
+                  className="hover:text-white transition-colors focus:outline-none cursor-pointer"
                 >
                   Methodology & Formulations
                 </button>
@@ -108,7 +99,7 @@ export const LandingFooter: React.FC<LandingFooterProps> = ({
               <li>
                 <button 
                   onClick={() => onNavigateRoute('sources')} 
-                  className="hover:text-black transition-colors focus:outline-none"
+                  className="hover:text-white transition-colors focus:outline-none cursor-pointer"
                 >
                   Data Ingestion & Provenance
                 </button>
@@ -116,7 +107,7 @@ export const LandingFooter: React.FC<LandingFooterProps> = ({
               <li>
                 <button 
                   onClick={() => onNavigateRoute('history')} 
-                  className="hover:text-black transition-colors focus:outline-none"
+                  className="hover:text-white transition-colors focus:outline-none cursor-pointer"
                 >
                   Historical Audit Trail
                 </button>
@@ -124,7 +115,7 @@ export const LandingFooter: React.FC<LandingFooterProps> = ({
               <li>
                 <button 
                   onClick={() => onNavigateRoute('portfolio')} 
-                  className="hover:text-black transition-colors focus:outline-none"
+                  className="hover:text-white transition-colors focus:outline-none cursor-pointer"
                 >
                   Wholesale Portfolio Explorer
                 </button>
@@ -135,14 +126,14 @@ export const LandingFooter: React.FC<LandingFooterProps> = ({
         </div>
 
         {/* Regulatory & Institutional Financial Disclaimer */}
-        <div className="pt-8 border-t border-[#d9d9d9] space-y-4">
-          <p className="text-[11px] text-[#767676] leading-relaxed max-w-4xl">
-            <strong>Disclaimer:</strong> RiskPulse AI is an educational financial risk analysis prototype. Model outputs and portfolio scenarios are estimates based on available data and documented assumptions. Simulated results do not represent actual trading performance or guaranteed outcomes. This platform does not provide financial advice.
+        <div className="pt-8 border-t border-[#282828] space-y-4">
+          <p className="text-xs text-[#7c7c7c] leading-relaxed max-w-4xl">
+            <strong className="text-white">Regulatory Disclaimer:</strong> RiskPulse is an institutional risk analysis system. Model outputs, Bayesian scores, and portfolio scenario simulations are estimates synthesized from available public and synthetic financial disclosures. Simulated results do not constitute financial advice, credit rating certification, or guarantee of future asset performance.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-[#f3f3f3] text-[11px] text-[#767676]">
-            <span>&copy; {currentYear} RiskPulse AI. Academic & Engineering Hackathon Prototype.</span>
-            <div className="flex items-center gap-4 font-mono text-[10px]">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-[#282828] text-xs text-[#7c7c7c]">
+            <span>&copy; {currentYear} RiskPulse. Institutional Financial Analytics Platform.</span>
+            <div className="flex items-center gap-4 font-mono text-[11px] text-[#7c7c7c]">
               <span>Zero-PII Compliance</span>
               <span>•</span>
               <span>OpenAPI Specification</span>

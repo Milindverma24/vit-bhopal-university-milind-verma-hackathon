@@ -12,7 +12,8 @@ import {
   TrendingUp, 
   BookOpen,
   Globe,
-  X
+  X,
+  ShieldCheck
 } from 'lucide-react';
 
 export interface NavItemDef {
@@ -48,7 +49,7 @@ export const NAV_SECTIONS: NavSectionDef[] = [
   {
     title: 'Portfolio',
     items: [
-      { id: 'rebalancing', path: '/portfolio/rebalancing', label: 'Tactical Index Rebalancing', icon: Sliders },
+      { id: 'rebalancing', path: '/portfolio/rebalancing', label: 'Tactical Rebalancing', icon: Sliders },
       { id: 'portfolio', path: '/portfolio/explorer', label: 'Portfolio Explorer', icon: Briefcase },
       { id: 'stress', path: '/portfolio/stress-testing', label: 'Stress Testing', icon: BarChart3 }
     ]
@@ -81,58 +82,49 @@ export const SidebarNavigation: React.FC<SidebarNavigationProps> = ({
       {/* Mobile Backdrop */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 bg-black/40 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 backdrop-blur-xs z-40 lg:hidden transition-opacity"
           onClick={onCloseMobile}
         />
       )}
 
       {/* Sidebar Container */}
       <aside
-        className={`fixed top-0 bottom-0 left-0 z-40 w-64 bg-white border-r border-[#d9d9d9] flex flex-col transition-transform duration-200 lg:translate-x-0 ${
-          mobileOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`fixed top-0 bottom-0 left-0 z-40 w-72 bg-[#121212] border-r border-[#282828] flex flex-col transition-transform duration-200 lg:translate-x-0 ${
+          mobileOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full'
         }`}
       >
-        {/* Brand Wordmark Top (Section 5.2) */}
-        <div className="h-16 px-6 flex items-center justify-between border-b border-[#d9d9d9] shrink-0">
+        {/* Brand Header */}
+        <div className="h-16 px-5 flex items-center justify-between border-b border-[#282828] shrink-0">
           <div
-            className="flex items-center gap-2.5 cursor-pointer select-none"
+            className="flex items-center cursor-pointer select-none group"
             onClick={() => onNavigate('landing')}
             title="Return to Product Landing Page"
           >
-            {/* Minimalist Monochrome Geometric Signal Logo */}
-            <div className="w-8 h-8 rounded-lg bg-black text-white flex items-center justify-center font-bold font-mono tracking-tighter">
-              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 12h3l3-8 4 16 3-8h5" />
-              </svg>
-            </div>
             <div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-bold text-base tracking-tight text-black">RiskPulse</span>
-                <span className="text-[11px] font-mono font-semibold px-1.5 py-0.2 rounded bg-black text-white">
-                  AI
-                </span>
-              </div>
-              <p className="text-[10px] text-[#767676] leading-none mt-0.5">Financial Risk Intelligence</p>
+              <span className="font-bold text-lg tracking-tight text-white block">
+                RiskPulse
+              </span>
+              <p className="text-[10px] text-[#b3b3b3] font-medium leading-none mt-1">Financial Risk Intelligence</p>
             </div>
           </div>
 
           <button
             type="button"
             onClick={onCloseMobile}
-            className="lg:hidden p-1.5 rounded-full hover:bg-[#efefef] text-[#767676]"
+            className="lg:hidden p-1.5 rounded-full hover:bg-[#282828] text-[#b3b3b3] hover:text-white transition-colors cursor-pointer"
           >
             <X className="w-4 h-4" />
           </button>
         </div>
 
         {/* Navigation Sections */}
-        <div className="flex-1 overflow-y-auto py-5 px-3 space-y-6">
+        <div className="flex-1 overflow-y-auto py-4 px-3 space-y-5">
           {NAV_SECTIONS.map((section) => (
             <div key={section.title}>
-              <div className="px-3 mb-1.5 text-[11px] font-mono uppercase tracking-wider text-[#767676] font-semibold">
+              <div className="px-3 mb-1.5 text-[10px] font-bold uppercase tracking-[1.4px] text-[#7c7c7c]">
                 {section.title}
               </div>
-              <nav className="space-y-0.5">
+              <nav className="space-y-1">
                 {section.items.map((item) => {
                   const Icon = item.icon;
                   const isActive = activeTab === item.id;
@@ -145,18 +137,20 @@ export const SidebarNavigation: React.FC<SidebarNavigationProps> = ({
                         onNavigate(item.id);
                         onCloseMobile();
                       }}
-                      className={`w-full flex items-center justify-between px-3 py-2 rounded-full text-xs font-medium transition-all group select-none text-left ${
+                      className={`w-full flex items-center justify-between px-3 py-2.5 rounded-[8px] text-xs transition-all group select-none text-left cursor-pointer ${
                         isActive
-                          ? 'bg-[#efefef] text-black font-semibold border-l-4 border-l-black pl-2.5'
-                          : 'text-[#5e5e5e] hover:text-black hover:bg-[#f3f3f3]'
+                          ? 'bg-[#282828] text-white font-bold'
+                          : 'text-[#b3b3b3] hover:text-white hover:bg-[#1a1a1a] font-medium'
                       }`}
                     >
-                      <div className="flex items-center gap-2.5 min-w-0">
-                        <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-black' : 'text-[#767676] group-hover:text-black'}`} />
-                        <span className="truncate">{item.label}</span>
+                      <div className="flex items-center gap-3 min-w-0">
+                        <Icon className={`w-4 h-4 shrink-0 transition-colors ${isActive ? 'text-[#1ed760]' : 'text-[#b3b3b3] group-hover:text-white'}`} />
+                        <span className="whitespace-nowrap text-xs">{item.label}</span>
                       </div>
                       {item.badge && (
-                        <span className="text-[10px] px-1.5 py-0.2 rounded-full bg-black text-white font-mono">
+                        <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono ml-2 shrink-0 ${
+                          isActive ? 'bg-[#1ed760] text-black font-bold' : 'bg-[#1f1f1f] text-[#b3b3b3]'
+                        }`}>
                           {item.badge}
                         </span>
                       )}
@@ -168,17 +162,22 @@ export const SidebarNavigation: React.FC<SidebarNavigationProps> = ({
           ))}
         </div>
 
-        {/* System Architecture Metadata Footer */}
-        <div className="p-4 border-t border-[#d9d9d9] bg-[#f3f3f3] text-[11px] text-[#767676] shrink-0">
-          <div className="flex items-center justify-between mb-1">
-            <span className="font-medium text-black">Compliance Stance</span>
-            <span className="font-mono text-[10px] text-black bg-[#e2e2e2] px-1.5 py-0.5 rounded">
-              BASEL III / SEC
-            </span>
+        {/* Compliance Footer Card */}
+        <div className="p-3.5 border-t border-[#282828] bg-[#121212] shrink-0">
+          <div className="p-3 rounded-[8px] bg-[#181818] border border-[#282828]">
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-[11px] font-bold text-white flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#1ed760]" />
+                <span>Compliance</span>
+              </span>
+              <span className="font-mono text-[9px] font-bold text-[#1ed760] bg-[#1ed760]/10 border border-[#1ed760]/30 px-1.5 py-0.2 rounded-full">
+                BASEL III / SEC
+              </span>
+            </div>
+            <p className="leading-snug text-[#b3b3b3] text-[10px]">
+              Deterministic FinBERT & Quantitative Hybrid Architecture.
+            </p>
           </div>
-          <p className="leading-snug text-[#5e5e5e] text-[10px]">
-            Explainable Zero-Key Lexicon + FinBERT Hybrid Architecture.
-          </p>
         </div>
       </aside>
     </>

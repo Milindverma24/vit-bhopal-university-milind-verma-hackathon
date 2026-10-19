@@ -43,7 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, systemS
             </div>
             <div>
               <div className="flex items-center space-x-2">
-                <span className="font-bold text-lg tracking-tight text-white">RiskPulse <span className="text-cyan-400 font-extrabold">AI</span></span>
+                <span className="font-bold text-lg tracking-tight text-white">RiskPulse</span>
                 <span className="text-[10px] uppercase font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-1.5 py-0.5 rounded">
                   S&P Global & CRISIL 2026
                 </span>
@@ -53,11 +53,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, systemS
           </div>
 
           <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-xs bg-slate-800/80 border border-slate-700/60 rounded-full px-3 py-1">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span className="text-slate-300 font-medium">Engine Mode:</span>
-              <span className="text-emerald-300 font-semibold">{systemStatus || 'Online (Zero-Key)'}</span>
-            </div>
             <div className="text-[11px] font-mono text-slate-400 hidden md:block bg-slate-950 px-2.5 py-1 rounded border border-slate-800">
               SEC / BASEL III COMPLIANT ARCHITECTURE
             </div>

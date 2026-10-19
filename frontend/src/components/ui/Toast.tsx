@@ -32,28 +32,31 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     <ToastContext.Provider value={{ showToast }}>
       {children}
       {/* Toast Notification Container */}
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-2 max-w-sm w-full pointer-events-none">
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-2.5 max-w-sm w-full pointer-events-none px-4 sm:px-0">
         {toasts.map((t) => {
-          let icon = <Info className="w-4 h-4 text-black shrink-0" />;
+          let icon = <Info className="w-4 h-4 text-[#539df5] shrink-0" />;
+          let borderStyle = 'border-[#333333]';
           if (t.type === 'success') {
-            icon = <CheckCircle2 className="w-4 h-4 text-black shrink-0" />;
+            icon = <CheckCircle2 className="w-4 h-4 text-[#1ed760] shrink-0" />;
+            borderStyle = 'border-[#1ed760]/30';
           } else if (t.type === 'error') {
-            icon = <AlertTriangle className="w-4 h-4 text-black shrink-0" />;
+            icon = <AlertTriangle className="w-4 h-4 text-[#f3727f] shrink-0" />;
+            borderStyle = 'border-[#f3727f]/30';
           }
 
           return (
             <div
               key={t.id}
-              className="pointer-events-auto bg-white border border-[#d9d9d9] shadow-[0_8px_32px_rgba(0,0,0,0.12)] rounded-2xl p-4 flex items-center justify-between gap-3 text-sm text-black transition-all animate-in fade-in slide-in-from-bottom-2 duration-200"
+              className={`pointer-events-auto bg-[#242424] border ${borderStyle} shadow-[0_8px_24px_rgba(0,0,0,0.5)] rounded-[8px] p-4 flex items-center justify-between gap-3 text-sm text-white transition-all animate-in fade-in slide-in-from-bottom-2 duration-200`}
             >
               <div className="flex items-center gap-2.5">
                 {icon}
-                <span className="font-medium text-xs leading-relaxed">{t.message}</span>
+                <span className="font-semibold text-xs leading-relaxed text-white">{t.message}</span>
               </div>
               <button
                 type="button"
                 onClick={() => removeToast(t.id)}
-                className="text-[#767676] hover:text-black p-1 rounded-full transition-colors"
+                className="text-[#b3b3b3] hover:text-white p-1 rounded-full hover:bg-[#333333] transition-colors cursor-pointer"
                 title="Dismiss"
               >
                 <X className="w-3.5 h-3.5" />

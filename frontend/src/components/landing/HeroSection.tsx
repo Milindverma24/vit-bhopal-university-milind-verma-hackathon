@@ -1,7 +1,6 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, Cpu, Sliders } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '../ui/Button';
-import { HeroAnalyticsPreview } from './HeroAnalyticsPreview';
 
 interface HeroSectionProps {
   onOpenDashboard: () => void;
@@ -13,71 +12,56 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onExploreMethodology
 }) => {
   return (
-    <section className="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-[#d9d9d9] bg-white">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <section className="relative overflow-hidden pt-20 pb-24 lg:pt-28 lg:pb-32 border-b border-[#282828] bg-[#121212]">
+      {/* Ambient Spotify Green Glow in center */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#1ed760]/10 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-3xl mx-auto text-center space-y-7">
           
-          {/* Left Column: Editorial Headline & Actions */}
-          <div className="lg:col-span-6 space-y-6">
-            {/* Eyebrow Label */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#efefef] border border-[#d9d9d9] text-xs font-mono text-black font-medium">
-              <span className="w-2 h-2 rounded-full bg-black animate-pulse" />
-              <span>AI-POWERED FINANCIAL RISK INTELLIGENCE</span>
-            </div>
-
-            {/* Main Bold Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-bold text-black tracking-tight leading-[1.08] max-w-[620px]">
-              Turn market noise into financial intelligence.
-            </h1>
-
-            {/* Supporting Copy */}
-            <p className="text-base sm:text-lg text-[#5e5e5e] leading-relaxed max-w-[540px]">
-              Transform financial news and social signals into explainable risk insights, sentiment-driven index allocations, and event-based portfolio stress simulations.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-              <Button
-                variant="primary"
-                size="lg"
-                onClick={onOpenDashboard}
-                className="justify-center group font-medium text-sm h-12 px-6"
-                icon={<ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />}
-              >
-                Open Risk Dashboard
-              </Button>
-              <Button
-                variant="secondary"
-                size="lg"
-                onClick={onExploreMethodology}
-                className="justify-center font-medium text-sm h-12 px-6"
-              >
-                Explore Methodology
-              </Button>
-            </div>
-
-            {/* Supporting Metadata */}
-            <div className="pt-4 border-t border-[#d9d9d9] flex flex-wrap items-center gap-y-2 gap-x-4 text-xs font-mono text-[#767676]">
-              <span className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-black"></span>
-                Explainable NLP
-              </span>
-              <span className="text-[#d9d9d9]">•</span>
-              <span className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-black"></span>
-                Tactical Allocation
-              </span>
-              <span className="text-[#d9d9d9]">•</span>
-              <span className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-black"></span>
-                Scenario Analysis
-              </span>
-            </div>
+          {/* Eyebrow Label */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#181818] border border-[#282828] text-xs font-mono text-white font-bold">
+            <span>INSTITUTIONAL RISK PLATFORM</span>
           </div>
 
-          {/* Right Column: Sophisticated Application Preview */}
-          <div className="lg:col-span-6 w-full">
-            <HeroAnalyticsPreview />
+          {/* Main Bold Headline */}
+          <h1 className="text-4xl sm:text-6xl lg:text-[62px] font-bold text-white tracking-tight leading-[1.08]">
+            Grounded risk intelligence for modern portfolios.
+          </h1>
+
+          {/* Supporting Copy */}
+          <p className="text-lg sm:text-xl text-[#b3b3b3] leading-relaxed max-w-2xl mx-auto font-normal">
+            Monitor news sentiment, evaluate tactical index adjustments, and simulate portfolio stress scenarios—all backed by transparent, reproducible evidence.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
+            <Button
+              variant="primary"
+              size="lg"
+              onClick={onOpenDashboard}
+              className="justify-center group font-bold h-12 px-8 min-w-[200px]"
+              icon={<ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />}
+            >
+              Launch Platform
+            </Button>
+            <Button
+              variant="secondary"
+              size="lg"
+              onClick={onExploreMethodology}
+              className="justify-center font-bold h-12 px-8 min-w-[200px]"
+            >
+              Explore Methodology
+            </Button>
+          </div>
+
+          {/* Supporting Metadata */}
+          <div className="pt-6 flex flex-wrap items-center justify-center gap-y-2 gap-x-5 text-xs font-mono text-[#7c7c7c]">
+            <span className="text-[#b3b3b3]">NLP Signal Extraction</span>
+            <span className="text-[#383838]">•</span>
+            <span className="text-[#b3b3b3]">Tactical Allocation</span>
+            <span className="text-[#383838]">•</span>
+            <span className="text-[#b3b3b3]">Portfolio Stress Testing</span>
           </div>
 
         </div>
