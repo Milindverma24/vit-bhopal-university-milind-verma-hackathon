@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 import { Button } from '../ui/Button';
 import { api } from '../../services/api';
-import { PortfolioSummary, StressScenarioDefinition } from '../../types';
+import { PortfolioSummary, StressScenarioDefinition, StressTestResult } from '../../types';
 
 interface StressTestingSectionProps {
   onNavigateStress: () => void;
@@ -22,13 +22,9 @@ export const StressTestingSection: React.FC<StressTestingSectionProps> = ({
 }) => {
   const [portfolio, setPortfolio] = useState<PortfolioSummary | null>(null);
   const [activeScenario, setActiveScenario] = useState<StressScenarioDefinition | null>(null);
-  const [sectorLossData, setSectorLossData] = useState<{ sector: string; loss: number }[]>([
-    { sector: 'Technology', loss: 7.9 },
-    { sector: 'Energy', loss: 7.5 },
-    { sector: 'Financials', loss: 6.8 },
-    { sector: 'Healthcare', loss: 3.6 },
-    { sector: 'Sovereign', loss: 3.5 }
-  ]);
+  const [stressResult, setStressResult] = useState<StressTestResult | null>(null);
+  const [sectorLossData, setSectorLossData] = useState<{ sector: string; loss: number }[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let mounted = true;
@@ -41,23 +37,31 @@ export const StressTestingSection: React.FC<StressTestingSectionProps> = ({
         if (!mounted) return;
         if (portRes) {
           setPortfolio(portRes);
-          if (portRes.sector_concentration) {
-            const formatted = Object.entries(portRes.sector_concentration)
-              .slice(0, 5)
-              .map(([sector, weight]) => ({
-                sector,
-                loss: Number(((weight as number) * 33.56).toFixed(1))
-              }));
-            if (formatted.length > 0) {
+        }
+        const scenario = (scnRes && scnRes.length > 0) ? scnRes[0] : null;
+        if (scenario) {
+          setActiveScenario(scenario);
+          // Execute live real-time stress calculation against the portfolio
+          const runRes = await api.runStressTest({ scenario_id: scenario.scenario_id }).catch(() => null);
+          if (!mounted) return;
+          if (runRes) {
+            setStressResult(runRes);
+            if (runRes.loss_by_sector) {
+              const formatted = Object.entries(runRes.loss_by_sector)
+                .map(([sector, loss]) => ({
+                  sector,
+                  loss: Number(((loss as number) / 1e6).toFixed(1))
+                }))
+                .sort((a, b) => b.loss - a.loss)
+                .slice(0, 5);
               setSectorLossData(formatted);
             }
           }
         }
-        if (scnRes && scnRes.length > 0) {
-          setActiveScenario(scnRes[0]);
-        }
       } catch (err) {
         console.error('Failed to load stress testing data:', err);
+      } finally {
+        if (mounted) setLoading(false);
       }
     }
     loadStressData();
@@ -66,12 +70,12 @@ export const StressTestingSection: React.FC<StressTestingSectionProps> = ({
     };
   }, []);
 
-  const totalVal = portfolio?.total_value ?? 500000000;
-  const totalValM = (totalVal / 1e6).toFixed(2);
-  const lossPct = 6.71;
-  const absLossM = (totalVal * (lossPct / 100) / 1e6).toFixed(2);
-  const postShockM = (totalVal * (1 - lossPct / 100) / 1e6).toFixed(2);
-  const holdingsCount = portfolio?.total_holdings_count ?? 22;
+  const totalVal = stressResult?.portfolio_value_before ?? portfolio?.total_value ?? 0;
+  const totalValM = totalVal > 0 ? (totalVal / 1e6).toFixed(2) : '0.00';
+  const lossPct = stressResult?.percentage_loss != null ? stressResult.percentage_loss.toFixed(2) : '0.00';
+  const absLossM = stressResult ? (stressResult.absolute_loss / 1e6).toFixed(2) : '0.00';
+  const postShockM = stressResult ? (stressResult.portfolio_value_after / 1e6).toFixed(2) : '0.00';
+  const holdingsCount = portfolio?.total_holdings_count ?? 0;
 
   return (
     <section className="py-20 lg:py-28 border-b border-[#282828] bg-[#121212]">
@@ -133,11 +137,11 @@ export const StressTestingSection: React.FC<StressTestingSectionProps> = ({
                     Crisis Scenario Fallout Engine
                   </span>
                   <div className="text-xs text-[#b3b3b3] mt-0.5">
-                    Scenario: <strong className="text-white">{activeScenario?.name || 'Geopolitical Escalation & Supply Conflict'}</strong>
+                    Scenario: <strong className="text-white">{activeScenario?.name || 'Loading active scenario...'}</strong>
                   </div>
                 </div>
                 <span className="text-[10px] font-mono uppercase px-3 py-1 rounded-full bg-[#1f1f1f] text-[#1ed760] border border-[#333333] font-bold">
-                  {activeScenario?.category || 'Synthetic Scenario'}
+                  {activeScenario?.category || 'Live Scenario'}
                 </span>
               </div>
 
@@ -145,17 +149,29 @@ export const StressTestingSection: React.FC<StressTestingSectionProps> = ({
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 <div className="p-3.5 rounded-[8px] bg-[#1f1f1f] border border-[#282828]">
                   <span className="text-[10px] font-mono text-[#7c7c7c] uppercase tracking-wider block">Baseline Book</span>
-                  <span className="text-lg font-bold font-mono text-white mt-1 block tabular-nums">${totalValM}M</span>
-                  <span className="text-[10px] text-[#7c7c7c]">{holdingsCount} Wholesale Assets</span>
+                  {loading ? (
+                    <div className="h-6 bg-[#282828] rounded w-20 mt-1 animate-pulse" />
+                  ) : (
+                    <span className="text-lg font-bold font-mono text-white mt-1 block tabular-nums">${totalValM}M</span>
+                  )}
+                  <span className="text-[10px] text-[#7c7c7c]">{holdingsCount > 0 ? `${holdingsCount} Wholesale Assets` : 'Active Portfolio'}</span>
                 </div>
                 <div className="p-3.5 rounded-[8px] bg-[#1f1f1f] border border-[#282828]">
                   <span className="text-[10px] font-mono text-[#7c7c7c] uppercase tracking-wider block">Post-Shock Book</span>
-                  <span className="text-lg font-bold font-mono text-white mt-1 block tabular-nums">${postShockM}M</span>
-                  <span className="text-[10px] text-[#7c7c7c]">After All Shocks</span>
+                  {loading ? (
+                    <div className="h-6 bg-[#282828] rounded w-20 mt-1 animate-pulse" />
+                  ) : (
+                    <span className="text-lg font-bold font-mono text-white mt-1 block tabular-nums">${postShockM}M</span>
+                  )}
+                  <span className="text-[10px] text-[#7c7c7c]">After Live Shock</span>
                 </div>
                 <div className="col-span-2 sm:col-span-1 p-3.5 rounded-[8px] bg-[#f3727f]/10 border border-[#f3727f]/30">
                   <span className="text-[10px] font-mono text-[#7c7c7c] uppercase tracking-wider block">Absolute Loss</span>
-                  <span className="text-lg font-bold font-mono text-[#f3727f] mt-1 block tabular-nums">-${absLossM}M</span>
+                  {loading ? (
+                    <div className="h-6 bg-[#f3727f]/20 rounded w-20 mt-1 animate-pulse" />
+                  ) : (
+                    <span className="text-lg font-bold font-mono text-[#f3727f] mt-1 block tabular-nums">-${absLossM}M</span>
+                  )}
                   <span className="text-[10px] font-semibold text-[#f3727f]">-{lossPct}% Total Impact</span>
                 </div>
               </div>
@@ -164,24 +180,30 @@ export const StressTestingSection: React.FC<StressTestingSectionProps> = ({
               <div className="p-4 rounded-[8px] bg-[#1f1f1f] border border-[#282828] space-y-2">
                 <div className="flex items-center justify-between text-xs font-mono">
                   <span className="font-bold text-white uppercase tracking-[1.4px]">Loss Attribution by Sector ($M)</span>
-                  <span className="text-[#7c7c7c]">Exact Reconciliation: Delta = $0.00</span>
+                  <span className="text-[#7c7c7c]">Live Simulation Engine</span>
                 </div>
                 <div className="h-44 w-full pt-2">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart
-                      layout="vertical"
-                      data={sectorLossData}
-                      margin={{ top: 4, right: 24, left: 24, bottom: 4 }}
-                    >
-                      <XAxis type="number" unit="M" tick={{ fontSize: 10, fill: '#7c7c7c' }} axisLine={false} tickLine={false} />
-                      <YAxis type="category" dataKey="sector" tick={{ fontSize: 11, fill: '#ffffff' }} axisLine={false} tickLine={false} width={80} />
-                      <Tooltip 
-                        contentStyle={{ backgroundColor: '#181818', borderColor: '#282828', borderRadius: '8px', color: '#fff' }}
-                        cursor={{ fill: 'rgba(255,255,255,0.05)' }}
-                      />
-                      <Bar dataKey="loss" fill="#f3727f" radius={[0, 4, 4, 0]} isAnimationActive={false} />
-                    </BarChart>
-                  </ResponsiveContainer>
+                  {sectorLossData.length > 0 ? (
+                    <ResponsiveContainer width="100%" height="100%">
+                      <BarChart
+                        layout="vertical"
+                        data={sectorLossData}
+                        margin={{ top: 4, right: 24, left: 24, bottom: 4 }}
+                      >
+                        <XAxis type="number" unit="M" tick={{ fontSize: 10, fill: '#7c7c7c' }} axisLine={false} tickLine={false} />
+                        <YAxis type="category" dataKey="sector" tick={{ fontSize: 11, fill: '#ffffff' }} axisLine={false} tickLine={false} width={80} />
+                        <Tooltip 
+                          contentStyle={{ backgroundColor: '#181818', borderColor: '#282828', borderRadius: '8px', color: '#fff' }}
+                          cursor={{ fill: 'rgba(255,255,255,0.05)' }}
+                        />
+                        <Bar dataKey="loss" fill="#f3727f" radius={[0, 4, 4, 0]} isAnimationActive={false} />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  ) : (
+                    <div className="h-full flex items-center justify-center text-xs font-mono text-[#7c7c7c]">
+                      {loading ? 'Running real-time portfolio stress simulation...' : 'No stress loss data available.'}
+                    </div>
+                  )}
                 </div>
               </div>
 

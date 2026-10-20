@@ -2,18 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 import { ImpactBadge, SentimentBadge } from '../ui/Badges';
 import { api } from '../../services/api';
-import { RiskSignal, DashboardSummary } from '../../types';
+import { RiskSignal } from '../../types';
 
 export const ProductPreviewSection: React.FC = () => {
   const [signals, setSignals] = useState<RiskSignal[]>([]);
   const [activeSignal, setActiveSignal] = useState<RiskSignal | null>(null);
-  const [distributionData, setDistributionData] = useState<{ name: string; count: number }[]>([
-    { name: 'Credit', count: 12 },
-    { name: 'Supply', count: 9 },
-    { name: 'Earnings', count: 8 },
-    { name: 'Reg', count: 5 },
-    { name: 'Macro', count: 2 }
-  ]);
+  const [distributionData, setDistributionData] = useState<{ name: string; count: number }[]>([]);
+  const [totalSignalCount, setTotalSignalCount] = useState<number>(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -28,15 +23,20 @@ export const ProductPreviewSection: React.FC = () => {
         if (sigRes.items && sigRes.items.length > 0) {
           setSignals(sigRes.items);
           setActiveSignal(sigRes.items[0]);
+          setTotalSignalCount(sigRes.total || sigRes.items.length);
         }
-        if (sumRes && sumRes.event_distribution) {
-          const formatted = Object.entries(sumRes.event_distribution)
-            .slice(0, 5)
-            .map(([k, v]) => ({
-              name: k.replace(/ Event| Action| Disruption/g, '').slice(0, 8),
-              count: v
-            }));
-          if (formatted.length > 0) {
+        if (sumRes) {
+          if (sumRes.total_signals) {
+            setTotalSignalCount(sumRes.total_signals);
+          }
+          if (sumRes.event_distribution) {
+            const formatted = Object.entries(sumRes.event_distribution)
+              .filter(([_, count]) => count > 0)
+              .map(([k, v]) => ({
+                name: k.replace(/ Event| Action| Disruption/g, '').slice(0, 10),
+                count: v
+              }))
+              .slice(0, 5);
             setDistributionData(formatted);
           }
         }
@@ -77,12 +77,13 @@ export const ProductPreviewSection: React.FC = () => {
           {/* Top Panel Controls */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#282828]">
             <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#1ed760] animate-pulse" />
               <span className="text-xs font-mono uppercase font-bold text-white tracking-[1.4px]">
                 Live Risk Signal Stream
               </span>
             </div>
             <span className="text-[11px] font-mono text-[#b3b3b3] bg-[#1f1f1f] px-3 py-1 rounded-full border border-[#282828]">
-              S&P 500 Constituent Coverage
+              {totalSignalCount > 0 ? `${totalSignalCount} Ingested Signals` : 'Live Stream Active'}
             </span>
           </div>
 
@@ -95,44 +96,59 @@ export const ProductPreviewSection: React.FC = () => {
                 Recent Detected Events
               </span>
 
-              <div className="space-y-2">
-                {signals.map((sig) => {
-                  const isSelected = currentSig?.signal_id === sig.signal_id;
-                  const sigTicker = sig.primary_ticker || sig.entities?.[0]?.ticker || 'CORP';
-                  const eventDisplay = sig.event_type.replace(/_/g, ' ');
-                  return (
-                    <div
-                      key={sig.signal_id}
-                      onClick={() => setActiveSignal(sig)}
-                      className={`p-4 rounded-[8px] border transition-all cursor-pointer text-left ${
-                        isSelected 
-                          ? 'border-[#1ed760] bg-[#242424] shadow-[0_4px_16px_rgba(0,0,0,0.6)]' 
-                          : 'border-[#282828] bg-[#1f1f1f] hover:bg-[#252525] hover:border-[#4d4d4d]'
-                      }`}
-                    >
-                      <div className="flex items-center justify-between gap-2 mb-1.5 text-xs font-mono">
-                        <div className="flex items-center gap-2">
-                          <span className={`font-bold ${isSelected ? 'text-[#1ed760]' : 'text-white'}`}>{sigTicker}</span>
-                          <span className="text-[#4d4d4d]">•</span>
-                          <span className="text-[#b3b3b3]">
-                            {sig.published_at ? new Date(sig.published_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Live'}
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <SentimentBadge score={sig.sentiment_score} />
-                          <ImpactBadge score={sig.impact_score} />
-                        </div>
-                      </div>
-                      <p className="text-xs text-white font-medium leading-snug line-clamp-2">
-                        {sig.headline}
-                      </p>
-                      <div className="mt-1.5 text-[11px] font-mono text-[#7c7c7c]">
-                        Event: <span className="text-[#cbcbcb] font-medium">{eventDisplay}</span>
-                      </div>
+              {loading ? (
+                <div className="space-y-2">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div key={i} className="p-4 rounded-[8px] border border-[#282828] bg-[#1f1f1f] animate-pulse space-y-2">
+                      <div className="h-4 bg-[#282828] rounded w-1/4"></div>
+                      <div className="h-3 bg-[#242424] rounded w-3/4"></div>
                     </div>
-                  );
-                })}
-              </div>
+                  ))}
+                </div>
+              ) : signals.length === 0 ? (
+                <div className="p-8 rounded-[8px] border border-[#282828] bg-[#1f1f1f] text-center text-xs font-mono text-[#7c7c7c]">
+                  Connecting to live signal stream...
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  {signals.map((sig) => {
+                    const isSelected = currentSig?.signal_id === sig.signal_id;
+                    const sigTicker = sig.primary_ticker || sig.entities?.[0]?.ticker || 'CORP';
+                    const eventDisplay = sig.event_type.replace(/_/g, ' ');
+                    return (
+                      <div
+                        key={sig.signal_id}
+                        onClick={() => setActiveSignal(sig)}
+                        className={`p-4 rounded-[8px] border transition-all cursor-pointer text-left ${
+                          isSelected 
+                            ? 'border-[#1ed760] bg-[#242424] shadow-[0_4px_16px_rgba(0,0,0,0.6)]' 
+                            : 'border-[#282828] bg-[#1f1f1f] hover:bg-[#252525] hover:border-[#4d4d4d]'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between gap-2 mb-1.5 text-xs font-mono">
+                          <div className="flex items-center gap-2">
+                            <span className={`font-bold ${isSelected ? 'text-[#1ed760]' : 'text-white'}`}>{sigTicker}</span>
+                            <span className="text-[#4d4d4d]">•</span>
+                            <span className="text-[#b3b3b3]">
+                              {sig.published_at ? new Date(sig.published_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Live'}
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-1.5">
+                            <SentimentBadge score={sig.sentiment_score} />
+                            <ImpactBadge score={sig.impact_score} />
+                          </div>
+                        </div>
+                        <p className="text-xs text-white font-medium leading-snug line-clamp-2">
+                          {sig.headline}
+                        </p>
+                        <div className="mt-1.5 text-[11px] font-mono text-[#7c7c7c]">
+                          Event: <span className="text-[#cbcbcb] font-medium">{eventDisplay}</span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
 
             {/* Right Column: Trend Chart & Distribution (5 cols) */}
@@ -178,17 +194,23 @@ export const ProductPreviewSection: React.FC = () => {
                   Signals by Event Taxonomy
                 </span>
                 <div className="h-36 w-full">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={distributionData} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
-                      <XAxis dataKey="name" tick={{ fontSize: 11, fill: '#b3b3b3' }} axisLine={false} tickLine={false} />
-                      <YAxis tick={{ fontSize: 10, fill: '#7c7c7c' }} axisLine={false} tickLine={false} />
-                      <Tooltip 
-                        contentStyle={{ backgroundColor: '#181818', borderColor: '#282828', borderRadius: '8px', color: '#fff' }}
-                        cursor={{ fill: 'rgba(255,255,255,0.05)' }}
-                      />
-                      <Bar dataKey="count" fill="#1ed760" radius={[4, 4, 0, 0]} isAnimationActive={false} />
-                    </BarChart>
-                  </ResponsiveContainer>
+                  {distributionData.length > 0 ? (
+                    <ResponsiveContainer width="100%" height="100%">
+                      <BarChart data={distributionData} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
+                        <XAxis dataKey="name" tick={{ fontSize: 11, fill: '#b3b3b3' }} axisLine={false} tickLine={false} />
+                        <YAxis tick={{ fontSize: 10, fill: '#7c7c7c' }} axisLine={false} tickLine={false} />
+                        <Tooltip 
+                          contentStyle={{ backgroundColor: '#181818', borderColor: '#282828', borderRadius: '8px', color: '#fff' }}
+                          cursor={{ fill: 'rgba(255,255,255,0.05)' }}
+                        />
+                        <Bar dataKey="count" fill="#1ed760" radius={[4, 4, 0, 0]} isAnimationActive={false} />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  ) : (
+                    <div className="h-full flex items-center justify-center text-xs font-mono text-[#7c7c7c]">
+                      Loading distribution taxonomy...
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -200,7 +222,11 @@ export const ProductPreviewSection: React.FC = () => {
           <div className="pt-4 border-t border-[#282828] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-[#b3b3b3]">
             <div className="flex items-center gap-2">
               <span className="font-semibold text-white">Coverage:</span>
-              <span>Live constituent feeds across 20 financial event categories</span>
+              <span>
+                {totalSignalCount > 0 
+                  ? `${totalSignalCount} live detected signals across ${distributionData.length > 0 ? distributionData.length : 'active'} event categories` 
+                  : 'Live constituent coverage across all financial risk events'}
+              </span>
             </div>
             <div className="font-mono text-[11px] text-[#7c7c7c]">
               Deterministic sentiment and audit trails for every signal

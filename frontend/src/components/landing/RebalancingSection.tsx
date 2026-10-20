@@ -19,23 +19,31 @@ interface RebalancingSectionProps {
 export const RebalancingSection: React.FC<RebalancingSectionProps> = ({
   onNavigateRebalancing
 }) => {
-  const [constituents, setConstituents] = useState<Constituent[]>([]);
-  const [turnoverPct, setTurnoverPct] = useState<number>(1.48);
+  const [allocations, setAllocations] = useState<any[]>([]);
+  const [turnoverPct, setTurnoverPct] = useState<number | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let mounted = true;
     async function loadIndexData() {
       try {
-        const res = await api.getIndex();
+        // Execute real-time tactical rebalance preview from the backend
+        const runRes = await api.executeRebalance({ preview_only: true });
         if (!mounted) return;
-        if (res.constituents && res.constituents.length > 0) {
-          setConstituents(res.constituents.slice(0, 4));
-        }
-        if (res.latest_rebalance_run && res.latest_rebalance_run.turnover != null) {
-          setTurnoverPct(res.latest_rebalance_run.turnover * 100);
+        if (runRes && runRes.allocations) {
+          // Sort by absolute weight change descending so the most active adjustments appear first
+          const sorted = [...runRes.allocations].sort(
+            (a, b) => Math.abs(b.weight_change ?? 0) - Math.abs(a.weight_change ?? 0)
+          );
+          setAllocations(sorted.slice(0, 4));
+          if (runRes.turnover != null) {
+            setTurnoverPct(runRes.turnover * 100);
+          }
         }
       } catch (err) {
-        console.error('Failed to load index data for RebalancingSection:', err);
+        console.error('Failed to load live rebalancing preview:', err);
+      } finally {
+        if (mounted) setLoading(false);
       }
     }
     loadIndexData();
@@ -76,61 +84,82 @@ export const RebalancingSection: React.FC<RebalancingSectionProps> = ({
                 </div>
                 <div className="text-right">
                   <span className="text-[10px] font-mono text-[#7c7c7c] uppercase tracking-wider block">Modeled Turnover</span>
-                  <span className="text-sm font-mono font-bold text-[#1ed760] tabular-nums">{turnoverPct.toFixed(2)}% (One-Way)</span>
+                  <span className="text-sm font-mono font-bold text-[#1ed760] tabular-nums">
+                    {turnoverPct != null ? `${turnoverPct.toFixed(2)}% (One-Way)` : 'Calculating...'}
+                  </span>
                 </div>
               </div>
 
               {/* Allocation Comparison Table with Real Constituents */}
               <div className="space-y-4">
-                {(constituents.length > 0 ? constituents : [
-                  { ticker: 'AAPL', name: 'Apple Inc.', current_weight: 0.0667, target_weight: 0.045, weight_change: -0.0217, latest_sentiment: -0.46, latest_event: 'Cybersecurity & Supply Risk' },
-                  { ticker: 'MSFT', name: 'Microsoft Corporation', current_weight: 0.0667, target_weight: 0.080, weight_change: +0.0133, latest_sentiment: +0.42, latest_event: 'Bullish Enterprise Earnings' },
-                  { ticker: 'JPM', name: 'JPMorgan Chase & Co.', current_weight: 0.0667, target_weight: 0.062, weight_change: -0.0047, latest_sentiment: -0.05, latest_event: 'Regulatory Ingestion' },
-                  { ticker: 'XOM', name: 'Exxon Mobil Corporation', current_weight: 0.0667, target_weight: 0.048, weight_change: -0.0187, latest_sentiment: -0.52, latest_event: 'Refining Margin Shift' }
-                ]).map((item: any) => {
-                  const currPct = (item.current_weight * 100);
-                  const targetPct = (item.target_weight * 100);
-                  const deltaPct = (item.weight_change != null ? item.weight_change : (item.target_weight - item.current_weight)) * 100;
-                  const isNegative = deltaPct < 0;
-                  return (
-                    <div key={item.ticker} className="p-4 rounded-[8px] border border-[#282828] bg-[#1f1f1f] space-y-2">
-                      <div className="flex items-center justify-between text-xs font-mono">
-                        <div className="flex items-center gap-2">
-                          <span className="font-bold text-white">{item.ticker}</span>
-                          <span className="text-[#b3b3b3] truncate max-w-[140px] sm:max-w-none">{item.name}</span>
+                {loading ? (
+                  <div className="space-y-3 animate-pulse">
+                    {[1, 2, 3, 4].map((i) => (
+                      <div key={i} className="p-4 rounded-[8px] border border-[#282828] bg-[#1f1f1f] space-y-2">
+                        <div className="h-4 bg-[#282828] rounded w-1/3"></div>
+                        <div className="h-2 bg-[#222222] rounded w-full"></div>
+                      </div>
+                    ))}
+                  </div>
+                ) : allocations.length === 0 ? (
+                  <div className="p-8 rounded-[8px] border border-[#282828] bg-[#1f1f1f] text-center text-xs font-mono text-[#7c7c7c]">
+                    Connecting to live rebalance engine...
+                  </div>
+                ) : (
+                  allocations.map((item: any) => {
+                    const prevWeight = item.prev_weight ?? item.current_weight ?? 0.0667;
+                    const proposedWeight = item.proposed_weight ?? item.executed_weight ?? item.target_weight ?? prevWeight;
+                    const currPct = prevWeight * 100;
+                    const targetPct = proposedWeight * 100;
+                    const deltaPct = (item.weight_change != null ? item.weight_change : (proposedWeight - prevWeight)) * 100;
+                    const isNegative = deltaPct < 0;
+                    const sentimentVal = item.sentiment ?? item.latest_sentiment ?? 0;
+                    const eventText = item.event ?? item.latest_event ?? 'Market Ingestion';
+
+                    return (
+                      <div key={item.ticker} className="p-4 rounded-[8px] border border-[#282828] bg-[#1f1f1f] space-y-2">
+                        <div className="flex items-center justify-between text-xs font-mono">
+                          <div className="flex items-center gap-2">
+                            <span className="font-bold text-white">{item.ticker}</span>
+                            <span className="text-[#b3b3b3] truncate max-w-[140px] sm:max-w-none">{item.name}</span>
+                          </div>
+                          <div className="flex items-center gap-2 shrink-0">
+                            <span className="text-[#7c7c7c]">{currPct.toFixed(1)}%</span>
+                            <span className="text-[#4d4d4d]">→</span>
+                            <span className="font-bold text-white">{targetPct.toFixed(1)}%</span>
+                            <span className={`px-2.5 py-0.5 rounded-full font-medium text-[11px] font-mono border ${
+                              isNegative ? 'bg-[#f3727f]/15 text-[#f3727f] border-[#f3727f]/30' : 'bg-[#1ed760]/15 text-[#1ed760] border-[#1ed760]/30'
+                            }`}>
+                              {deltaPct > 0 ? `+${deltaPct.toFixed(1)}%` : `${deltaPct.toFixed(1)}%`}
+                            </span>
+                          </div>
                         </div>
-                        <div className="flex items-center gap-2 shrink-0">
-                          <span className="text-[#7c7c7c]">{currPct.toFixed(1)}%</span>
-                          <span className="text-[#4d4d4d]">→</span>
-                          <span className="font-bold text-white">{targetPct.toFixed(1)}%</span>
-                          <span className={`px-2.5 py-0.5 rounded-full font-medium text-[11px] font-mono border ${
-                            isNegative ? 'bg-[#f3727f]/15 text-[#f3727f] border-[#f3727f]/30' : 'bg-[#1ed760]/15 text-[#1ed760] border-[#1ed760]/30'
-                          }`}>
-                            {deltaPct > 0 ? `+${deltaPct.toFixed(1)}%` : `${deltaPct.toFixed(1)}%`}
+
+                        {/* Visual Bar Comparison */}
+                        <div className="w-full bg-[#121212] h-2 rounded-full overflow-hidden flex">
+                          <div 
+                            className="bg-[#1ed760] h-full rounded-full transition-all duration-500" 
+                            style={{ width: `${Math.min(targetPct * 5, 100)}%` }} 
+                          />
+                        </div>
+
+                        <div className="flex items-center justify-between text-[11px] text-[#7c7c7c] pt-0.5">
+                          <span>
+                            Sentiment: <strong className={sentimentVal > 0 ? 'text-[#1ed760]' : sentimentVal < 0 ? 'text-[#f3727f]' : 'text-white'}>
+                              {sentimentVal > 0 ? `+${sentimentVal.toFixed(2)}` : sentimentVal.toFixed(2)}
+                            </strong>
                           </span>
+                          <span className="font-medium text-[#cbcbcb] truncate max-w-[180px] sm:max-w-none">{eventText}</span>
                         </div>
                       </div>
-
-                      {/* Visual Bar Comparison */}
-                      <div className="w-full bg-[#121212] h-2 rounded-full overflow-hidden flex">
-                        <div 
-                          className="bg-[#1ed760] h-full rounded-full transition-all duration-500" 
-                          style={{ width: `${Math.min(targetPct * 5, 100)}%` }} 
-                        />
-                      </div>
-
-                      <div className="flex items-center justify-between text-[11px] text-[#7c7c7c] pt-0.5">
-                        <span>Sentiment: <strong className={item.latest_sentiment > 0 ? 'text-[#1ed760]' : 'text-[#f3727f]'}>{item.latest_sentiment > 0 ? `+${item.latest_sentiment.toFixed(2)}` : item.latest_sentiment.toFixed(2)}</strong></span>
-                        <span className="font-medium text-[#cbcbcb] truncate max-w-[180px] sm:max-w-none">{item.latest_event}</span>
-                      </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })
+                )}
               </div>
 
               <div className="pt-2 text-[11px] font-mono text-[#7c7c7c] flex items-center justify-between">
                 <span>Sum of Allocations: 100.0%</span>
-                <span>Box Bounds: 2.0% – 20.0%</span>
+                <span>Box Bounds: 2.0% – 18.0%</span>
               </div>
             </div>
           </div>
